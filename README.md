@@ -1,0 +1,2 @@
+# Favicon Generator
+Favicon Generator
