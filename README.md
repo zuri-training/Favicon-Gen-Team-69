@@ -1,2 +1,2 @@
-# Team-69-Backend
+# Favicon Generator
 Favicon Generator
