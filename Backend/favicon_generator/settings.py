@@ -97,7 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-
+        
 
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
@@ -141,7 +141,13 @@ CLOUDINARY_STORAGE = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
 }
+
+from datetime import timedelta
+
+REST_KNOX = {'TOKEN_TLL': timedelta(hours=6)}
