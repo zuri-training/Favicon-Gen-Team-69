@@ -1,0 +1,95 @@
+* {
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  /* background-color: aqua; */
+  width: 100%;
+  display: flex;
+  /* column-gap: 10rem; */
+  padding: 1rem 4rem 1rem 4rem;
+  margin: auto;
+  justify-content: space-between;
+  border-bottom: 1px solid #757678;
+  position: fixed;
+}
+.header_links,a {
+  word-spacing: 20px;
+  text-align: center;
+  text-decoration: none;
+  align-self: center;
+  color: #002055;
+  font-size: large;
+
+}
+.loginbtn {
+  background-color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0005em;
+  color: #0041aa;
+  padding: 7px 20px 7px 20px;
+  border-radius: 5px;
+  border: 1px solid #0041aa;
+  margin-right: 25px;
+}
+.regbtn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0005em;
+  color: white;
+  background: #0041aa;
+  border-radius: 5px;
+  padding: 7px 20px 7px 20px;
+  gap: 10px;
+  border: none;
+}
+.loginbtn:hover{
+    background-color: #0041aa;
+    color: white;
+    transition-delay: 0.3s;
+
+}
+.regbtn:hover{
+    background-color: white;
+    color: #0041aa;
+    transition-delay: 0.3s;
+
+}
+.favicon_logo{
+    width: 10%;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.upperfooter{
+    background: #CCDFFF;
+    display: flex;
+    padding:2em 4em 2em 4em;
+    justify-content:space-between;
+    color: #002055;
+}
+.slogan{width: 75%;
+    margin: auto; 
+}
+.socials{ 
+   color: #0041aa; 
+}
+.lowerfooter{
+    background-color: #0041aa;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 4em 1em 4em;
+}
