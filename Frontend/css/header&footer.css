@@ -1,30 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   max-width: 100%;
   margin: 0;
   box-sizing: border-box;
 }
+
+html,
+body,
+p {
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 400px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700px;
+}
+
 header {
-  /* background-color: aqua; */
   width: 100%;
   display: flex;
-  /* column-gap: 10rem; */
   padding: 1rem 4rem 1rem 4rem;
   margin: auto;
   justify-content: space-between;
   border-bottom: 1px solid #757678;
   position: fixed;
 }
-.header_links,a {
+
+.header_links,
+a {
   word-spacing: 20px;
   text-align: center;
   text-decoration: none;
   align-self: center;
   color: #002055;
-  font-size: large;
+  font-size: 18px;
 
 }
+
 .loginbtn {
   background-color: white;
+  width: 160px;
+  height: 54px;
+  left: 409px;
+  top: 419px;
+  cursor: pointer;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -32,13 +59,15 @@ header {
   line-height: 24px;
   letter-spacing: 0.0005em;
   color: #0041aa;
-  padding: 7px 20px 7px 20px;
+  padding: 10px 20px 10px 20px;
   border-radius: 5px;
   border: 1px solid #0041aa;
   margin-right: 25px;
 }
+
 .regbtn {
   font-family: "Poppins";
+  cursor: pointer;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -46,50 +75,71 @@ header {
   letter-spacing: 0.0005em;
   color: white;
   background: #0041aa;
-  border-radius: 5px;
-  padding: 7px 20px 7px 20px;
+  border-radius: 7px;
+  padding: 10px;
   gap: 10px;
   border: none;
+  width: 160px;
+  height: 54px;
+  left: 409px;
+  top: 419px;
 }
-.loginbtn:hover{
-    background-color: #0041aa;
-    color: white;
-    transition-delay: 0.3s;
+
+.loginbtn:hover {
+  background-color: #0041aa;
+  color: white;
+  transition-delay: 0.3s;
 
 }
-.regbtn:hover{
-    background-color: white;
-    color: #0041aa;
-    transition-delay: 0.3s;
+
+.regbtn:hover {
+  background: #80B0FF;
+  color: white;
+  transition-delay: 0.3s;
 
 }
-.favicon_logo{
-    width: 10%;
+
+.regbtn:active {
+  background-color: #0061FF;
 }
-footer{
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+.favicon_logo {
+  width: 15%;
 }
-.upperfooter{
-    background: #CCDFFF;
-    display: flex;
-    padding:2em 4em 2em 4em;
-    justify-content:space-between;
-    color: #002055;
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-.slogan{width: 75%;
-    margin: auto; 
+
+.upperfooter {
+  background: #CCDFFF;
+  display: flex;
+  padding: 2em 4em 2em 4em;
+  justify-content: space-between;
+  color: #002055;
 }
-.socials{ 
-   color: #0041aa; 
+
+.slogan {
+  width: 75%;
+  margin: auto;
 }
-.lowerfooter{
-    background-color: #0041aa;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 4em 1em 4em;
+
+.socials {
+  color: #0041aa;
+  width: 30px;
+  /* margin: auto; */
+  margin-left: 7px;
+}
+
+.lowerfooter {
+  background-color: #0041aa;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 4em 1em 4em;
+  font-size: 15px;
 }
