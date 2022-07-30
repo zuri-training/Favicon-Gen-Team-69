@@ -32,6 +32,11 @@ Create a preview feature before downloading: This is an addition to the design s
 - Allow user to upload icon
 - Generate favicon (downloadable as zip)
 - Generate html code favicon
-- Allow user to save data and come back to download or use
-- 
+- Allow user to save data and come back to download or use 
+
+## Technical Details
+### Stacks
+Frontend: HTML, CSS and JavaScript (Vanilla Js)
+Backend: Python Django Rest Framework
+
 
