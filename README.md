@@ -36,7 +36,7 @@ Create a preview feature before downloading: This is an addition to the design s
 
 ## Technical Details
 ### Stacks
-Frontend: HTML, CSS and JavaScript (Vanilla Js)
-Backend: Python Django Rest Framework
+- Frontend: HTML, CSS and JavaScript (Vanilla Js)
+- Backend: Python Django Rest Framework
 
 
