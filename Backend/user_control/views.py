@@ -2,12 +2,15 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
+from django.contrib.auth.models import User
 
 from rest_framework import generics, permissions
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
 from knox.models import AuthToken
-from .serializers import UserSerializer, RegisterSerializer
+from .serializers import LoginSerializer, UserSerializer, RegisterSerializer
 
 
 from rest_framework import permissions
@@ -30,7 +33,9 @@ class RegisterAPI(generics.GenericAPIView):
 
 #Login API
 class LoginAPI(KnoxLoginView):
-    permission_classes = (permissions.AllowAny,)
+    queryset = User.objects.all()
+    serializer_class = LoginSerializer
+    permission_classes = ()
 
     def post(self, request, format=None):
         serializer = AuthTokenSerializer(data=request.data)
