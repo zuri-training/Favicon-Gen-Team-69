@@ -10,7 +10,7 @@
 html,
 body,
 p {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Poppins";
   font-weight: 400px;
 }
@@ -32,6 +32,7 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid #757678;
   position: fixed;
+  top: 0;
 }
 
 .header_links,
@@ -41,14 +42,15 @@ a {
   text-decoration: none;
   align-self: center;
   color: #002055;
-  font-size: 18px;
+  font-size: 16px;
+  max-width: 100%;
 
 }
 
 .loginbtn {
   background-color: white;
-  width: 160px;
-  height: 54px;
+  width: 120px;
+  height: 44px;
   left: 409px;
   top: 419px;
   cursor: pointer;
@@ -79,8 +81,8 @@ a {
   padding: 10px;
   gap: 10px;
   border: none;
-  width: 160px;
-  height: 54px;
+  width: 120px;
+  height: 44px;
   left: 409px;
   top: 419px;
 }
@@ -104,7 +106,8 @@ a {
 }
 
 .favicon_logo {
-  width: 15%;
+  width: 12%;
+  /* margin-top: 10px; */
 }
 
 footer {
@@ -118,21 +121,26 @@ footer {
 .upperfooter {
   background: #CCDFFF;
   display: flex;
-  padding: 2em 4em 2em 4em;
+  padding: 2em;
   justify-content: space-between;
   color: #002055;
 }
-
+.slogann{
+  max-width: 25%;
+  margin-right: 50px;
+  text-align: center;
+}
 .slogan {
-  width: 75%;
+  width: 60%;
   margin: auto;
+  
 }
 
 .socials {
   color: #0041aa;
   width: 30px;
-  /* margin: auto; */
-  margin-left: 7px;
+  width: 10%;
+  margin-right: 7px; 
 }
 
 .lowerfooter {
@@ -141,5 +149,8 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 1em 4em 1em 4em;
-  font-size: 15px;
+  font-size: 12px;
+}
+.reducedfooter{
+  line-height: 2em;
 }
