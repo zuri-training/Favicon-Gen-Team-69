@@ -2,12 +2,11 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 
 from rest_framework import generics, permissions
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 
 from knox.models import AuthToken
 from .serializers import LoginSerializer, UserSerializer, RegisterSerializer
@@ -16,6 +15,8 @@ from .serializers import LoginSerializer, UserSerializer, RegisterSerializer
 from rest_framework import permissions
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
+from knox.views import LogoutView as KnoxLogoutView
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # Register API
@@ -43,4 +44,14 @@ class LoginAPI(KnoxLoginView):
         user = serializer.validated_data['user']
         login(request, user)
         return super(LoginAPI, self).post(request, format=None)
+    
+class LogoutAPI(KnoxLogoutView):
+    permission_classes = ()
+
+    def post(self, request, format=None):
+        logout(request)
+        request.user.auth_token.delete()
+        return Response('User Logged out successfully') 
+        
+
 
