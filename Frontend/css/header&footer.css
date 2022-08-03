@@ -31,7 +31,7 @@ header {
   margin: auto;
   justify-content: space-between;
   border-bottom: 1px solid #757678;
-  position: fixed;
+  position: relative;
 }
 
 .header_links,

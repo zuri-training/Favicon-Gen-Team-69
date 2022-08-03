@@ -1,0 +1,44 @@
+main {
+  background-image: url("../images/image generator screen.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+h2 {
+  font-size: 27px;
+  color: #0051d4;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.heading-paragraph {
+  text-align: center;
+  margin-bottom: 76px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #0051d4;
+  padding-left: 250px;
+  margin-bottom: 104px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.card {
+  width: 481px;
+  height: 427px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 8px 16px #D0CFCF;
+  border-radius: 5px;
+  margin-bottom: 103px;
+}
