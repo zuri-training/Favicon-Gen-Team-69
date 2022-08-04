@@ -4,7 +4,7 @@ from django.core.files.base import ContentFile
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from .models import Icon
 
-def generate_fav(image, size, favicon_id):
+def generate_icon(image, size, favicon_id):
 	if size == "favicon":
 		resized_img = image.resize((64,64))
 		img_name = "favicon"
@@ -23,7 +23,7 @@ def generate_fav(image, size, favicon_id):
 
 	my_icon.save()
 
-def generate_all_fav(image, sizes, favicon_id):
+def generate_favicon(image, sizes, favicon_id):
 	pillow_image = Image.open(image)
 	for size in ico_sizes:
-		generate_fav(pillow_image, size, favicon_id)
+		generate_icon(pillow_image, size, favicon_id)
