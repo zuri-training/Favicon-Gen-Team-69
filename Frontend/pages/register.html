@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="reg.css" />
+  </head>
+  <body>
+    <div id="vector1">
+      <img src="./image1/Vector1.png" alt="image" />
+    </div>
+    <div id="vector3"><img src="./image1/Vector3.png" alt="image" /></div>
+    <div id="vector13"><img src="./image1/Vector13.png" alt="image" /></div>
+    <div id="vector11">
+      <img src="./image1/Vector11.png" alt="image" />
+    </div>
+    <div id="vector14"><img src="./image1/Vector14.png" alt="image" /></div>
+    <div id="vector12"><img src="./image1/Vector12.png" alt="image" /></div>
+    <div id="main-containier">
+      <div id="left-div">
+        <div id="text1">Welcome To Faviconify</div>
+        <div id="text2">Please enter your personal details to get started</div>
+      </div>
+      <div id="right-div">
+        <div id="account">
+          <span>Create an account with </span>
+          <span id="fav">Faviconify</span>
+        </div>
+        <div class="logo-div">
+          <div id="facebook">
+            <img
+              src="./image1/gg_facebook.png"
+              width="10.395999908447266px"
+              height="19px;  "
+              alt=""
+            />
+            Facebook
+          </div>
+          <div id="google">
+            <img
+              src="./image1/akar-icons_google-fill.png"
+              alt=""
+              width="10.395999908447266px;"
+              height="19px "
+            />
+            Google
+          </div>
+        </div>
+        <div id="or">Or</div>
+        <div id="continue">Continue with your email account</div>
+        <form
+          action="Registration-Page-Mobile"
+          name="form"
+          id="form"
+          method="form"
+        >
+          <div class="fields" id="fields1">
+            <label for="username">User Name</label>
+            <input
+              type="text"
+              id="username"
+              class="input"
+              placeholder="E.g Faith olu"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <img src="./image1/user.png" alt="image" />
+            <small class="error" id="small1">error message</small>
+          </div>
+          <div class="fields" id="fields2">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              class="input"
+              placeholder="faitholu@gmail.com"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <img src="./image1/mail.png" alt="image" />
+            <small class="error" id="small2">error message</small>
+          </div>
+          <div class="fields" id="fields3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="input"
+              placeholder="password"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <img src="./image1/lock.png" alt="image" />
+            <small class="error" id="small3">error message</small>
+          </div>
+          <div class="fields" id="fields4">
+            <label for="password">Confirm Password</label>
+            <input
+              type="password"
+              id="password2"
+              class="input"
+              placeholder="password"
+            /><i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <img src="./image1/lock.png" alt="image" />
+            <small class="error" id="small4">error message</small>
+          </div>
+          <button id="button">Sign Up</button>
+        </form>
+        <div id="sign-in">Don't have an account? <a href="">SIGN IN</a></div>
+        <div id="by-clicking">
+          By clicking sign up, you agree pharmachain terms and conditions and
+          privacy policy.
+        </div>
+      </div>
+    </div>
+    <script src="reg.js"></script>
+  </body>
+</html>
