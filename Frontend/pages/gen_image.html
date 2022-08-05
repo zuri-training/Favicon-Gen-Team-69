@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="shortcut icon" href=" " type="image/x-icon" />
-    <link rel="stylesheet" href="./css/header&footer.css" />
+    <link rel="stylesheet" href="../css/header&footer.css" />
+    <link rel="stylesheet" href="../css/gen_image.css" />
 </head>
 
 <body>
+
+
     <header>
         <div class="favicon_logo">
-            <img src="./images/favicon.png" alt="Logo" />
+            <img src="../images/favicon.png" alt="Logo" />
         </div>
         <div class="header_links">
             <a href="#">Generator</a>
@@ -26,20 +29,47 @@
             <button type="button" class="regbtn">Register</button>
         </div>
     </header>
-    <main></main>
+    <main>
+        <div class="gen_image1">
+            <h1>Generate your Favicon in Seconds!</h1>
+            <br>
+            <p>
+                Quickly generate your favicon from an image by uploading your image below. </p>
+            <p>Download your favicons in the most up to date formats.
+            </p>
+            <br><br>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <h3 class="converter">Converter</h3>
+                <div class="drag_area">
+                    <span> Drag and drop your file or click here to upload image</span>
+                    <button type="button" class="button">Upload Image</button>
+                    <input type="file" hidden />
+                </div>
+            </div>
+            <br><br>
+            <div class="download_btns">
+                <div> <button type="button" class="regbtn" id="download">Download</button></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div><button type="button" class="loginbtn" id="preview">Preview</button></div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <br><br><br><br><br><br>
+    </main>
     <footer>
         <div class="upperfooter">
             <div class="slogann">
-                <img src="./images/favicon+slogan.png" alt="logo" class="slogan" />
+                <img src="../images/favicon+slogan.png" alt="logo" class="slogan" />
                 <br />
                 <br />
-                <img src="./images/Vector.png" alt="facebook" class="socials">&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="./images/twitter.png" alt="twitter" class="socials" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="./images/gmail icon.png" alt="gmail" class="socials" />
+                <img src="../images/Vector.png" alt="facebook" class="socials" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="../images/twitter.png" alt="twitter" class="socials" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="../images/gmail icon.png" alt="gmail" class="socials" />
             </div>
             <div>
                 <h3>Resources</h3>
-                <br>
+                <br />
                 <p class="reducedfooter">What is a favicon?</p>
 
                 <p class="reducedfooter">How to create a favicon</p>
@@ -70,6 +100,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/gen_image.js"></script> -->
 </body>
 
 </html>
