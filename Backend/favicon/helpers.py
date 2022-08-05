@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 from django.core.files.base import ContentFile
 from django.core.files.uploadedfile import InMemoryUploadedFile
@@ -32,3 +32,15 @@ def generate_favicon(image, sizes, favicon):
     pillow_image = Image.open(image)
     for size in sizes:
         generate_icon(pillow_image, size, favicon)
+
+def text_co_favicon(size, text,color,background_color):
+    
+    img = Image.new("RGBA", (100, 50), background_color,)
+
+    d = ImageDraw.Draw(img)
+
+    fnt = ImageFont.truetype("OpenSans-Bold.ttf", size=size)
+
+    d.text((0, 0), text, font=fnt, fill=color)
+    
+    img.save("icon.ico")
