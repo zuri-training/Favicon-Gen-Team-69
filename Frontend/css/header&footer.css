@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   padding: 0;
@@ -18,7 +18,7 @@ html,
 body,
 p {
   font-size: 16px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 400;
 }
 
@@ -61,7 +61,7 @@ a {
   left: 409px;
   top: 419px;
   cursor: pointer;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -78,7 +78,7 @@ a {
 }
 
 .regbtn {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   cursor: pointer;
   font-style: normal;
   font-weight: 700;
@@ -120,7 +120,6 @@ a {
 
 .favicon_logo {
   max-width: 30%;
-  /* margin-top: 10px; */
 }
 
 .favicon_logo > img {
@@ -147,6 +146,12 @@ footer {
 .upperfooter > div {
   max-width: 25%;
 }
+
+.upperfooter > div > h3,
+.upperfooter > div > p {
+  margin: 1rem auto;
+}
+
 .slogan {
   max-width: 70%;
   margin-right: 50px;
@@ -169,6 +174,131 @@ footer {
 }
 .reducedfooter {
   line-height: 2em;
+}
+
+
+
+@media screen and (max-width: 786px) {
+        footer {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      
+        .upperfooter {
+          background: #ccdfff;
+          display: grid;
+          grid-template-columns: auto auto;
+          justify-content: center;
+          align-items: center;
+          color: #002055;
+        }
+      
+        .upperfooter > div {
+          max-width: 100%;
+          justify-self: center;
+          text-align: left;
+          margin: auto auto;
+        }
+
+        .upperfooter > div:first-child {
+                grid-column: 1 / span 2;
+        }
+      
+        .slogan {
+          display: block;
+          max-width: 3fr;
+          margin: auto auto;
+        }
+      
+        .upperfooter > div:first-child > :nth-child(n+4){
+                justify-self: center;
+                margin: auto 10%;
+        }
+      
+        .lowerfooter {
+          background-color: #0041aa;
+          color: white;
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-content: left;
+          padding: 1em auto;
+          font-size: 12px;
+        }
+      
+        .lowerfooter > div {
+          word-spacing: 0.3em;
+          line-height: 3em;
+          max-width: 100%;
+        }
+      
+        .reducedfooter {
+          line-height: 2em;
+        }
+      }
+      
+
+
+@media screen and (max-width: 480px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .upperfooter {
+    background: #ccdfff;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    color: #002055;
+  }
+
+  .upperfooter > div {
+    max-width: 100%;
+    justify-self: center;
+    text-align: left;
+    margin: auto auto;
+  }
+
+  .upperfooter > div:first-child {
+        grid-column: 1;
+}
+
+  .slogan {
+    display: block;
+    max-width: 3fr;
+    margin: auto auto;
+  }
+  .upperfooter > div:first-child > :nth-child(n+4){
+        justify-self: center;
+        margin: auto auto;
+}
+
+
+  .socials {
+    color: #0041aa;
+    align-self: center;
+  }
+
+  .lowerfooter {
+    background-color: #0041aa;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: left;
+    padding: 1em auto;
+    font-size: 12px;
+  }
+
+  .lowerfooter > div {
+    word-spacing: 0.3em;
+    line-height: 3em;
+    max-width: 100%;
+  }
+
+  .reducedfooter {
+    line-height: 2em;
+  }
 }
 
 /**
