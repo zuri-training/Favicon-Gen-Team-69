@@ -1,4 +1,3 @@
-from email.mime import image
 from django.http import Http404
 from rest_framework import generics, status
 from rest_framework.response import Response
@@ -8,31 +7,33 @@ from favicon.models import Favicon
 from .helpers import generate_favicon
 
 # Create your views here.
+
+
 class FaviconListView(generics.GenericAPIView):
     def get(self, request, format=None):
         favicons = Favicon.objects.all()
-        # for favicon in favicons:
-        #     print(favicon.icon)
         serializer = FaviconSerializer(favicons, many=True)
         return Response(serializer.data)
+
 
 class CreateFaviconView(generics.GenericAPIView):
 
     def post(self, request, format=None):
 
         serializer = FaviconSerializer(data=request.data)
-        favicon_sizes = [ (16,16),  (24,24), (32,32),  (48,48), 'favicon', (128, 128)]
+        favicon_sizes = [(16, 16),  (24, 24), (32, 32),
+                         (48, 48), 'favicon', (128, 128)]
 
         if serializer.is_valid():
             image = request.data.get('image')
+            if image is None:
+                return Response({"details": "image field is required"})
             favicon = serializer.save()
             favicon.title = 'my_title'
-            generate_favicon(image, favicon_sizes, favicon)     
+            generate_favicon(image, favicon_sizes, favicon)
             favicon.save()
-            print(favicon.title)
             return Response(FaviconSerializer(favicon).data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)        
-
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class UpdateFaviconView(generics.GenericAPIView):
