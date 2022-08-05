@@ -2,6 +2,7 @@ asgiref==3.5.2
 attrs==22.1.0
 autobahn==22.7.1
 Automat==20.2.0
+autopep8==1.6.0
 backports.zoneinfo==0.2.1
 boto3==1.24.46
 botocore==1.27.46
@@ -17,9 +18,11 @@ daphne==3.0.2
 decorator==5.1.1
 Django==4.0.6
 django-cloudinary-storage==0.3.0
+django-cors-headers==3.13.0
 django-extensions==3.2.0
 django-rest-knox==4.2.0
 djangorestframework==3.13.1
+djangorestframework-simplejwt==5.2.0
 dynaconf==3.1.9
 hvac==0.11.2
 hyperlink==21.0.0
@@ -33,7 +36,9 @@ MarkupSafe==2.1.1
 Pillow==9.2.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
+pycodestyle==2.9.1
 pycparser==2.21
+PyJWT==2.4.0
 pyOpenSSL==22.0.0
 python-dateutil==2.8.2
 python-decouple==3.6
@@ -45,6 +50,7 @@ service-identity==21.1.0
 shortuuid==1.0.9
 six==1.16.0
 sqlparse==0.4.2
+toml==0.10.2
 Twisted==22.4.0
 txaio==22.2.1
 typing-extensions==4.3.0
