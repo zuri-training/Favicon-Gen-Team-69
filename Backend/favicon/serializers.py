@@ -3,19 +3,21 @@ from pyexpat import model
 from rest_framework import serializers
 from django.contrib.auth.models import User
 
-from favicon.models import Favicon 
+from favicon.models import Favicon, Icon
 from user_control.serializers import UserSerializer
 
-class  FaviconSerializer(serializers.ModelSerializer):
+class  IconSerializer(serializers.ModelSerializer):
     class Meta:
         model = Icon
-        fields = ('id', 'image')
+        fields = '__all__'
 
 
 class FaviconSerializer(serializers.ModelSerializer):
     author_id = serializers.IntegerField(write_only=True)
 
     author = UserSerializer(read_only=True)
+
+    icons = IconSerializer(many=True)
 
     class Meta:
         model = Favicon
