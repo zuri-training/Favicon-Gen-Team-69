@@ -2,17 +2,18 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import login, logout
 from django.contrib.auth.models import User
 
-from rest_framework import generics, permissions
+from rest_framework import generics
 from rest_framework.response import Response
 
 from knox.models import AuthToken
-from .serializers import LoginSerializer, UserSerializer, RegisterSerializer
+from .serializers import LoginSerializer, UpdateUserSerializer, UserSerializer, RegisterSerializer
 
 
 from rest_framework import permissions
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 from knox.views import LogoutView as KnoxLogoutView
@@ -55,3 +56,7 @@ class LogoutAPI(KnoxLogoutView):
         
 
 
+class UpdateUserProfileView(generics.UpdateAPIView ):
+    queryset = User.objects.all()
+    permissions_classes = (IsAuthenticated,)
+    serializer_class = UpdateUserSerializer
