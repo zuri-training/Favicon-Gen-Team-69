@@ -38,7 +38,7 @@ h6 {
 }
 
 
-main {
+/* main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@ main {
     margin: auto;
     height: 100vh;
     color: white;
-}
+} */
 
 .container {
     display: grid;
@@ -71,7 +71,7 @@ main {
 
 .intro {
     text-align: center;
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 700;
     border-radius: 10px;
 }
@@ -176,25 +176,54 @@ main {
     font-weight: 600;
 }
 
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: url("../images/tablet\ signup\ page.png");
+    }
+    
 
-@media screen and (max-width: 700px) {
     .container {
         grid-template-columns: auto;
-        background-image: url("images/bg-intro-mobile.png");
+    }
+
+    .container > div {
+        margin: 2rem auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("../images/mobile\ signup\ page.png");
+    }
+
+    .container {
+        grid-template-columns: auto;
         padding: 2rem 1rem;
+        margin-top: 4rem;
     }
     .container > div {
         text-align: center;
     }
+
+    .welcome {
+        display: none;
+    }
     h2 {
         font-size: 24px;
+        margin: 1rem auto;
     }
+
     .container > div > p {
         margin-bottom: 20px;
     }
     
     .card  button {
         width: 30%;
+    }
+
+    .terms {
+        font-size: 11px;
     }
     
 }
@@ -205,6 +234,10 @@ main {
     }
     .card  button {
         width: 40%;
+    }
+
+    .terms {
+        font-size: 10px;
     }
     
 }
