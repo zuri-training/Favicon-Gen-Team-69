@@ -28,6 +28,20 @@ dragArea.addEventListener("drop", (event) => {
 
     uploadFile();
 });
+// sending data to the backend
+dragArea.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(file)
+        // const formData = new FormData();
+        // formData.append('imgFile', imgFile.files[0]);
+
+    fetch('https://faviconify-rest-api.herokuapp.com/api/favicon_generate/post', {
+            method: "POST",
+            body: uploadFile
+        }).then(res => res.json())
+        .then(data => console.log(data))
+        .catch(console.error);
+})
 
 function uploadFile() {
     let fileType = file.type;
