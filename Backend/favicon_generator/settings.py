@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&gue5r&@8%^0j+qey$a16mzt!+-02svw1=86%_3qj6s*2j8pn(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "faviconify-rest-api.herokuapp.com",
+    "*"
 ]
 
 
