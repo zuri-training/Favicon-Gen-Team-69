@@ -108,7 +108,7 @@ form.addEventListener("submit", (e) => {
         }
         else if (data.user) {
             // console.log("successful")
-            window.location.pathname = "pages/login.html"
+            window.location.pathname = "Favicon-Gen-Team-69/pages/register.html/login.html"
         }
       })
       .catch((error) => console.log(error));
