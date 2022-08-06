@@ -80,7 +80,7 @@ form.addEventListener("submit", (e) => {
   validatePassword(password, cpassword);
   autoValidate(cpassword, password);
 
-  if ((usernameIsValid, passwordIsValid, emailIsValid)) {
+  if (usernameIsValid && passwordIsValid && emailIsValid) {
     userData = {
       username: username.value,
       email: email.value,
@@ -100,14 +100,12 @@ form.addEventListener("submit", (e) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data)
 
         if (data.username) {
             errorField.classList.remove("invisible")
             errorField.innerHTML = data.username[0]
         }
         else if (data.user) {
-            // console.log("successful")
             window.location.pathname = "Favicon-Gen-Team-69/pages/login.html"
         }
       })
