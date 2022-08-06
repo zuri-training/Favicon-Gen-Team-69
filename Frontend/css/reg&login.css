@@ -225,6 +225,11 @@ h6 {
     .terms {
         font-size: 11px;
     }
+
+    #general-error {
+        font-size: 15px;
+    }
+    
     
 }
 
@@ -238,6 +243,10 @@ h6 {
 
     .terms {
         font-size: 10px;
+    }
+
+    #general-error {
+        font-size: 12px;
     }
     
 }
