@@ -1,168 +1,116 @@
-const myForm = document.querySelector("#form");
-const username = document.querySelector("#username");
-const email = document.getElementById("email");
-const password = document.querySelector("#password");
-const password2 = document.querySelector("#password2");
-const button = document.querySelector("#button");
-
+form = document.querySelector("form");
 let usernameIsValid = false;
-let emailIsValid = false;
 let passwordIsValid = false;
+let emailIsValid = false;
 
-myForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  validateInputs();
-});
+let valid = 0;
 
-// function setErrorFor(input, message) {
-//     const fields = input.parentElement;
-//     console.log(fields)
-//     const small  = document.querySelector('small');
-//     console.log(small);
+const addError = (tag) => {
+  errorParagraph = tag.nextElementSibling;
+  tag.classList.add("invalid");
+  errorParagraph.classList.remove("invisible");
+};
 
-//     // add error message inside the small tag
-//     small.innerText = message;
-//     fields.className = 'fields error';
-// }
-// function setSuccessFor(input) {
-//     const fields = input.parentElement;
-//     fields.className = 'fields success';
-// }
+const removeError = (tag) => {
+  errorParagraph = tag.nextElementSibling;
+  tag.classList.remove("invalid");
+  errorParagraph.classList.add("invisible");
+};
 
-function setErrorFor1(input, message) {
-  const fields1 = input.parentElement;
-  const small1 = document.querySelector("#small1");
-
-  // add error message inside the small tag
-  small1.innerText = message;
-  fields1.className = "fields error";
-}
-function setSuccessFor1(input) {
-  const fields1 = input.parentElement;
-  fields1.className = "fields success";
-}
-
-function setErrorFor2(input, message) {
-  const fields2 = input.parentElement;
-  const small2 = document.querySelector("#small2");
-  // add error message inside the small tag
-  small2.innerText = message;
-  fields2.className = "fields error";
-}
-function setSuccessFor2(input) {
-  const fields2 = input.parentElement;
-  fields2.className = "fields success";
-}
-
-function setErrorFor3(input, message) {
-  const fields3 = input.parentElement;
-  const small3 = document.querySelector("#small3");
-
-  // add error message inside the small tag
-  small3.innerText = message;
-  fields3.className = "fields error";
-}
-function setSuccessFor3(input) {
-  const fields3 = input.parentElement;
-  fields3.className = "fields success";
-}
-
-function setErrorFor4(input, message) {
-  const fields4 = input.parentElement;
-  const small4 = document.querySelector("#small4");
-
-  // add error message inside the small tag
-  small4.innerText = message;
-  fields4.className = "fields error";
-}
-function setSuccessFor4(input) {
-  const fields4 = input.parentElement;
-  fields4.className = "fields success";
-}
-
-function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
-  );
-}
-
-function validateInputs() {
-  const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
-
-  if (usernameValue === "") {
-    setErrorFor1(username, "username cannot be blank");
-    usernameIsValid = false;
+const validateLength = (tag) => {
+  if (tag.value.length < 4) {
+    addError(tag);
   } else {
-    setSuccessFor1(username);
-    usernameIsValid = true;
+    if (tag.type === "text") {
+      usernameIsValid = true;
+    }
+    removeError(tag);
   }
+};
 
-  if (emailValue === "") {
-    setErrorFor2(email, "email cannot be blank");
-    emailIsValid = false;
-  } else if (!isEmail(emailValue)) {
-    setErrorFor2(email, "email is not valid"); //'email must contain any of the special charcters and numbers'*/
-    emailIsValid = false;
+const validateEmail = (tag) => {
+  if (!tag.value.includes("@")) {
+    addError(tag);
   } else {
-    setSuccessFor2(email);
+    removeError(tag);
     emailIsValid = true;
   }
+};
 
-  if (passwordValue === "") {
-    setErrorFor3(password, "password cannot be blank");
-  } else if (passwordValue < 8) {
-    setErrorFor3(password, "password is too short");
+const validatePassword = (password, cPassword) => {
+  if (password.value !== cPassword.value || password.value.length < 1) {
+    addError(cPassword);
   } else {
-    setSuccessFor3(password);
-    // return true;
-  }
-
-  if (password2Value === "") {
-    setErrorFor4(password2, "password cannot be blank");
-    passwordIsValid = false;
-  } else if (passwordValue !== password2Value) {
-    setErrorFor4(password2, "password does not match");
-    passwordIsValid = false;
-  } else if (passwordValue < 8) {
-    setErrorFor4(password2, "password is too short");
-    passwordIsValid = false;
-  } else {
-    setSuccessFor4(password2);
+    removeError(cPassword);
     passwordIsValid = true;
   }
+};
 
-  if (usernameIsValid && emailIsValid && passwordIsValid) {
-    postData();
-  }
-}
+const autoValidate = (tag, second = "") => {
+  tag.addEventListener("input", (e) => {
+    if (e.target.type == "email") {
+      validateEmail(e.target);
+      return false;
+    } else if (e.target.name == "cpassword") {
+      validatePassword(second, e.target);
+    } else {
+      validateLength(e.target);
+      return true;
+    }
+  });
+};
 
-function postData() {
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  username = e.target.username;
+  email = e.target.email;
+  password = e.target.password;
+  cpassword = e.target.cpassword;
+
+  errorField = document.querySelector("#general-error")
+  errorField.classList.add("invisible")
+
+  validateLength(username);
+  autoValidate(username);
+  validateEmail(email);
+  autoValidate(email);
+  autoValidate(email);
+  validateLength(password);
+  autoValidate(password);
+  validatePassword(password, cpassword);
+  autoValidate(cpassword, password);
+
+  if ((usernameIsValid, passwordIsValid, emailIsValid)) {
+    userData = {
+      username: username.value,
+      email: email.value,
+      password: password.value,
+    };
+
     const url = "https://faviconify-rest-api.herokuapp.com/api/register";
-  const headers = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Headers": "Accept"
-    },
-    body: JSON.stringify({
-      username: usernameValue,
-      email: emailValue,
-      password: passwordValue,
+
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(userData),
     })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data)
+
+        if (data.username) {
+            errorField.classList.remove("invisible")
+            errorField.innerHTML = data.username[0]
+        }
+        else if (data.user) {
+            // console.log("successful")
+            window.location.pathname = "pages/login.html"
+        }
+      })
+      .catch((error) => console.log(error));
   }
-  console.log(url, headers)
-  fetch(url, headers)
-    .then((response) => {
-        console.log(response)
-      if (!response.ok) {
-        throw Error("ERROR");
-      }
-    console.log(response.json())
-    }).catch((err) => console.log(err))
-}
+});

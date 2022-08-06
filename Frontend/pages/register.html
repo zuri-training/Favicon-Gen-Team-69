@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
+    <link rel="stylesheet" href="register.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -12,106 +13,77 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../css/header&footer.css" />
-    <link rel="stylesheet" href="../css/register.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <div id="vector1">
-      <img src="./image1/Vector1.png" alt="image" />
-    </div>
-    <div id="vector3"><img src="./image1/Vector3.png" alt="image" /></div>
-    <div id="vector13"><img src="./image1/Vector13.png" alt="image" /></div>
-    <div id="vector11">
-      <img src="./image1/Vector11.png" alt="image" />
-    </div>
-    <div id="vector14"><img src="./image1/Vector14.png" alt="image" /></div>
-    <div id="vector12"><img src="./image1/Vector12.png" alt="image" /></div>
-    <div id="main-containier">
-      <div id="left-div">
-        <div id="text1">Welcome To Faviconify</div>
-        <div id="text2">Please enter your personal details to get started</div>
-      </div>
-      <div id="right-div">
-        <div id="account">
-          <span>Create an account with </span>
-          <span id="fav">Faviconify</span>
+    <main>
+      <div class="container">
+        <div>
+          <h2>Welcome to Faviconify</h2>
+          <p>
+            Please enter your personal details to get started
+          </p>
         </div>
-        <div class="logo-div">
-          <div id="facebook">
-            <img
-              src="./image1/gg_facebook.png"
-              width="10.395999908447266px"
-              height="19px;  "
-              alt=""
-            />
-            Facebook
+        <div>
+          <div class="header">
+            <h2 class="intro">
+              <span>Create an account with</span> Faviconify
+            </h2>
+            <h2><span>Or</span></h2>
+            <p>Continue with your email account</p>
           </div>
-          <div id="google">
-            <img
-              src="./image1/akar-icons_google-fill.png"
-              alt=""
-              width="10.395999908447266px;"
-              height="19px "
-            />
-            Google
+          <div class="card">
+              <p class="invisible" id="general-error"></p>
+            <form action="" method="post">
+              <div class="field">
+                <label for="username">Username</label>
+                <i class="fa-regular fa-user "></i>
+                <input name="username" type="text" placeholder="E.g Faith" />
+                <p class="error invisible">username must be at least 4 characters long</p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email </label>
+                <i class="fa-regular fa-envelope"></i>
+                <input name="email" type="email" placeholder="E.g Faith" />
+                <p class="error invisible">This is not an email</p>
+              </div>
+
+              <div class="field">
+                <label for="password">Password</label>
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="Passowrd"
+                />
+                <p class="error invisible">Password must  be at least 8 characters long</p>
+              </div>
+              <div class="field">
+                <label for="cpassword">Confirm Password</label>
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  name="cpassword"
+                  type="password"
+                  placeholder="Enter Password again"
+                />
+                <p class="error invisible">Password must match</p>
+              </div>
+
+              <button type="submit">Sign Up</button>
+              <p class="sign-in">Already have an account <span><a href="pages/login.html">SIGN IN</a></span></p>
+              <p class="terms">
+                By clicking sign up, you agree to the Pharmachain Terms and conditions and privacy policy.
+              </p>
+            </form>
           </div>
-        </div>
-        <div id="or">Or</div>
-        <div id="continue">Continue with your email account</div>
-        <form id="form">
-          <div class="fields" id="fields1">
-            <label for="username">User Name</label>
-            <input
-              type="text"
-              id="username"
-              class="input"
-              placeholder="E.g Faith olu"
-            />
-            <i class="fa-regular fa-user "></i>
-            <small class="error" id="small1">error message</small>
-          </div>
-          <div class="fields" id="fields2">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              class="input"
-              placeholder="faitholu@gmail.com"
-            />
-            <i class="fa-regular fa-envelope"></i>
-            <small class="error" id="small2">error message</small>
-          </div>
-          <div class="fields" id="fields3">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              class="input"
-              placeholder="password"
-            />
-            <i class="fa-solid fa-lock"></i>
-            <small class="error" id="small3">error message</small>
-          </div>
-          <div class="fields" id="fields4">
-            <label for="password">Confirm Password</label>
-            <input
-              type="password"
-              id="password2"
-              class="input"
-              placeholder="password"
-            />
-            <i class="fa-solid fa-lock"></i>
-            <small class="error" id="small4">error message</small>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="sign-in">Don't have an account? <a href="">SIGN IN</a></div>
-        <div id="by-clicking">
-          By clicking sign up, you agree pharmachain terms and conditions and
-          privacy policy.
         </div>
       </div>
-    </div>
-    <script src="../js/register.js"></script>
+    </main>
+    <script src="register.js"></script>
   </body>
 </html>
