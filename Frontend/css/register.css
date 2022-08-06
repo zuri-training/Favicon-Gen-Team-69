@@ -259,6 +259,7 @@ body {
 }
 
 .fields input {
+    padding: 20px;
     border: 2px solid #CCDFFF;
     width: 100%;
     height: 33px;
@@ -268,19 +269,18 @@ body {
 }
 
 .fields input[placeholder] {
-    padding-left: 30px;
-    font-size: 11px;
+    padding-left: 10%;
     color: #757678;
 
 }
 
-.fields img {
-    height: 16px;
-    width: 12px;
-    left: 8px;
-    top: 30px;
+.fields i {
+    left: 2%;
+    top: 37px;
+    font-size: 26px;
     border-radius: 0px;
     position: absolute;
+    color:#838487;
 }
 
 .fields small {
@@ -308,10 +308,8 @@ button {
     width: 100px;
     left: 50.5px;
     top: 13px;
-    border-radius: nullpx, 3px;
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 500;
+    border-radius: 10px;
+    font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.0005em;
     text-align: center;
@@ -334,8 +332,8 @@ button {
     top: 874px;
     border-radius: nullpx;
     font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 30px;
     letter-spacing: 0.0005em;
     text-align: center;

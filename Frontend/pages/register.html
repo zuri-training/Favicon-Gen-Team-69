@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
-    <link rel="stylesheet" href="reg.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/header&footer.css" />
+    <link rel="stylesheet" href="../css/register.css" />
   </head>
   <body>
     <div id="vector1">
@@ -50,12 +58,7 @@
         </div>
         <div id="or">Or</div>
         <div id="continue">Continue with your email account</div>
-        <form
-          action="Registration-Page-Mobile"
-          name="form"
-          id="form"
-          method="form"
-        >
+        <form id="form">
           <div class="fields" id="fields1">
             <label for="username">User Name</label>
             <input
@@ -64,9 +67,7 @@
               class="input"
               placeholder="E.g Faith olu"
             />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <img src="./image1/user.png" alt="image" />
+            <i class="fa-regular fa-user "></i>
             <small class="error" id="small1">error message</small>
           </div>
           <div class="fields" id="fields2">
@@ -77,9 +78,7 @@
               class="input"
               placeholder="faitholu@gmail.com"
             />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <img src="./image1/mail.png" alt="image" />
+            <i class="fa-regular fa-envelope"></i>
             <small class="error" id="small2">error message</small>
           </div>
           <div class="fields" id="fields3">
@@ -90,9 +89,7 @@
               class="input"
               placeholder="password"
             />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <img src="./image1/lock.png" alt="image" />
+            <i class="fa-solid fa-lock"></i>
             <small class="error" id="small3">error message</small>
           </div>
           <div class="fields" id="fields4">
@@ -102,12 +99,11 @@
               id="password2"
               class="input"
               placeholder="password"
-            /><i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <img src="./image1/lock.png" alt="image" />
+            />
+            <i class="fa-solid fa-lock"></i>
             <small class="error" id="small4">error message</small>
           </div>
-          <button id="button">Sign Up</button>
+          <button type="submit">Sign Up</button>
         </form>
         <div id="sign-in">Don't have an account? <a href="">SIGN IN</a></div>
         <div id="by-clicking">
@@ -116,6 +112,6 @@
         </div>
       </div>
     </div>
-    <script src="reg.js"></script>
+    <script src="../js/register.js"></script>
   </body>
 </html>
