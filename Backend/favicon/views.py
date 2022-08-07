@@ -2,21 +2,29 @@ from django.http import Http404
 from rest_framework import generics, status
 from rest_framework.response import Response
 from favicon.serializers import FaviconSerializer
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 from favicon.models import Favicon
 from .helpers import generate_favicon
 
+
 # Create your views here.
 
 
-class FaviconListView(generics.GenericAPIView):
+class FaviconListView(LoginRequiredMixin, generics.GenericAPIView):
+    login_url = '/api/login'
+    redirect_field_name = 'login'
+
     def get(self, request, format=None):
         favicons = Favicon.objects.all()
         serializer = FaviconSerializer(favicons, many=True)
         return Response(serializer.data)
 
 
-class CreateFaviconView(generics.GenericAPIView):
+class CreateFaviconView(LoginRequiredMixin, generics.GenericAPIView):
+    login_url = '/api/login'
+    redirect_field_name = 'login'
 
     def post(self, request, format=None):
 
@@ -36,7 +44,10 @@ class CreateFaviconView(generics.GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UpdateFaviconView(generics.GenericAPIView):
+class UpdateFaviconView(LoginRequiredMixin, generics.GenericAPIView):
+    login_url = '/api/login'
+    redirect_field_name = 'login'
+
     queryset = Favicon.objects.all()
     serializer_class = FaviconSerializer
 
