@@ -14,6 +14,10 @@ const font_size_empty = document.getElementById('font-size-empty')
 // const font_size_empty_span = document.getElementById('font-size-empty-span')
 
 
+//for modal
+const modal=document.getElementById('modalpopup')
+
+
 getData();
 
 async function getData(){
@@ -144,5 +148,18 @@ previewbtn.addEventListener('click', (e) => {
         font_size_empty.innerText =''
      }
    
+    //  modal.classList.add("open-popup")
+    console.log(font_size_message.length)
+    console.log(text_message.length)
 
+    if(font_size_message.length==0 && text_message.length ==0){
+        modal.classList.add("open-popup")
+    }
+
+   
 });
+
+
+function closepopup(){
+    modal.classList.remove("open-popup")
+}
