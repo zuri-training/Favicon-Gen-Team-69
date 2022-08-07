@@ -91,7 +91,8 @@ h6 {
     text-align: start;
 }
 .field {
-    margin: 20px 0;
+    display: block;
+    margin: auto auto;
 }
 .field label {
     display: block;
@@ -111,7 +112,6 @@ h6 {
 .field  input {
     display: inline;
     width: 80%;
-    justify-self: center;
     border-radius: 3px;
     padding: 10pt 35pt;
     border: 1px solid #002055;
