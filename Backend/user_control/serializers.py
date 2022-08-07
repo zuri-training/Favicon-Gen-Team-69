@@ -1,27 +1,30 @@
-from dataclasses import field
-import email
-from pyexpat import model
 from rest_framework import serializers
 from django.contrib.auth import authenticate
-from django.contrib.auth.models import User
+from .models import CustomUser
 
 # User Serializer
+
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = CustomUser
         fields = ('id', 'username', 'email')
 
 # Register Serializer
+
+
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ('id','username', 'email', 'password')
+        model = CustomUser
+        fields = ('id', 'username', 'email', 'password', 'phone')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        user = User.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
-        
-        return user 
+        user = self.model.create_user(
+            validated_data['username'], validated_data['email'], validated_data['password'])
+
+        return user
+
 
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
@@ -34,42 +37,46 @@ class LoginSerializer(serializers.Serializer):
         raise serializers.ValidationError('Incorrect Credentials Passed.')
 
 # Update Users informatiion
+
+
 class UpdateUserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(required=True)
 
     class Meta:
-        model = User
+        model = CustomUser
         fields = ('username', 'first_name', 'last_name', 'email')
         extra_kwargs = {
             'first_name': {'required': True},
             'last_name': {'required': True}
         }
-    
+
     def validate_email(self, value):
         user = self.context['request'].user
-        if User.objects.exclude(pk=user.pk).filter(email=value).exists():
-            raise serializers.ValidationError({'email': 'This email already exists.'})
-        return value    
+        if CustomUser.objects.exclude(pk=user.pk).filter(email=value).exists():
+            raise serializers.ValidationError(
+                {'email': 'This email already exists.'})
+        return value
 
-    # 
+    #
     def validate_username(self, value):
         user = self.context['request'].user
-        if User.objects.exclude(pk=user.pk).filter(username=value).exists():
-            raise serializers.ValidationError({'username': 'This username already exists.'})
-        return value    
+        if CustomUser.objects.exclude(pk=user.pk).filter(username=value).exists():
+            raise serializers.ValidationError(
+                {'username': 'This username already exists.'})
+        return value
 
     def update(self, instance, validated_data):
         user = self.context['request'].user
 
         # makes sure the user logged in is same as the user updating the profile
         if user.pk != instance.pk:
-            raise serializers.ValidationError({'authorize': 'you dont have permission to perform this function.'})
+            raise serializers.ValidationError(
+                {'authorize': 'you dont have permission to perform this function.'})
 
-
-        instance.first_name = validated_data['first_name'] 
-        instance.last_name = validated_data['last_name'] 
-        instance.username = validated_data['username'] 
-        instance.email = validated_data['email'] 
+        instance.first_name = validated_data['first_name']
+        instance.last_name = validated_data['last_name']
+        instance.username = validated_data['username']
+        instance.email = validated_data['email']
 
         instance.save()
 

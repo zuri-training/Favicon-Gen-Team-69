@@ -4,6 +4,8 @@ from django.core.files.base import ContentFile
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from .models import Icon
 
+import requests
+
 
 def generate_icon(image, size, favicon):
     if size == "favicon":
@@ -33,14 +35,28 @@ def generate_favicon(image, sizes, favicon):
     for size in sizes:
         generate_icon(pillow_image, size, favicon)
 
-def text_co_favicon(size, text,color,background_color):
+
+def text_to_image(text_data):
     
-    img = Image.new("RGBA", (100, 50), background_color,)
-
-    d = ImageDraw.Draw(img)
-
-    fnt = ImageFont.truetype("OpenSans-Bold.ttf", size=size)
-
-    d.text((0, 0), text, font=fnt, fill=color)
+    img_width = len(text_data["text"]) * int(text_data["font_size"] / 2)
+    img_height = text_data["font_size"] + 10
     
-    img.save("icon.ico")
+    new_img = Image.new("RGB", (img_width, img_height), text_data["background_color"],)
+
+    drawable_img = ImageDraw.Draw(new_img)
+    
+    font_file = requests.get(text_data["url"])
+
+    file_image = ContentFile(font_file.content)
+
+    font_ttf = ImageFont.truetype(file_image, size=text_data["font_size"])
+
+    drawable_img.text((img_width / len(text_data["text"]), img_height / text_data["font_size"]), text_data["text"], font=font_ttf, fill=text_data["text_color"])
+    
+    blob = BytesIO()
+    
+    new_img.save(fp=blob, format="PNG")
+    
+    text_image = ContentFile(blob.getvalue())
+    
+    return text_image
