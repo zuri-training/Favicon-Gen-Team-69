@@ -1,9 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
-    max-width: 100%;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+html {
+  overflow-x: auto;
+}
+
+body {
+  overflow: hidden;
 }
 
 html,
@@ -32,7 +43,8 @@ header {
   border-bottom: 1px solid #757678;
 }
 
-.header_links, a {
+.header_links,
+a {
   word-spacing: 20px;
   text-align: center;
   text-decoration: none;
@@ -40,8 +52,9 @@ header {
   color: #002055;
   font-size: 16px;
   max-width: 100%;
-  -webkit-animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) .5s both;
-	animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) .5s both;
+  -webkit-animation: slide-in-blurred-bottom 1s cubic-bezier(0.23, 1, 0.32, 1)
+    0.5s both;
+  animation: slide-in-blurred-bottom 1s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both;
 }
 
 .loginbtn {
@@ -62,8 +75,9 @@ header {
   border-radius: 5px;
   border: 1px solid #0041aa;
   margin-right: 25px;
-  -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
-  animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
+  -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    1s both;
+  animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s both;
 }
 
 .regbtn {
@@ -84,36 +98,41 @@ header {
   height: 44px;
   left: 409px;
   top: 419px;
-  -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
-  animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
+  -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    1.2s both;
+  animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s
+    both;
 }
 
 .loginbtn:hover {
-  background-color: #80B0FF;
+  background-color: #80b0ff;
   border: none;
   color: white;
   transition-delay: 0.1s;
-
 }
 
 .regbtn:hover {
-  background: #80B0FF;
+  background: #80b0ff;
   color: white;
   transition-delay: 0.1s;
 }
 
 .regbtn:active {
-    background-color: #0061FF;
+
+
+
+  background-color: #0061ff;
 }
 
 .favicon_logo {
-    width: 12%;
-    /* margin-top: 10px; */
+  max-width: 30%;
+
 }
 
 .favicon_logo > img {
   -webkit-animation: bounce-in-bck 1.1s both;
   animation: bounce-in-bck 1.1s both;
+  max-width: 50%;
 }
 
 /* FOOTER */
@@ -124,7 +143,7 @@ footer {
 }
 
 .upperfooter {
-  background: #CCDFFF;
+  background: #ccdfff;
   display: flex;
   padding: 2em;
   justify-content: space-around;
@@ -134,7 +153,13 @@ footer {
 .upperfooter > div {
   max-width: 25%;
 }
-.slogan{
+
+.upperfooter > div > h3,
+.upperfooter > div > p {
+  margin: 1rem auto;
+}
+
+.slogan {
   max-width: 70%;
   margin-right: 50px;
   text-align: center;
@@ -147,16 +172,145 @@ footer {
 }
 
 .lowerfooter {
-    background-color: #0041aa;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 4em 1em 4em;
-    font-size: 12px;
+
+
+  background-color: #0041aa;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 4em 1em 4em;
+  font-size: 12px;
+}
+.reducedfooter {
+  line-height: 2em;
+
 }
 
 .reducedfooter {
     line-height: 2em;
+}
+
+@media screen and (max-width: 786px) {
+        footer {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      
+        .upperfooter {
+          background: #ccdfff;
+          display: grid;
+          grid-template-columns: auto auto;
+          justify-content: center;
+          align-items: center;
+          color: #002055;
+        }
+      
+        .upperfooter > div {
+          max-width: 100%;
+          justify-self: center;
+          text-align: left;
+          margin: auto auto;
+        }
+
+        .upperfooter > div:first-child {
+                grid-column: 1 / span 2;
+        }
+      
+        .slogan {
+          display: block;
+          max-width: 3fr;
+          margin: auto auto;
+        }
+      
+        .upperfooter > div:first-child > :nth-child(n+4){
+                justify-self: center;
+                margin: auto 10%;
+        }
+      
+        .lowerfooter {
+          background-color: #0041aa;
+          color: white;
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-content: left;
+          padding: 1em auto;
+          font-size: 12px;
+        }
+      
+        .lowerfooter > div {
+          word-spacing: 0.3em;
+          line-height: 3em;
+          max-width: 100%;
+        }
+      
+        .reducedfooter {
+          line-height: 2em;
+        }
+      }
+      
+
+
+@media screen and (max-width: 480px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .upperfooter {
+    background: #ccdfff;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    color: #002055;
+  }
+
+  .upperfooter > div {
+    max-width: 100%;
+    justify-self: center;
+    text-align: left;
+    margin: auto auto;
+  }
+
+  .upperfooter > div:first-child {
+        grid-column: 1;
+}
+
+  .slogan {
+    display: block;
+    max-width: 3fr;
+    margin: auto auto;
+  }
+  .upperfooter > div:first-child > :nth-child(n+4){
+        justify-self: center;
+        margin: auto auto;
+}
+
+
+  .socials {
+    color: #0041aa;
+    align-self: center;
+  }
+
+  .lowerfooter {
+    background-color: #0041aa;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: left;
+    padding: 1em auto;
+    font-size: 12px;
+  }
+
+  .lowerfooter > div {
+    word-spacing: 0.3em;
+    line-height: 3em;
+    max-width: 100%;
+  }
+
+  .reducedfooter {
+    line-height: 2em;
+  }
 }
 
 /**
@@ -176,111 +330,110 @@ footer {
  * animation bounce-in-bck
  * ----------------------------------------
  */
- @-webkit-keyframes bounce-in-bck {
+@-webkit-keyframes bounce-in-bck {
   0% {
     -webkit-transform: scale(7);
-            transform: scale(7);
+    transform: scale(7);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
   38% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     opacity: 1;
   }
   55% {
     -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   72% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   81% {
     -webkit-transform: scale(1.24);
-            transform: scale(1.24);
+    transform: scale(1.24);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   89% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   95% {
     -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+    transform: scale(1.04);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 @keyframes bounce-in-bck {
   0% {
     -webkit-transform: scale(7);
-            transform: scale(7);
+    transform: scale(7);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
   38% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     opacity: 1;
   }
   55% {
     -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   72% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   81% {
     -webkit-transform: scale(1.24);
-            transform: scale(1.24);
+    transform: scale(1.24);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   89% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   95% {
     -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+    transform: scale(1.04);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
-
 
 /* ----------------------------------------------
  * Generated by Animista on 2022-8-4 14:57:10
@@ -294,47 +447,46 @@ footer {
  * animation slide-in-blurred-bottom
  * ----------------------------------------
  */
- @-webkit-keyframes slide-in-blurred-bottom {
+@-webkit-keyframes slide-in-blurred-bottom {
   0% {
     -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
     -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     -webkit-filter: blur(40px);
-            filter: blur(40px);
+    filter: blur(40px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-            transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     -webkit-filter: blur(0);
-            filter: blur(0);
+    filter: blur(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-blurred-bottom {
   0% {
     -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
     -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     -webkit-filter: blur(40px);
-            filter: blur(40px);
+    filter: blur(40px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-            transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     -webkit-filter: blur(0);
-            filter: blur(0);
+    filter: blur(0);
     opacity: 1;
   }
 }
-
 
 /* ----------------------------------------------
  * Generated by Animista on 2022-8-4 15:0:40
@@ -348,35 +500,35 @@ footer {
  * animation swing-in-top-fwd
  * ----------------------------------------
  */
- @-webkit-keyframes swing-in-top-fwd {
+@-webkit-keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 0;
   }
   100% {
     -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 1;
   }
 }
 @keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 0;
   }
   100% {
     -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 1;
   }
 }

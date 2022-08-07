@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="../css/reg&login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="welcome">
+          <h2>Welcome to Faviconify</h2>
+          <p>
+            Please enter your personal details to get started
+          </p>
+        </div>
+        <div>
+          <div class="header">
+            <h2 class="intro">
+              <span>Create an account with</span> Faviconify
+            </h2>
+            <h2><span>Or</span></h2>
+            <p>Continue with your email account</p>
+          </div>
+          <div class="card">
+              <p class="invisible" id="general-error"></p>
+            <form action="" method="post">
+              <div class="field">
+                <label for="username">Username</label>
+                <i class="fa-regular fa-user "></i>
+                <input name="username" type="text" placeholder="E.g faith" />
+                <p class="error invisible">username must be at least 4 characters long</p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email </label>
+                <i class="fa-regular fa-envelope"></i>
+                <input name="email" type="email" placeholder="E.g faith@gmail.com" />
+                <p class="error invisible">This is not an email</p>
+              </div>
+
+              <div class="field">
+                <label for="password">Password</label>
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                />
+                <p class="error invisible">Password must  be at least 8 characters long</p>
+              </div>
+              <div class="field">
+                <label for="cpassword">Confirm Password</label>
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  name="cpassword"
+                  type="password"
+                  placeholder="Enter Password again"
+                />
+                <p class="error invisible">Password must match</p>
+              </div>
+
+              <button type="submit">Sign Up</button>
+              <p class="sign-in">Already have an account <span><a href="login.html">SIGN IN</a></span></p>
+              <p class="terms">
+                By clicking sign up, you agree to the Faviconify Terms and conditions and privacy policy.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/register.js"></script>
+  </body>
+</html>
