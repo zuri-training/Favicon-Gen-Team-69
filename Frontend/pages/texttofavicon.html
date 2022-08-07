@@ -40,27 +40,23 @@
                 <h3>Generate From Text</h3>
             </div>
             <div class="bottom">
-                <form name="texttofavicon" method="post" action="#">
+                <form name="submit-form" method="post" action="" id="submit-form">
                     <section>
-                        <div style="float:left;margin-right:20px;">
+                        <div style="float:left;margin-right:20px;" >
                             <label for="text-input">Text</label>
                             <input id="text-input" type="text" value="" name="text-input" placeholder="Friends">
+                          
+                            <p style="color: red;" id="text-empty"></p>
                         </div>
-                        <div style="float:left;margin-right:20px;">
+                        <div style="float:left;margin-right:20px;" >
                             <label for="font-size">Font Size</label>
-                            <input id="Font Size" type="text" value="" name="font-size" placeholder="50px">
-                            <!-- <select name="font-size" id="font-size">
-                                <option value="50px"> 50px </option>
-                                <option value="50px"> 50px </option>
-                                <option value="50px"> 50px </option>
-                                <option value="50px"> 50px </option>
-                            </select> -->
-
+                            <input id="font-size" type="number" value="" name="font-size" placeholder="14">
+                            <p id="font-size-empty" style="color: red;""> </span></p>
                         </div>
                         <div style="float:left;margin-right:20px;">
                             <label for="font-style">Font Style</label>
                             <select onchange="getSelect()" name="font-style" id="font-style">
-                                <option value="Default"> Select </option>
+                                <option value="Default"> Default </option>
                                 
                             </select>
                         </div>
@@ -68,9 +64,9 @@
                         <br style="clear:both;" />
 
                         <div style="float:left;margin-right:20px;">
-                            <label for="text-input">Text Color</label>
+                            <label for="text-color">Text Color</label>
                             <input type="color" id="ftextcolor" name="textcolor" value="#ff0000">
-                            <!-- <input id="text-input" type="text" value="" name="text-input"> -->
+                            
                         </div>
                         <div style="float:left;margin-right:20px;">
                             <label for="font-size">Background Color</label>
@@ -84,14 +80,15 @@
                             <!-- <input id="Font Style" type="text" value="" name="font-style"> -->
                         </div>
                     </section>
+                    
                 </form>
 
             </div>
         </section>
         <section class="bottom-buttons">
             <div class="header_btns">
-                <button type="button" class="downloadbtn">Download</button>
-                <button type="button" class="previewbtn">Preview</button>
+                <button form="submit-form" type="button" class="downloadbtn" id="downloadbtn">Download</button>
+                <button form="submit-form" type="submit" class="previewbtn" id="previewbtn">Preview</button>
                 
             </div>
         </section>

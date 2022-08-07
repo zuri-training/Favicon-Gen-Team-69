@@ -84,7 +84,7 @@ input, label {
     
 }
 
-input[type=text]{
+input[type=text],input[type=number]{
     padding: .3rem 0;
 }
 select{
