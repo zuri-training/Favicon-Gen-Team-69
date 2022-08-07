@@ -291,7 +291,7 @@ main form label {
 .preview-modal .container .display {
     background: #CCDFFF;
     padding: 2rem;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
     border-radius: 10px;
 }
 
@@ -333,9 +333,10 @@ main form label {
     display: flex;
     flex-direction: column;
     /* border: 2px solid green; */
-    width: 60%;
+    width: 80%;
     /* border: .7px solid black; */
     background-color: rgb(214, 212, 212);
+    /* border: 2px solid red; */
 }
 
 .preview-modal .container .display .image .top {
@@ -430,6 +431,7 @@ main form label {
     width: 100%;
     background-color: #ffffff;
     height: .5em;
+    /* border: 2px solid gold; */
 
 }
 
@@ -450,6 +452,8 @@ main form label {
     /* border: 2px solid blue; */
     padding: .3em;
     background-color: #ffffff;
+    /* border: 2px solid yellow; */
+    width: 100%;
 }
 
 .preview-modal .container .display .image .bottom .seg4-dark {
@@ -682,7 +686,18 @@ h4 {
     .preview-modal {
         width: 100%;
     }
+    /* .preview-modal .container .display .image .top .seg2,.seg1,.seg3
+    {
+        
+        width: 100%;
+    }
 
+    .preview-modal .container .display .image .bottom .seg4{
+        border: 2px solid red;
+       
+    } */
+   
+  
 
 
 }
