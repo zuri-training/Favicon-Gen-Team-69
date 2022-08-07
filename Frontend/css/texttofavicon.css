@@ -1,0 +1,225 @@
+main .head-text h2,h4{
+/* align-items: center;
+margin: 0 auto; */
+/* padding-left: 200px; */
+/* color: white; */
+text-align: center;
+}
+
+main .head-text h2{
+    color: #2B7BFF;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 27px;
+line-height: 112%;
+
+letter-spacing: 0.0005em;
+
+}
+main .head-text h4{
+    color: #002055;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 33px;
+letter-spacing: 0.0005em;
+}
+
+.text-generate-container{
+    width: 80%;
+    /* border: 2px solid red; */
+    margin: 0 auto;
+    box-shadow: 2px 10px 18px rgba(205, 218, 240, 0.79);
+    margin-bottom: 5rem;
+}
+/* .text-generate-container .top{
+border: 2px solid yellow;
+
+
+} */
+.text-generate-container .top h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 112%;
+    letter-spacing: 0.0005em;
+    color: #2B7BFF;
+    padding: 2rem;
+}
+.text-generate-container .bottom{
+    /* border: 2px solid green; */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    padding: 2rem;  
+    
+   
+    
+}
+/* input */
+form{
+    /* border: 2px solid blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+form div{
+    /* border: 2px solid brown; */
+    padding: 2rem;
+    /* border: 2px solid red; */
+    
+}
+input, label {
+    display:block;
+    
+}
+
+input[type=text]{
+    padding: .3rem 0;
+}
+select{
+    padding: .5rem 0;
+}
+input,select{
+  
+  background-color: #ffffff;
+  width: 230px;
+  margin: 1rem auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  border: 1px solid #3D89F5;
+  box-sizing: border-box;
+  border-radius: 2px;  
+
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.5px;
+  line-height: 30px;
+  letter-spacing: 0.0005em;
+    color: #757678;
+    /* border: 2px solid yellow; */
+    
+  
+
+}
+main  form label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.0005em;
+    color: #002055;
+}
+
+
+.bottom-buttons{
+    /* border: 2px solid red ; */
+    margin-bottom: 5rem;
+}
+.header_btns{
+    /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.downloadbtn {
+    margin-right:2rem ;
+    font-family: "Poppins";
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0005em;
+    color: white;
+    background: #0041aa;
+    border-radius: 7px;
+    padding: 10px;
+    gap: 10px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    left: 409px;
+    top: 419px;
+    -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
+    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
+  }
+  .previewbtn {
+    margin-left:2rem ;
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    left: 409px;
+    top: 419px;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0005em;
+    color: #0041aa;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #0041aa;
+    margin-right: 25px;
+    -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
+    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
+  }
+
+  .previewbtn:hover {
+    background-color: #80B0FF;
+    border: none;
+    color: white;
+    transition-delay: 0.1s;
+  
+  }
+  
+  .downloadbtn:hover {
+    background: #80B0FF;
+    color: white;
+    transition-delay: 0.1s;
+  
+  }
+  
+  .downloadbtn:active {
+    background-color: #0061FF;
+  }
+
+
+@media (max-width: 500px) {
+    input,select{
+        width: 400px;
+    }
+    .header_btns{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        
+    }
+    .previewbtn,.downloadbtn{
+        /* display: flex;
+        flex-direction: row;
+        justify-content: center; */
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+   
+
+
+}
