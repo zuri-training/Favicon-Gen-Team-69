@@ -1,15 +1,24 @@
-from django.http import Http404
+from math import radians
+from django.http import Http404, FileResponse
 from rest_framework import generics, status
 from rest_framework.response import Response
-from favicon.serializers import FaviconSerializer
+from .serializers import FaviconSerializer, TextPreviewSerializer
+from rest_framework.permissions import IsAuthenticated
+from knox.auth import TokenAuthentication
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 from favicon.models import Favicon
-from .helpers import generate_favicon
+from .helpers import generate_favicon, text_to_image
+
 
 # Create your views here.
 
 
-class FaviconListView(generics.GenericAPIView):
+class FaviconListView(LoginRequiredMixin, generics.GenericAPIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)  
+
     def get(self, request, format=None):
         favicons = Favicon.objects.all()
         serializer = FaviconSerializer(favicons, many=True)
@@ -17,6 +26,8 @@ class FaviconListView(generics.GenericAPIView):
 
 
 class CreateFaviconView(generics.GenericAPIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
     def post(self, request, format=None):
 
@@ -37,6 +48,9 @@ class CreateFaviconView(generics.GenericAPIView):
 
 
 class UpdateFaviconView(generics.GenericAPIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
+
     queryset = Favicon.objects.all()
     serializer_class = FaviconSerializer
 
@@ -63,3 +77,20 @@ class UpdateFaviconView(generics.GenericAPIView):
         favicon = self.get_object(pk)
         favicon.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class TextFaviPreview(generics.GenericAPIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
+    serializer_class = TextPreviewSerializer
+
+    def post(self, request):
+        serializer = TextPreviewSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        text_data = serializer.validated_data
+        text_data["background_color"] =  tuple(text_data["background_color"])
+        text_data["text_color"] =  tuple(text_data["text_color"])
+
+        txt_img = text_to_image(text_data)
+        print(txt_img)
+        return FileResponse(txt_img)
+        

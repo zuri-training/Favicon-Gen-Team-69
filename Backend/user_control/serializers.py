@@ -1,6 +1,7 @@
 from dataclasses import field
 import email
 from pyexpat import model
+from requests import Response
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 from .models import CustomUser
@@ -28,10 +29,18 @@ class LoginSerializer(serializers.Serializer):
     password = serializers.CharField()
 
     def validate(self, data):
+        print(data)
+        if not CustomUser.objects.filter(username=data).exists():
+            return Response('username not correct')
+        
         user = authenticate(**data)
         if user and user.is_active:
-            return user
+                return user
+            # else:
+            #     return Response('Username does not exists')
+                # raise serializers.ValidationError('Username does not exists') 
         raise serializers.ValidationError('Incorrect Credentials Passed.')
+    
 
 # Update Users informatiion
 class UpdateUserSerializer(serializers.ModelSerializer):
@@ -47,7 +56,7 @@ class UpdateUserSerializer(serializers.ModelSerializer):
     
     def validate_email(self, value):
         user = self.context['request'].user
-        if User.objects.exclude(pk=user.pk).filter(email=value).exists():
+        if CustomUser.objects.exclude(pk=user.pk).filter(email=value).exists():
             raise serializers.ValidationError({'email': 'This email already exists.'})
         return value    
 

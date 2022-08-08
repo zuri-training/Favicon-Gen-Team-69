@@ -9,6 +9,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 
 from knox.models import AuthToken
+from knox.auth import TokenAuthentication
 from .serializers import LoginSerializer, UpdateUserSerializer, UserSerializer, RegisterSerializer
 
 
@@ -47,6 +48,7 @@ class LoginAPI(KnoxLoginView):
         
         return super(LoginAPI, self).post(request, format=None)
     
+    
 class LogoutAPI(KnoxLogoutView):
     permission_classes = ()
 
@@ -64,3 +66,4 @@ class UpdateUserProfileView(LoginRequiredMixin, generics.UpdateAPIView ):
     queryset = CustomUser.objects.all()
     permissions_classes = (IsAuthenticated,)
     serializer_class = UpdateUserSerializer
+    authentication_classes = (TokenAuthentication,)
