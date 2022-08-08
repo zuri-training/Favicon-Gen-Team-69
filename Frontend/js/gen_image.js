@@ -77,7 +77,7 @@ document.getElementById("form").addEventListener("submit", (event) => {
   req.open("POST", url);
   req.onload  = () => {
     const response = req.response;
-    data = JSON.parse(response)
+    const data = JSON.parse(response)
    console.log(data)
  };
  
