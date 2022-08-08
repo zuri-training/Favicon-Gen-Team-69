@@ -58,5 +58,8 @@ def text_to_image(text_data):
     new_img.save(fp=blob, format="PNG")
     
     text_image = ContentFile(blob.getvalue())
+
+    image_file = InMemoryUploadedFile(
+        text_image, None, 'foo.png', 'image/png', text_image.tell, None)    
     
-    return text_image
+    return image_file

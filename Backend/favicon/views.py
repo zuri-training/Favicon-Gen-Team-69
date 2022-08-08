@@ -1,5 +1,5 @@
 from math import radians
-from django.http import Http404
+from django.http import Http404, FileResponse
 from rest_framework import generics, status
 from rest_framework.response import Response
 from .serializers import FaviconSerializer, TextPreviewSerializer
@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 from favicon.models import Favicon
-from .helpers import generate_favicon
+from .helpers import generate_favicon, text_to_image
 
 
 # Create your views here.
@@ -79,11 +79,18 @@ class UpdateFaviconView(generics.GenericAPIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class TextFaviPreview(generics.GenericAPIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
     serializer_class = TextPreviewSerializer
 
     def post(self, request):
         serializer = TextPreviewSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         text_data = serializer.validated_data
-        print(text_data)
-        return Response('OK')
+        text_data["background_color"] =  tuple(text_data["background_color"])
+        text_data["text_color"] =  tuple(text_data["text_color"])
+
+        txt_img = text_to_image(text_data)
+        print(txt_img)
+        return FileResponse(txt_img)
+        
