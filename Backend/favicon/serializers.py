@@ -20,13 +20,15 @@ class FaviconSerializer(serializers.ModelSerializer):
     class Meta:
         model = Favicon
         fields ='__all__'
- 
-    # def upload(self, validated_data):
-    #     # image_data = self.context.get('view').request.FILES 
-    #     favicon = favicon.object.upload(
-    #     validated_data['image'])
 
-    #     return favicon
+class TextPreviewSerializer(serializers.Serializer):
+    text = serializers.CharField(max_length=50)
+    font_size = serializers.IntegerField()
+    text_color = serializers.ListField()
+    background_color = serializers.ListField()
+    url = serializers.URLField()
+
+ 
 
         
         

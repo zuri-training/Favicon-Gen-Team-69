@@ -1,7 +1,10 @@
+from math import radians
 from django.http import Http404
 from rest_framework import generics, status
 from rest_framework.response import Response
-from favicon.serializers import FaviconSerializer
+from .serializers import FaviconSerializer, TextPreviewSerializer
+from rest_framework.permissions import IsAuthenticated
+from knox.auth import TokenAuthentication
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -13,8 +16,8 @@ from .helpers import generate_favicon
 
 
 class FaviconListView(LoginRequiredMixin, generics.GenericAPIView):
-    login_url = '/api/login'
-    redirect_field_name = 'login'
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)  
 
     def get(self, request, format=None):
         favicons = Favicon.objects.all()
@@ -22,9 +25,9 @@ class FaviconListView(LoginRequiredMixin, generics.GenericAPIView):
         return Response(serializer.data)
 
 
-class CreateFaviconView(LoginRequiredMixin, generics.GenericAPIView):
-    login_url = '/api/login'
-    redirect_field_name = 'login'
+class CreateFaviconView(generics.GenericAPIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
     def post(self, request, format=None):
 
@@ -44,9 +47,9 @@ class CreateFaviconView(LoginRequiredMixin, generics.GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UpdateFaviconView(LoginRequiredMixin, generics.GenericAPIView):
-    login_url = '/api/login'
-    redirect_field_name = 'login'
+class UpdateFaviconView(generics.GenericAPIView):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
     queryset = Favicon.objects.all()
     serializer_class = FaviconSerializer
@@ -74,3 +77,13 @@ class UpdateFaviconView(LoginRequiredMixin, generics.GenericAPIView):
         favicon = self.get_object(pk)
         favicon.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class TextFaviPreview(generics.GenericAPIView):
+    serializer_class = TextPreviewSerializer
+
+    def post(self, request):
+        serializer = TextPreviewSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        text_data = serializer.validated_data
+        print(text_data)
+        return Response('OK')

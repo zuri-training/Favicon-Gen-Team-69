@@ -1,3 +1,4 @@
+import imp
 from django.shortcuts import render
 
 # Create your views here.
@@ -17,7 +18,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 from knox.views import LogoutView as KnoxLogoutView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from knox.auth import TokenAuthentication
 # Create your views here.
 
 # Register API
@@ -47,6 +48,7 @@ class LoginAPI(KnoxLoginView):
         
         return super(LoginAPI, self).post(request, format=None)
     
+    
 class LogoutAPI(KnoxLogoutView):
     permission_classes = ()
 
@@ -57,10 +59,8 @@ class LogoutAPI(KnoxLogoutView):
         
 
 
-class UpdateUserProfileView(LoginRequiredMixin, generics.UpdateAPIView ):
-    login_url = '/api/login'
-    redirect_field_name = 'login'
-
+class UpdateUserProfileView( generics.UpdateAPIView ):
     queryset = User.objects.all()
     permissions_classes = (IsAuthenticated,)
     serializer_class = UpdateUserSerializer
+    authentication_classes = (TokenAuthentication,)
