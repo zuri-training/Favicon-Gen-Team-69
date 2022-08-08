@@ -1,3 +1,5 @@
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -5,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 html {
   overflow-x: auto;
@@ -115,11 +118,15 @@ a {
 }
 
 .regbtn:active {
+
+
+
   background-color: #0061ff;
 }
 
 .favicon_logo {
   max-width: 30%;
+
 }
 
 .favicon_logo > img {
@@ -165,6 +172,8 @@ footer {
 }
 
 .lowerfooter {
+
+
   background-color: #0041aa;
   color: white;
   display: flex;
@@ -174,9 +183,12 @@ footer {
 }
 .reducedfooter {
   line-height: 2em;
+
 }
 
-
+.reducedfooter {
+    line-height: 2em;
+}
 
 @media screen and (max-width: 786px) {
         footer {
