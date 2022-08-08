@@ -77,13 +77,14 @@ h6 {
 }
 
 .header {
+    height: 100vh;
     text-align: center;
 
 }
 
 .card {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100vh;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
@@ -91,7 +92,8 @@ h6 {
     text-align: start;
 }
 .field {
-    margin: 20px 0;
+    width: 100%;
+    margin: 20px auto;
 }
 .field label {
     display: block;
@@ -110,7 +112,7 @@ h6 {
 
 .field  input {
     display: inline;
-    width: 100%;
+    width: 80%;
     border-radius: 3px;
     padding: 10pt 35pt;
     border: 1px solid #002055;
@@ -127,7 +129,7 @@ h6 {
 }
 
 #general-error {
-    font-size: 20px;
+    font-size: 16px;
     color: #F1510C;
     text-align: center;
 }

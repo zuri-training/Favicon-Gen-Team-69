@@ -4,23 +4,23 @@ from pyexpat import model
 from requests import Response
 from rest_framework import serializers
 from django.contrib.auth import authenticate
-from django.contrib.auth.models import User
+from .models import CustomUser
 
 # User Serializer
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = CustomUser
         fields = ('id', 'username', 'email')
 
 # Register Serializer
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = CustomUser
         fields = ('id','username', 'email', 'password')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        user = User.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
+        user = CustomUser.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
         
         return user 
 
@@ -30,7 +30,7 @@ class LoginSerializer(serializers.Serializer):
 
     def validate(self, data):
         print(data)
-        if not User.objects.filter(username=data).exists():
+        if not CustomUser.objects.filter(username=data).exists():
             return Response('username not correct')
         
         user = authenticate(**data)
@@ -47,7 +47,7 @@ class UpdateUserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(required=True)
 
     class Meta:
-        model = User
+        model = CustomUser
         fields = ('username', 'first_name', 'last_name', 'email')
         extra_kwargs = {
             'first_name': {'required': True},
@@ -56,14 +56,14 @@ class UpdateUserSerializer(serializers.ModelSerializer):
     
     def validate_email(self, value):
         user = self.context['request'].user
-        if User.objects.exclude(pk=user.pk).filter(email=value).exists():
+        if CustomUser.objects.exclude(pk=user.pk).filter(email=value).exists():
             raise serializers.ValidationError({'email': 'This email already exists.'})
         return value    
 
     # 
     def validate_username(self, value):
         user = self.context['request'].user
-        if User.objects.exclude(pk=user.pk).filter(username=value).exists():
+        if CustomUser.objects.exclude(pk=user.pk).filter(username=value).exists():
             raise serializers.ValidationError({'username': 'This username already exists.'})
         return value    
 
