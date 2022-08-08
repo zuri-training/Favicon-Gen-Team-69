@@ -23,6 +23,7 @@ p {
   font-size: 16px;
   font-family: "Poppins";
   font-weight: 400;
+  color: #002055;
 }
 
 h1,
@@ -57,12 +58,19 @@ a {
   animation: slide-in-blurred-bottom 1s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both;
 }
 
+.header_btns {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  column-gap: 20px;
+}
+
 .loginbtn {
   background-color: white;
   width: 120px;
   height: 44px;
-  left: 409px;
-  top: 419px;
   cursor: pointer;
   font-family: "Poppins";
   font-style: normal;
@@ -70,11 +78,9 @@ a {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.0005em;
-  color: #0041aa;
-  padding: 10px 20px 10px 20px;
+  color: #0051d5;
   border-radius: 5px;
-  border: 1px solid #0041aa;
-  margin-right: 25px;
+  border: 1px solid #0051d5;
   -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     1s both;
   animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s both;
@@ -89,15 +95,11 @@ a {
   line-height: 24px;
   letter-spacing: 0.0005em;
   color: white;
-  background: #0041aa;
-  border-radius: 7px;
-  padding: 10px;
-  gap: 10px;
+  background: #0051d5;
+  border-radius: 5px;
   border: none;
   width: 120px;
   height: 44px;
-  left: 409px;
-  top: 419px;
   -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     1.2s both;
   animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s
