@@ -192,6 +192,9 @@ footer {
         bottom: 0; */
         background: #CCDFFF;
         border: 1px solid rgb(37, 37, 37);
+        /* padding: 1rem; */
+}
+footer .upperfooter,.lowerfooter{
         padding: 1rem;
 }
 
