@@ -293,7 +293,7 @@
   
   @media screen and (max-width: 425px) {
       body{
-          background-image:url('./images/about\ and\ profile.svg');
+          background-image:url('../images/about\ and\ profile.svg');
           background-repeat: no-repeat;
           background-size: cover;
       }
