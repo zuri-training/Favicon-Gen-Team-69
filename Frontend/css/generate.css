@@ -72,10 +72,13 @@ main > h3 {
   font-size: 18px;
   margin: 0px 3rem;
 }
+
 .desc {
   text-align: center;
   max-width: 350px;
   line-height: 25px;
+  word-spacing: normal;
+  color: #002055;
 }
 
 .card > img {

@@ -6,9 +6,8 @@ from .serializers import FaviconSerializer, TextPreviewSerializer, EmojiPreviewS
 from rest_framework.permissions import IsAuthenticated
 from knox.auth import TokenAuthentication
 
-
 from favicon.models import Favicon
-from .helpers import generate_favicon, text_to_image, emoji_to_image
+from .helpers import generate_favicon, text_to_image,emoji_to_image, favicons_to_zip
 
 
 # Create your views here.
@@ -51,6 +50,7 @@ class CreateFaviconView(generics.GenericAPIView):
             favicon = serializer.save()
             favicon.title = 'my_title'
             generate_favicon(image, favicon_sizes, favicon)
+            favicons_to_zip(favicon)
             favicon.save()
             return Response(FaviconSerializer(favicon).data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
