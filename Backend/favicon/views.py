@@ -7,9 +7,8 @@ from rest_framework.permissions import IsAuthenticated
 from knox.auth import TokenAuthentication
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-
 from favicon.models import Favicon
-from .helpers import generate_favicon, text_to_image
+from .helpers import generate_favicon, text_to_image, favicons_to_zip
 
 
 # Create your views here.
