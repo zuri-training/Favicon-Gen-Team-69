@@ -36,13 +36,20 @@ class CreateFaviconView(generics.GenericAPIView):
         if serializer.is_valid():
             favicon_type = request.data.get('type')
             if favicon_type is None:
-                return Response({'please pass in a file type'})
+                return Response({'details':'please pass in a file type'})
             if favicon_type == 'text':
-                serializer = TextPreviewSerializer(data=request.data)
-                serializer.is_valid(raise_exception=True)
-                text_data = serializer.validated_data
+                text_serializer = TextPreviewSerializer(data=request.data)
+                text_serializer.is_valid(raise_exception=True)
+                text_data = text_serializer.validated_data
+                text_data["background_color"] =  tuple(text_data["background_color"])
+                text_data["text_color"] =  tuple(text_data["text_color"])
                 image = text_to_image(text_data)
 
+            # elif favicon_type == 'emoji':
+            #     serializer = TextPreviewSerializer(data=request.data)
+            #     serializer.is_valid(raise_exception=True)
+            #     text_data = serializer.validated_data
+            #     image = text_to_image(text_data)
             elif favicon_type == 'image':
                 image = request.data.get('image')
                 if image is None:

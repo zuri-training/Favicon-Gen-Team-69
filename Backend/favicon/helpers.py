@@ -86,7 +86,7 @@ def favicons_to_zip(favicon):
     
     zip = favicon.zip_file
     zip.save("favicon.zip", uploadable_zip)
-    
+
     return favicon
     
 
