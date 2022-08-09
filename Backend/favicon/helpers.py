@@ -9,6 +9,7 @@ import requests
 
 
 def generate_icon(image, size, favicon):
+
     if size == "favicon":
         resized_img = image.resize((64, 64))
         img_name = "favicon"
@@ -29,11 +30,11 @@ def generate_icon(image, size, favicon):
     upload_icon.save(img_name, icon_file)
 
     my_icon.save()
-
+    
 
 def generate_favicon(image, sizes, favicon):
     pillow_image = Image.open(image)
-    for size in sizes:
+    for size in sizes: 
         generate_icon(pillow_image, size, favicon)
 
 
@@ -85,7 +86,42 @@ def favicons_to_zip(favicon):
     
     zip = favicon.zip_file
     zip.save("favicon.zip", uploadable_zip)
-    favicon.save()
-    
+
     return favicon
     
+
+def emoji_to_image(emoji_data):
+
+    font_size = 10
+    img_width = len(emoji_data["emoji"]) * int(font_size / 2)
+    img_height = font_size + 10
+    
+    new_img = Image.new("RGB", (img_width, img_height), emoji_data["background_color"],)
+
+    drawable_img = ImageDraw.Draw(new_img)
+
+    FONT_PATH = './NotoSansSC-Regular.otf'
+    
+    font_ttf = ImageFont.truetype(FONT_PATH, size=font_size)
+
+    # font_file = requests.get(emoji_data["url"])
+
+    # file_image = ContentFile(font_file.content)
+
+    # font_ttf = ImageFont.truetype(file_image, size=emoji_data["font_size"])
+
+    drawable_img.text((img_width / len(emoji_data["emoji"]), img_height / font_size), emoji_data["emoji"], font=font_ttf, fill=emoji_data["text_color"])
+    
+    blob = BytesIO()
+    
+    new_img.save(fp=blob, format="PNG")
+    
+    text_image = ContentFile(blob.getvalue())
+
+    image_file = InMemoryUploadedFile(
+        text_image, None, 'foo.png', 'image/png', text_image.tell, None)    
+    
+    return image_file
+
+
+

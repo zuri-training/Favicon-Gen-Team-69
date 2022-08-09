@@ -28,6 +28,13 @@ class TextPreviewSerializer(serializers.Serializer):
     background_color = serializers.ListField()
     url = serializers.URLField()
 
+class EmojiPreviewSerializer(serializers.Serializer):
+    emoji = serializers.CharField()   
+    text_color = serializers.ListField()
+    background_color = serializers.ListField()
+   
+ 
+
  
 
         

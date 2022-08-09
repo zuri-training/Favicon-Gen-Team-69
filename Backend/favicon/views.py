@@ -2,19 +2,18 @@ from math import radians
 from django.http import Http404, FileResponse
 from rest_framework import generics, status
 from rest_framework.response import Response
-from .serializers import FaviconSerializer, TextPreviewSerializer
+from .serializers import FaviconSerializer, TextPreviewSerializer, EmojiPreviewSerializer
 from rest_framework.permissions import IsAuthenticated
 from knox.auth import TokenAuthentication
-from django.contrib.auth.mixins import LoginRequiredMixin
 
 from favicon.models import Favicon
-from .helpers import generate_favicon, text_to_image, favicons_to_zip
+from .helpers import generate_favicon, text_to_image,emoji_to_image, favicons_to_zip
 
 
 # Create your views here.
 
 
-class FaviconListView(LoginRequiredMixin, generics.GenericAPIView):
+class FaviconListView(generics.GenericAPIView):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)  
 
@@ -35,12 +34,30 @@ class CreateFaviconView(generics.GenericAPIView):
                          (48, 48), 'favicon', (128, 128)]
 
         if serializer.is_valid():
-            image = request.data.get('image')
-            if image is None:
-                return Response({"details": "image field is required"})
+            favicon_type = request.data.get('type')
+            if favicon_type is None:
+                return Response({'details':'please pass in a file type'})
+            if favicon_type == 'text':
+                text_serializer = TextPreviewSerializer(data=request.data)
+                text_serializer.is_valid(raise_exception=True)
+                text_data = text_serializer.validated_data
+                text_data["background_color"] =  tuple(text_data["background_color"])
+                text_data["text_color"] =  tuple(text_data["text_color"])
+                image = text_to_image(text_data)
+
+            # elif favicon_type == 'emoji':
+            #     serializer = TextPreviewSerializer(data=request.data)
+            #     serializer.is_valid(raise_exception=True)
+            #     text_data = serializer.validated_data
+            #     image = text_to_image(text_data)
+            elif favicon_type == 'image':
+                image = request.data.get('image')
+                if image is None:
+                    return Response({"details": "image field is required"})
             favicon = serializer.save()
             favicon.title = 'my_title'
             generate_favicon(image, favicon_sizes, favicon)
+            favicons_to_zip(favicon)
             favicon.save()
             return Response(FaviconSerializer(favicon).data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -92,4 +109,18 @@ class TextFaviPreview(generics.GenericAPIView):
         txt_img = text_to_image(text_data)
         print(txt_img)
         return FileResponse(txt_img)
-        
+
+class EmojiFaviPreview(generics.GenericAPIView):
+    # authentication_classes = (TokenAuthentication,)
+    # permission_classes = (IsAuthenticated,)
+    serializer_class = EmojiPreviewSerializer
+
+    def post(self, request):
+        serializer = EmojiPreviewSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        emoji_data = serializer.validated_data
+        emoji_data["background_color"] =  tuple(emoji_data["background_color"])
+        emoji_data["text_color"] =  tuple(emoji_data["text_color"])
+
+        emoji_img = emoji_to_image(emoji_data)
+        return FileResponse(emoji_img)        
