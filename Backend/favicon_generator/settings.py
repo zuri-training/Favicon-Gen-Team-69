@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'corsheaders',
-    'cloudinary_storage',
-    'cloudinary',
     'favicon',
     'user_control',
 ]
@@ -135,20 +133,17 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config("CLOUD_NAME"),
-    'API_KEY': config("API_KEY"),
-    'API_SECRET': config("API_SECRET")
-}
+AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.authentication.BasicAuthentication',
-        # 'rest_framework.authentication.SessionAuthentication',
         'knox.auth.TokenAuthentication',
     ),
 
