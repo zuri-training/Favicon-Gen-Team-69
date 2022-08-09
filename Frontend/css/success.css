@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    color: #002055;
+}
+
+body {
+    margin: 5%;
+    background-color: #0000004D;
+    padding: 2% 1% 2% 1%;
+}
+
+main h1,
+h5 {
+    text-align: center;
+}
+
+#container {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5%;
+
+
+}
+
+#card {
+    text-align: center;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #22B10A;
+    padding: 5% 9% 5% 9%;
+    margin-bottom: 30px;
+    width: 65%;
+    justify-self: center;
+}
+
+#card h2 {
+    padding-bottom: 30px;
+}
+
+#img1 {
+    position: relative;
+}
+
+#img2 {
+    position: relative;
+    right: 0px;
+    top: -98px;
+}
+
+#section1 {
+    display: flex;
+    padding: 0px 65px 40px 65px;
+    justify-content: center;
+    margin-left: -7%;
+}
+
+#enter {
+    margin-right: 20px;
+}
+
+#save {
+    margin-left: 5%;
+}
+
+input {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0051D5;
+    width: 110%;
+    height: 150%;
+    border-radius: 3px;
+}
+
+#save a {
+    color: white;
+    background-color: #0051D5;
+    width: 150% auto;
+    padding: 17% 80% 17% 80%;
+    border-radius: 3px;
+}
+
+#code {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+ul {
+    line-height: 20px;
+}
+
+#lastcard {
+    justify-content: center;
+    background: #F2F7FF;
+    padding: 5%;
+    line-height: 40px;
+}
+
+#copy-code {
+    background-color: #0051D5;
+    text-align: center;
+    margin-left: 43%;
+    margin-right: 43%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+
+}
+
+#copy-code a {
+    color: white;
+}
+
+
+
+@media screen and (max-width:450px) {
+
+    main h1,
+    h5 {
+        text-align: center;
+    }
+
+    #card h2 {
+        padding-bottom: 30px;
+        font-size: 13px;
+    }
+
+    #img1 img {
+        width: 80px;
+    }
+
+    #img2 {
+        top: -55px;
+
+    }
+
+    #img2 img {
+        width: 30px;
+    }
+
+    #section1 {
+        display: flex;
+        padding: 0px 65px 40px 65px;
+        justify-content: center;
+        margin-left: -7%;
+    }
+
+    #enter {
+        margin-right: 5px;
+    }
+
+    #save {
+        margin-left: 2%;
+    }
+
+    input {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #0051D5;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+    input[placeholder] {
+        font-size: 8px;
+    }
+
+    #save a {
+        color: white;
+        background-color: #0051D5;
+        width: 150% auto;
+        padding: 17% 80% 17% 80%;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+
+    #copy-code a {
+        color: white;
+        font-size: 10px;
+    }
+}
