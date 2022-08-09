@@ -20,8 +20,11 @@ main h1, h5{
     align-items: center;
     background-color: white;
     padding: 5%;
+    border-radius: 20px;
     
-    
+}
+#cancel{
+    text-align: end;
 }
 #card{
     text-align: center;
