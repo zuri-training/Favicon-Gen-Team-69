@@ -1,7 +1,14 @@
 # Daniel Etchie
 
 # Tasks Completed
-1. Create Backend Folder Structure            https://github.com/zuri-training/Favicon-Gen-Team-69/issues/4
+1. **Create Backend Folder Structure**
+   ### Link to Issue           
+      https://github.com/zuri-training/Favicon-Gen-Team-69/issues/4
+      
+  ### Link to Solution
+      https://github.com/zuri-training/Favicon-Gen-Team-69/tree/dev/Backend
+   
+   
 2. **Implement User, Favicon and Icon Models**    
    ### Link to Issues
     https://github.com/zuri-training/Favicon-Gen-Team-69/issues/5, 
