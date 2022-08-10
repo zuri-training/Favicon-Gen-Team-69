@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Paget</title>
+    <link rel="stylesheet" href="../css/tutorial.css" />
+  </head>
+  <body>
+    <main>
+      <div id="main-container">
+        <div id="img1"><img src="../images/vector-svg1.svg" alt="img" /></div>
+        <div id="img2"><img src="../images/Vector-svg2.svg" alt="img" /></div>
+        <div id="img3"><img src="../images/Vector-svg2.svg" alt="img" /></div>
+        <div id="img4"><img src="../images/Vector-svg3.svg" alt="img" /></div>
+        <div id="img5"><img src="../images/Vector-svg4.svg" alt="img" /></div>
+
+        <section id="section1">
+          <div class="up-text">
+            <h1>Tutorials</h1>
+            <h3>
+              Video Tutorial on how to Generate a Favicon from Images, Texts or
+              Emojis.
+            </h3>
+            <p>
+              Have you gone through our short illustration in our home page and
+              still need help to generate your favicon?, Kindly watch this short
+              video below for further clarification.
+            </p>
+          </div>
+          <div id="logocard">
+            <div id="card"></div>
+            <div id="img6">
+              <img src="../images/Vector12edited.png" alt="img" />
+            </div>
+          </div>
+          <div class="video">
+            <p>Was this video Helpful?</p>
+            <img src="../images/fa_thumbs-up-left.png" alt="image" />
+            <p>Yes</p>
+            <img src="../images/fa_thumbs-down.png" alt="image" />
+            <p>No</p>
+          </div>
+        </section>
+        <section class="section2">
+          <h1>Faviconify HTML Reference Guide for Developers</h1>
+          <strong>Tips on Creating a great Favicon.</strong><br /><br />
+          <p>
+            Now, if you're wondering, “how can I create a memorable favicon?”
+            don't worry!
+          </p>
+          <br /><br />
+          <p>Here are some actionable tips you can follow:</p>
+          <br /><br />
+          <ul>
+            <li>
+              <strong>Keep it simple.</strong> Remember, you don't have a lot of
+              space to play around with!
+            </li>
+            <li>
+              <strong>Keep it recognizable.</strong> Try and encapsulate your
+              brand in the small space you have to work with. If you're used to
+              using a logo that isn't a tiny square, try and create something
+              that evokes that logo rather than unnecessarily trying to squeeze
+              the whole original in.
+            </li>
+            <li>
+              <strong>Use as little text or lettering as possible.</strong>
+              Remember that the favicon is a small image. Even if your usual
+              logo has your company name spelled out, try to keep it concise in
+              your favicon.
+            </li>
+            <li>
+              <strong>Think about color.</strong> Different web browsers (like
+              Google Chrome, Android Chrome, Safari, and Internet Explorer) use
+              different color palettes. And, with the increasing popularity of
+              night mode, you'll want to make sure your favicon looks great
+              regardless of the user's browser. All you have to do is ensure
+              that the favicon looks good and stands out at least on white,
+              gray, and black background colors.
+            </li>
+          </ul>
+          <br /><br />
+          <p>
+            The WordPress.com favicon, for example, uses just a simple,
+            recognizable W letter. This makes the user think of WordPress but
+            doesn't take up as much space as the whole word. It's perfect for a
+            favicon!
+          </p>
+          <br /><br /><br />
+          <strong>Browser code (in most cases)</strong>
+          <p>
+            For the main favicon itself, it's best for cross-browser
+            compatibility not to use any HTML. Just name the file favicon.ico
+            and place it in the root of your domain.
+          </p>
+          <p>
+            This works in every desktop browser/version all the way back to IE6,
+            except for SeaMonkey.
+          </p>
+          <br /><br />
+          <strong>iOS, Android, and Windows mobile</strong>
+          <p>
+            If you want your site to have a unique icon when a user creates a
+            shortcut to it on their mobile device screen, use the following:
+          </p>
+          <br />
+          <ol>
+            <li>
+              <p>Touch icon for iOS 2.0+ and Android 2.1+:</p>
+              <br />
+              <span
+                >$ltlink rel="apple-touch-icon-precomposed"
+                href="path/to/favicon-152.png" /&gt</span
+              ><br />
+            </li>
+            <br />
+            <li>
+              <p>Internet Explorer Modern UI (formerly Metro) tile icon:</p>
+              <br />
+              <span
+                >&ltmeta name="msapplication-TileColor" content="#FFFFFF"
+                /&gt</span
+              ><br />
+              <span
+                >&ltmeta name="msapplication-TileImage"
+                content="/path/to/favicon-144.png" /&gt</span
+              >
+            </li>
+            <br />
+          </ol>
+          <p>Where #FFFFFF is the Windows tile color of your choice.</p>
+          <br /><br />
+          <strong>Icons for specific Apple devices and everything else</strong>
+          <p>Here's how to specify favicons for particular Apple devices:</p>
+          <br />
+          <ol>
+            <li>
+              <p>Largest to smallest apple-touch-icons:</p>
+              <br /><br />
+              <span
+                ><!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+                &ltlink rel="apple-touch-icon-precomposed" sizes="152x152"
+                href="/path/to/favicon-152.png" /&gt</span
+              ><br /><br />
+              <span
+                ><!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+                &ltlink rel="apple-touch-icon-precomposed" sizes="144x144"
+                href="/path/to/favicon-144.png" /&gt</span
+              ><br /><br />
+              <span
+                ><!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+                &ltlink rel="apple-touch-icon-precomposed" sizes="120x120"
+                href="/path/to/favicon-120.png" /&gt</span
+              ><br /><br />
+              <span
+                ><!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+                &ltlink rel="apple-touch-icon-precomposed" sizes="114x114"
+                href="/path/to/favicon-114.png" /&gt</span
+              ><br /><br />
+              <span
+                ><!-- For first- and second-generation iPad: -->
+                &ltlink rel="apple-touch-icon-precomposed" sizes="72x72"
+                href="/path/to/favicon-72.png" /&gt</span
+              ><br /><br />
+              <span
+                ><!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+                &ltlink rel="apple-touch-icon-precomposed"
+                href="/path/to/favicon-57.png" /&gt</span
+              ><br /><br />
+            </li>
+            <li>
+              <p>
+                Favicons targeted to any additional png sizes that you add that
+                aren't covered above:
+              </p>
+              <br />
+              <span
+                >&ltlink rel="icon" href="/path/to/favicon-32.png" sizes="32x32"
+                /&gt</span
+              >
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
