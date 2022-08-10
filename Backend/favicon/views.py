@@ -45,11 +45,14 @@ class CreateFaviconView(generics.GenericAPIView):
                 text_data["text_color"] =  tuple(text_data["text_color"])
                 image = text_to_image(text_data)
 
-            # elif favicon_type == 'emoji':
-            #     serializer = TextPreviewSerializer(data=request.data)
-            #     serializer.is_valid(raise_exception=True)
-            #     text_data = serializer.validated_data
-            #     image = text_to_image(text_data)
+            elif favicon_type == 'emoji':
+                emoji_serializer = EmojiPreviewSerializer(data=request.data)
+                emoji_serializer.is_valid(raise_exception=True)
+                emoji_data = emoji_serializer.validated_data
+                emoji_data["background_color"] =  tuple(emoji_data["background_color"])
+                emoji_data["text_color"] =  tuple(emoji_data["text_color"])
+                image = emoji_to_image(emoji_data)
+
             elif favicon_type == 'image':
                 image = request.data.get('image')
                 if image is None:
