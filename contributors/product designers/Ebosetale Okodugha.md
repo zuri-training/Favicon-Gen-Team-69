@@ -5,3 +5,6 @@ links: https://www.figma.com/file/ucpk5nq44myTI3h1Y1lUWY/Team-69---Faviconify?no
 2. On the low fidelity/ wireframe and high fidelity pages,I designed the login (sign in) and register (sign up) pages as I was assigned. This included creating the active screen, the error screen, the forget password screen amongst others as well as ensuring this designs were responsive.
 low fidelity/ wireframe link: https://www.figma.com/file/ucpk5nq44myTI3h1Y1lUWY/Team-69---Faviconify?node-id=202%3A102
 High fidelity link: https://www.figma.com/file/ucpk5nq44myTI3h1Y1lUWY/Team-69---Faviconify?node-id=253%3A74
+Issue link: https://github.com/zuri-training/Team-69-Product-design/issues/1
+
+3. I created one of the pages on the contact us screen on the high fidelity page to ensure user get notified that their messages have been sent.
