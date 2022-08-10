@@ -4,7 +4,7 @@
       Using the Pillow function in Python, I develped the function that converts
       any picture format into a favicon.
 
-      link to issue: #33
+      link to issue: https://github.com/zuri-training/Favicon-Gen-Team-69/issues/33
 
       Link to solution: https://github.com/zuri-training/Favicon-Gen-Team-69/pull/34#issue-1329249308
 
