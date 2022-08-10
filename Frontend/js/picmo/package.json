@@ -1,0 +1,42 @@
+{
+  "name": "picmo",
+  "version": "5.4.0",
+  "description": "JavaScript emoji picker. Any app, any framework.",
+  "keywords": [
+    "emoji",
+    "emoji picker",
+    "javascript"
+  ],
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run clean && npm run build",
+    "precommit": "npm-run-all lint check test",
+    "build": "npm run check && rollup -c",
+    "check": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "lint": "eslint src/*.ts",
+    "start": "rollup -cw",
+    "test:watch": "jest --watch src",
+    "test": "jest --coverage src",
+    "update-scss-types": "typed-scss-modules src"
+  },
+  "author": "Joe Attardi <jattardi@gmail.com> (https://joeattardi.dev)",
+  "repository": "joeattardi/picmo",
+  "homepage": "https://picmojs.com",
+  "bugs": "https://github.com/joeattardi/picmo/issues",
+  "funding": "https://github.com/sponsors/joeattardi",
+  "license": "MIT",
+  "dependencies": {
+    "emojibase": "^6.1.0"
+  },
+  "devDependencies": {
+    "msw": "^0.39.2",
+    "node-fetch": "^2.6.7"
+  },
+  "gitHead": "9f0647da0b917ea3c276eb810f2382e6329294e5"
+}
