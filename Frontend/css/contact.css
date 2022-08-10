@@ -121,12 +121,9 @@ textarea {
     font-weight: 500;
     border-radius: 5px;
     border: none;
-    /*	padding: 20px;
-*/
     background-color: #0061FF;
     cursor: pointer;
     color: #FFFFFF;
-    /*<----find a way to overwrite header color for button*/
 }
 
 #container {
@@ -284,11 +281,6 @@ textarea {
         font-weight: 400;
         text-align: left;
         width: 332px;
-    }
-
-    #faqText {
-        /*width: 265px;
-		padding:;*/
     }
 
     #faq1 {
