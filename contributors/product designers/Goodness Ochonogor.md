@@ -16,3 +16,9 @@ i then did the hi fi screen for the registration process
 [Team 69 - Faviconify (7).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297539/Team.69.-.Faviconify.7.zip)
 after my team mate did the landing page for the project i made changes to some part of it
 i then did some part of the componet section like the (nav bar) and the footer 
+[Team 69 - Faviconify (12).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297555/Team.69.-.Faviconify.12.zip)
+[Team 69 - Faviconify (11).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297556/Team.69.-.Faviconify.11.zip)
+[Team 69 - Faviconify (10).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297557/Team.69.-.Faviconify.10.zip)
+then i assited in the generation screen ( converting image to favicon, icon to favicon and text to favicon)
+then i did sdome corrections on the the screen i have designed that is not proparly presented
+i also did some redesign on the once that is not okay with the team members
