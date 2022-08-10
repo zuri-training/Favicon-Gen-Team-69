@@ -37,4 +37,8 @@ TASK COMPLETED
       Allow User preview the generated Favicon 
       
       Link to issue
-      * 
+      * https://github.com/zuri-training/Favicon-Gen-Team-69/issues/70
+
+      Link to solution
+      * https://github.com/zuri-training/Favicon-Gen-Team-69/pull/72
+     
