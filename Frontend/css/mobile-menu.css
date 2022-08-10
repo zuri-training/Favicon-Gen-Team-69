@@ -140,6 +140,38 @@
        
        
     }
+
+
+
+    /* mobile menu */
+    .mobile-header_btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* border: 2px solid red; */
+        visibility: visible;
+        width: 30%;
+        position: relative;
+    }
+
+    .mobile-header_btns img:hover {
+        cursor: pointer;
+    }
+
+    .mobile-header_btns img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .mobile-header-links {
+        display: contents;
+        padding: 10px;
+    }
+
+    /* end of mobile menu */
 }
 
 
