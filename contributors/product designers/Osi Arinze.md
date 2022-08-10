@@ -22,4 +22,11 @@ https://www.figma.com/file/Q3BdDpHxXjd9oal105nS18
 create tutorial video#17 : I specifically created the tutorial video for our Favicon generator using Canva, this was in order to give users a comprehensive walk through of how the Favicon generator works without experiencing any difficulty. The idea to use a video was collectively accepted by the team and I was saddled with the responsibility to come up with the tutorial video.  Below are the screenshots of some pages of the video and immediately after the screenshots is the  link to watch the video directly on canva.
 ![WhatsApp Image 2022-08-10 at 7 45 03 AM (1)](https://user-images.githubusercontent.com/105232462/183837462-7d0267bb-64fd-451b-867f-ca886c2dac48.jpeg)
 ![WhatsApp Image 2022-08-10 at 7 45 03 AM](https://user-images.githubusercontent.com/105232462/183837470-b229ded4-409a-4a31-ad2b-6eae5b5359db.jpeg)
+https://www.canva.com/design/DAFIIKDxMiA/Q-J6SfE1EhdPj1z0i-Y_6w/watch?utm_content=DAFIIKDxMiA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+Lastly, apart from the above listed contributions to the team to ensure that the project Favicon generator works, I also made other contributions such as :
+working on the typography guide
+Adjusting our primary buttons to make them components and variants respectively
+
 
