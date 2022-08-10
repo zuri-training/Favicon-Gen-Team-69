@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    background-image: url("../images/about screen.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-size: 27px;
+    color: #0041AA;
+}
+
+h2 {
+    font-size: 22px;
+    color: #002055;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #002055;
+}
+
+#description {
+    width: 60.4%;
+    margin: auto;
+    text-align: left;
+    padding: 85px 0;
+}
+
+#description h1,
+h2 {
+    text-align: center;
+}
+
+#choice {
+    width: 100%;
+    /*min-width: 700px;*/
+    height: 473px;
+    border: none;
+    padding: 50px;
+    background-color: #F2F7FF;
+}
+
+#perks {
+    width: 58%;
+    /*min-width: 600px;*/
+    border: none;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bolt img {
+    width: 73.69px;
+    height: 110px;
+    margin: auto;
+}
+
+#ease img {
+    width: 68.75px;
+    height: 97.88px;
+    margin: auto;
+}
+
+#performance img {
+    width: 100.84px;
+    height: 91.7px;
+    margin: auto;
+}
+
+.round {
+    height: 192px;
+    width: 192px;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#container {
+    padding: 137px 0;
+}
+
+#subscription {
+    width: 81%;
+    /*min-width: 750px;*/
+    height: 227px;
+    border-radius: 12px;
+    background-image: url("../images/Subscribe background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #205055;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#text {
+    padding: 60px;
+    color: #FFFFFF;
+}
+
+#destination {
+    margin: auto;
+}
+
+input {
+    width: 432px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 15px;
+    font-size: 15.5px;
+    font-weight: 400;
+    margin: auto 10px;
+}
+
+#subButt {
+    width: 170px;
+    height: 54px;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    background-color: #0051D4;
+    color: white;
+    font-size: 17.5px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 375px) {
+   h1 {
+    font-size: 20px;
+   }
+
+   h2 {
+    font-size: 17.5px;
+   }
+
+   h4 {
+    font-size: 17.5px;
+   }
+
+   h5 {
+    font-size: 12px;
+   }
+
+   p {
+    font-size: 12px;
+   }
+
+   #description h1 {
+    padding-bottom: 0;
+   }
+
+   #low {
+    padding-top: 20px;
+   }
+
+   main {
+    background-image: url("../images/about-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   }
+
+   /*header {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+   }*/
+
+   .header_links, .header_btns {
+    display: none;
+   }
+
+   #choice {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 5px;
+   }
+
+   #perks {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    margin: 50px;
+   }
+
+   .round {
+    width: 50px;
+    height: 50px;
+   }
+
+   #bolt img {
+    width: 19.19px;
+    height: 28.65px;
+    margin: auto;
+    }
+
+    #ease img {
+    width: 28.13px;
+    height: 38px;
+    margin: auto;
+    }
+
+    #performance img {
+        width: 26.26px;
+        height: 23.88px;
+        margin: auto;
+    }
+
+   #description {
+    width: 83.2%;
+    text-align: center;
+    padding: 43px 0;
+   }
+
+   #description h2 {
+    display: none;
+   }
+
+   #subscription {
+    width: 88.5%;
+    display: grid;
+    grid-template-columns: 100%;
+    height: auto;
+    background-color: #205055;
+    background-image: none;
+    padding: 33px 15px 30px 17px;
+   }
+
+   #text {
+    display: block;
+    padding: 23px;
+    text-align: center;
+   }
+
+   input {
+    width: 300px;
+    height: 60px;
+    font-size: 15.5px;
+    margin: auto;
+   }
+
+   #subButt {
+    margin: 28px auto;
+    display: block;
+    width: 108px;
+    height: 60px;
+    font-size: 14px;
+   }
+
+   .upperfooter {
+    display: block;
+    margin: auto;
+    text-align: center;
+   }
+
+}

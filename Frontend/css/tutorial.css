@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main-container {
+    justify-content: center;
+    display: grid;
+    padding: 50px;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#section1 {
+    text-align: center;
+    color: #002055;
+}
+
+.up-text {
+    padding-bottom: 45px;
+
+}
+
+.up-text h1 {
+    color: #0041AA;
+
+}
+
+h3 {
+    padding-bottom: 20px;
+}
+
+#logocard {
+    display: flex;
+}
+
+#card {
+    height: 75vh;
+    width: 100%;
+    box-shadow: 0.05px 0.05px 10px, 0.05px 0.05px 10px;
+    border-radius: 20px;
+}
+
+#img6 img {
+    position: absolute;
+    height: 444.00001525878906px;
+    width: 100.0000305175781px;
+    left: 1164px;
+    top: 298px;
+    border-radius: 0px;
+
+}
+
+h1 {
+    text-align: center;
+    color: #002055;
+    padding-bottom: 30px;
+}
+
+.video {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 50px 100px 50px;
+    width: 80%;
+}
+
+.video img {
+    width: 25px;
+}
+
+span {
+    color: aquamarine;
+}
+
+#img1 img {
+    position: absolute;
+    height: 335px;
+    width: 180px;
+    left: -12px;
+    top: -10px;
+    border-radius: 0px;
+}
+
+#img2 img {
+    position: absolute;
+    height: 244px;
+    width: 279px;
+    left: 317px;
+    top: 1175px;
+    border-radius: 0px;
+}
+
+#img3 img {
+    position: absolute;
+    height: 244px;
+    width: 279px;
+    left: 817px;
+    top: 690px;
+    border-radius: 0px;
+}
+
+#img4 img {
+    position: absolute;
+    height: 244px;
+    width: 279px;
+    left: -87px;
+    top: 642px;
+    border-radius: 0px;
+}
+
+#img5 img {
+    position: absolute;
+    height: 244px;
+    width: 279px;
+    left: 1070px;
+    top: 900px;
+    border-radius: 0px;
+}
+
+@media screen and (max-width:600px) {
+    .video img {
+        width: 13px;
+        height: 12px;
+    }
+
+    .video p {
+        font-size: 10px;
+    }
+}
