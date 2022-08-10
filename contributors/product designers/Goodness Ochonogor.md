@@ -1,12 +1,10 @@
 # Goodness Ochonogor
-1.  I worked on some art of the style guilde (the guide and the sliders)here is the link to the screen i designed
-   p![sliders](https://user-images.githubusercontent.com/37247608/183888642-b941c6ad-2c60-4f4f-be3d-95b6ddca1012.png)
-  
+1.  I worked on somepart of the style guilde (the guide and the sliders)here is the link to the screen i designed
+    https://www.figma.com/file/ucpk5nq44myTI3h1Y1lUWY/Team-69---Faviconify?node-id=129%3A38
+    ![sliders](https://user-images.githubusercontent.com/37247608/183889158-c7ed3b8e-485a-4a4c-9341-c3efc4c22f39.png)
 
-
-2 i also did the design for the spacing ssytem using the 8 grid system here is the link too
- [Team 69 - Faviconify (2).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297500/Team.69.-.Faviconify.2.zip)
-
+2. I also did the design for the spacing system using the 8 grid system here is the link too
+    https://www.figma.com/file/ucpk5nq44myTI3h1Y1lUWY/Team-69---Faviconify?node-id=5%3A12
 
 3 i was then assigned a task- to design the LOW fi wireframe section of the design
   i stated with the authentication screens (ranging from the sign up,login,forget password and all other screen that involed the regigsitation process.
