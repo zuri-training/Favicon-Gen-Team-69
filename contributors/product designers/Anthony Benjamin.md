@@ -1,1 +1,4 @@
-# Anthony Benjamin
+# Anthony Benjamin; I worked on the documentation file and my inputs were; the key decisions, research insight, scope and not in scope, contstraint and technical details. Here is the link to the file: https://www.figma.com/file/pe3JrXn6nui62FfGP7uJ2c/Documentation
+I worked on the empathy map and ideas from the brainstorming, This is link to the file: https://www.figma.com/file/Q3BdDpHxXjd9oal105nS18/Team-69-research-UX-document?node-id=0%3A1
+I worked on the research plan document. I contributed in the research questions and research objectives. Here is the link to the file: https://docs.google.com/document/d/1m2-tzJugvHI3vawkQWisMP52p2N_kSoaIZcBtnrHkhM/edit?usp=sharing
+I worked on the survey/interview questions. Here is the link: https://docs.google.com/forms/d/e/1FAIpQLSf2V2UpkH9O5TcnsO6ieJ7czZ7Y0MAsd-D1Of6-lnT15ccwPA/viewform?usp=sf_link
