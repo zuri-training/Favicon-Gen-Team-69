@@ -1,32 +1,42 @@
 # Daniel Etchie
 
-# Tasks Completed
-1. **Create Backend Folder Structure**
-   ### Link to Issue           
-      https://github.com/zuri-training/Favicon-Gen-Team-69/issues/4
+## Tasks Completed
+
+1. Create Backend Project Setup
+
+    > Created the backend django folder and set up all the required apps. The following apps were created (user_control, favicon) also installed all the necessary python packages including Cloudinary
       
-  ### Link to Solution
-      https://github.com/zuri-training/Favicon-Gen-Team-69/tree/dev/Backend
+      Link to issues
+      * https://github.com/zuri-training/Favicon-Gen-Team-69/issues/4
+
+      Link to solution
+      * https://github.com/zuri-training/Favicon-Gen-Team-69/pull/15
+
+2. Designed Database Schema 
+
+    > Designed the database schema showing all the tables, their fields and the relationship between them
+      
+      Link to issues
+      * https://github.com/zuri-training/Favicon-Gen-Team-69/issues/3
+
+      Link to solution
+      *  https://app.diagrams.net/#G1xZjlcI8SS6FBSsCD37lDRl2rRN7QkJph
    
    
-2. **Implement User, Favicon and Icon Models**    
-   ### Link to Issues
+3. Implement User, Favicon and Icon Models
+   
+   > Implement all the tables and fields prepared in the database schema design 
+    
+    Link to Issues
     https://github.com/zuri-training/Favicon-Gen-Team-69/issues/5, 
     https://github.com/zuri-training/Favicon-Gen-Team-69/issues/7, 
     https://github.com/zuri-training/Favicon-Gen-Team-69/issues/8
-   ### Link to Solution:
-    https://github.com/danieletchie/Favicon-Gen-Team-69/blob/454a09f1ef4dbf2be0f115d27dea0a68e75b08fe/Backend/user_control/models.py
-    https://github.com/danieletchie/Favicon-Gen-Team-69/blob/454a09f1ef4dbf2be0f115d27dea0a68e75b08fe/Backend/favicon/models.py
+   
+   Link to Solution:
+   * https://github.com/zuri-training/Favicon-Gen-Team-69/pull/21
 
-
-3. **Created Database Model Design**
-   ### Link to Issue:
-   https://github.com/zuri-training/Favicon-Gen-Team-69/issues/3
-   ### Link to solution:
-   https://app.diagrams.net/#G1xZjlcI8SS6FBSsCD37lDRl2rRN7QkJph
- 
- 
- 4. **Created Image to Favicon page**
+  
+ 4. Created Image to Favicon page
     ### Link to Issue:
     https://github.com/zuri-training/Favicon-Gen-Team-69/issues/94
     ### Link to Solution: 
