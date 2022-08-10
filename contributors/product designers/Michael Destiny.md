@@ -7,7 +7,7 @@ image of solution: ![WhatsApp Image 2022-08-10 at 11 49 42 AM (1)](https://user-
 
 I created the drop-down menu.
 Link to issue:  https://github.com/zuri-training/Team-69-Product-design/issues/19
-Image of solution: ![WhatsApp Image 2022-08-10 at 11 49 42 AM (3)](https://user-images.githubusercontent.com/105232462/183885574-70b3b834-ac57-4d6b-9b5a-d69ac0d47f5c.jpeg)
+Image of solution:![WhatsApp Image 2022-08-10 at 11 49 42 AM](https://user-images.githubusercontent.com/105232462/183885697-7872b9ce-8f03-45ce-8e4a-b11906bbb661.jpeg)
 
 
 
