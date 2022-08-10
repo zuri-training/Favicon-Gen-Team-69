@@ -17,6 +17,7 @@ i then did the hi fi screen for the registration process
 [Team 69 - Faviconify (7).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297539/Team.69.-.Faviconify.7.zip)
 after my team mate did the landing page for the project i made changes to some part of it
 i then did some part of the componet section like the (nav bar) and the footer 
+![Screenshot (8)](https://user-images.githubusercontent.com/37247608/183845436-2203a752-6832-4320-9efc-c53e86eb7c10.png)
 [Team 69 - Faviconify (12).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297555/Team.69.-.Faviconify.12.zip)
 [Team 69 - Faviconify (11).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297556/Team.69.-.Faviconify.11.zip)
 [Team 69 - Faviconify (10).zip](https://github.com/zuri-training/Favicon-Gen-Team-69/files/9297557/Team.69.-.Faviconify.10.zip)
