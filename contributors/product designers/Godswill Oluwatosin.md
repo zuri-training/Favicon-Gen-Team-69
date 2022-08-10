@@ -14,6 +14,12 @@ I worked on the Tutorial page of the High-Fidelity Designs
 ![image](https://user-images.githubusercontent.com/105371281/183773837-4f47d5e6-eda0-4a19-8ea4-c265dbaa3062.png)
 Github Link: https://github.com/zuri-training/Team-69-Product-design/issues/15
 
-I also worked on some minor fixes of some pages on the high-Fidelity designs on request of the Team Lead which were not assigned on Github like the redesign of the Logo Used, remodification of the landing page and preview page.
+I helped to modify the Hero section and How to Create a Favicon section of the Landing page made by StephanieAni
+![image](https://user-images.githubusercontent.com/105371281/183787434-b3bb15cb-d862-4bde-a9d7-110c1bb06655.png)
+![image](https://user-images.githubusercontent.com/105371281/183787447-1296fe93-333b-4921-965b-a77adbbe8b46.png)
+Github Link: https://github.com/zuri-training/Team-69-Product-design/issues/24
+
+
+I also worked on some minor fixes of some pages on the high-Fidelity designs on request of the Team Lead which were not assigned on Github like the redesign of the Logo Used, remodification of the view page.
 
 THANK YOU!
