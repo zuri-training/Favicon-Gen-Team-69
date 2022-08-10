@@ -59,9 +59,9 @@ class LogoutAPI(KnoxLogoutView):
         
 
 
-class UpdateUserProfileView(LoginRequiredMixin, generics.UpdateAPIView ):
-    login_url = '/api/login'
-    redirect_field_name = 'login'
+class UpdateUserProfileView(generics.UpdateAPIView ):
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
     queryset = CustomUser.objects.all()
     permissions_classes = (IsAuthenticated,)
