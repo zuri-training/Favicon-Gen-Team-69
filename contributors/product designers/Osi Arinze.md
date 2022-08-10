@@ -12,10 +12,9 @@ Research plan and Interview script#13:  The user research plan and Interview scr
 https://docs.google.com/document/d/1m2-tzJugvHI3vawkQWisMP52p2N_kSoaIZcBtnrHkhM/edit?usp=drivesdk
 
 
-Create User Persona#8:  I was also saddled with the task of creating a fictional character which  represents a user type (target users) . This helped the team  to create understanding and empathy with the end-users, thus helping us to define expectations, concerns and motivations, helping the design team to understand how to design a product that will satisfy our users' needs and therefore be a success. 
-Here's a screenshot to the user persona I created and the link to the file
-![WhatsApp Image 2022-08-10 at 7 45 03 AM (2)](https://user-images.githubusercontent.com/105232462/183836556-f91f021c-a626-4fd5-a18e-93cae5a7380e.jpeg)
+Create User Persona#8:  I was also saddled with the task of creating a fictional character which  represents a user type (target users) . This helped the team  to create understanding and empathy with the end-users, thus helping us to define expectations, concerns and motivations, helping the design team to understand how to design a product that will satisfy our users' needs and therefore be a success. Here's a screenshot to the user persona I created and the link to the file
 
+![WhatsApp Image 2022-08-10 at 7 45 03 AM (2)](https://user-images.githubusercontent.com/105232462/183836556-f91f021c-a626-4fd5-a18e-93cae5a7380e.jpeg)
 https://www.figma.com/file/Q3BdDpHxXjd9oal105nS18
 
 
