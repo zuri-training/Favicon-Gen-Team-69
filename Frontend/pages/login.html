@@ -24,43 +24,47 @@
       <div class="container">
         <div class="welcome">
           <h2>Welcome Back</h2>
-          <p>
-            To stay connected with us, please enter your personal details 
-          </p>
+          <p>To stay connected with us, please enter your personal details</p>
         </div>
         <div>
           <div class="header">
-            <h2 class="intro">
-              <span>Login to</span> Faviconify
-            </h2>
+            <h2 class="intro"><span>Login to</span> Faviconify</h2>
+            <p class="oauth_icons">
+              <a href="#"><img src="../images/facebook logo.svg" alt="facebook"></a>
+              <a href="#"><img src="../images/Google logo.svg" alt="google"></a>
+            </p>
             <h2><span>Or</span></h2>
-            <p>Continue with your email account</p>
+            <p>Continue with your personal details</p>
           </div>
           <div class="card">
-              <p class="invisible" id="general-error"></p>
+            <p class="invisible" id="general-error"></p>
             <form action="" method="post">
               <div class="field">
                 <label for="username">Username</label>
-                <i class="fa-regular fa-user "></i>
+                <img src="../images/User icon.svg" alt="user_avata" />
                 <input name="username" type="text" placeholder="E.g faith" />
-                <p class="error invisible">username must be at least 4 characters long</p>
+                <p class="error invisible">
+                  username must be at least 4 characters long
+                </p>
               </div>
 
               <div class="field">
                 <label for="password">Password</label>
-                <i class="fa-solid fa-lock"></i>
-                <input
-                  name="password"
-                  type="password"
-                  placeholder="Password"
-                />
-                <p class="error invisible">Password must  be at least 4 characters long</p>
+                <img src="../images/lock icon.svg" alt="lock_icon" />
+                <input name="password" type="password" placeholder="Password" />
+                <p class="error invisible">
+                  Password must be at least 4 characters long
+                </p>
               </div>
 
               <button type="submit">Login</button>
-              <p class="sign-in">Don't have an account <span><a href="register.html">SIGN UP</a></span></p>
+              <p class="sign-in">
+                Don't have an account
+                <span><a href="register.html">SIGN UP</a></span>
+              </p>
               <p class="terms">
-                By clicking sign up, you agree to the Faviconify Terms and conditions and privacy policy.
+                By clicking sign up, you agree to the Faviconify Terms and
+                conditions and privacy policy.
               </p>
             </form>
           </div>

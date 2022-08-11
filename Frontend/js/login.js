@@ -57,7 +57,7 @@ form.addEventListener("submit", (e) => {
       password: password.value,
     };
     
-    const url = "https://faviconify-rest-api.herokuapp.com/api/login";
+    const url = "https://faviconify-rest-api.herokuapp.com/api/login/";
 
     fetch(url, {
       headers: {
@@ -77,6 +77,7 @@ form.addEventListener("submit", (e) => {
         }
         else if (data.token) {
             localStorage.setItem("token", data.token)
+            localStorage.setItem("user_id", data.user_id)
             window.location.pathname = "Favicon-Gen-Team-69/pages/profile.html"
         }
       })

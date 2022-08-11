@@ -71,10 +71,10 @@ a:hover {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.0005em;
-        color: #0041aa;
+        color: #0051d4;
         padding: 10px 20px 10px 20px;
         border-radius: 5px;
-        border: 1px solid #0041aa;
+        border: 1px solid #0051d4;
         /* margin-right: 25px; */
         -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
         animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
@@ -89,7 +89,7 @@ a:hover {
         line-height: 24px;
         letter-spacing: 0.0005em;
         color: white;
-        background: #0041aa;
+        background: #0051d4;
         border-radius: 7px;
         padding: 10px;
         gap: 10px;
@@ -337,13 +337,13 @@ footer .footer-tab .tab-links span {
 }
 
 .socials {
-        color: #0041aa;
+        color: #0051d4;
         max-width: 10%;
         margin: auto auto;
 }
  */
 .lowerfooter {
-        background-color: #0041aa;
+        background-color: #0051d4;
         color: white;
         display: flex;
         flex-direction: row;
