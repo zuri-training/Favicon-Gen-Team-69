@@ -105,9 +105,11 @@ def emoji_to_image(emoji_data):
 
     drawable_img = ImageDraw.Draw(new_img)
 
-    FONT_PATH = './NotoSansSC-Regular.otf'
+    font_file = requests.get(emoji_data["url"])
+
+    file_image = ContentFile(font_file.content)
     
-    font_ttf = ImageFont.truetype(FONT_PATH, size=font_size)
+    font_ttf = ImageFont.truetype(file_image, size=font_size)
 
     # font_file = requests.get(emoji_data["url"])
 

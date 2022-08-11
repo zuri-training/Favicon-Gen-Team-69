@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="shortcut icon" href=" " type="image/x-icon" />
-    <link rel="stylesheet" href="./../css/header&footer.css" />
     <link rel="stylesheet" href="./../css/texttofavicon.css" />
     <script defer src="./../js/texttofavicon.js"></script>
+
+
+    <link rel="stylesheet" href="./../css/header&footer.css" />
+    <link rel="stylesheet" href="./../css/preview-modal.css" />
+    <link rel="stylesheet" href="../css/mobile-menu.css" />
+    <script defer src="../js/mobile-menu.js"></script>
 </head>
 
 <body>
@@ -18,16 +23,78 @@
           <img src="../images/favicon.png" alt="Logo" />
         </div>
         <div class="header_links">
-          <a href="generate.html">Generator</a>
-          <a href="tutorial.html">Tutorial</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="#">Generator</a>
+          <a href="#">Tutorial</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
         </div>
         <div class="header_btns">
-          <button type="button" class="loginbtn">Login</button>
-          <button type="button" class="regbtn">Register</button>
+          <div class="button-container">
+            <button type="button" class="loginbtn">Login</button>
+            <button type="button" class="regbtn">Register</button>
+          </div>
+        </div>
+        <div class="mobile-header_btns">
+          <img src="../images/menu-3-slashes.png" onclick="menu()" />
         </div>
       </header>
+    
+    
+<!-- mobile menu -->
+      <div class="mobile-menu-links " id="mobile-menu">
+        <div class="mobile-menu-links-container">
+    
+          <div class="cards card1">
+            <a href="#">
+              <div class="logo">
+                <img src="../images/generate-icon.svg" alt="">
+              </div>
+              <div class="text">
+                <p>Generator</p>
+              </div>
+            </a>
+          </div>
+          
+          <div class="cards card1">
+            <a href="#">
+              <div class="logo">
+                <img src="../images/Tutoorial.svg" alt="">
+              </div>
+              <div class="text">
+                <p>Tutorial</p>
+              </div>
+            </a>
+          </div>
+    
+          <div class="cards card1">
+            <a href="#">
+              <div class="logo">
+                <img src="../images/About.svg" alt="">
+              </div>
+              <div class="text">
+                <p>About</p>
+              </div>
+            </a>
+          </div>
+    
+          <div class="cards card1">
+            <a href="#">
+              <div class="logo">
+                <img src="../images/contact.svg" alt="">
+              </div>
+              <div class="text">
+                <p>Contact</p>
+              </div>
+            </a>
+          </div>
+    
+    
+    
+    
+        </div>
+      </div>
+<!-- mobile menu end -->
+    
     <main>
 
         <section class="head-text">
@@ -42,20 +109,20 @@
             <div class="bottom">
                 <form name="submit-form" method="post" action="" id="submit-form">
                     <section>
-                        <div style="float:left;margin-right:20px;">
-                            <label for="text-input">Text</label>
-                            <input id="text-input" type="text" value="" name="text-input" placeholder="Friends">
+                        <div style="float:left;margin-right:0px;">
+                            <label for="text">Text</label>
+                            <input id="text" type="text" value="" name="text" placeholder="Friends">
 
                             <p style="color: red;" id="text-empty"></p>
                         </div>
-                        <div style="float:left;margin-right:20px;">
-                            <label for="font-size">Font Size</label>
-                            <input id="font-size" type="number" value="" name="font-size" placeholder="14">
+                        <div style="float:left;margin-right:0px;">
+                            <label for="font_size">Font Size</label>
+                            <input id="font_size" type="number" value="" name="font_size" placeholder="14">
                             <p id="font-size-empty" style="color: red;""> </span></p>
                         </div>
-                        <div style=" float:left;margin-right:20px;">
-                                <label for="font-style">Font Style</label>
-                                <select onchange="getSelect()" name="font-style" id="font-style">
+                        <div style=" float:left;margin-right:0px;">
+                                <label for="font_style">Font Style</label>
+                                <select onchange="getSelect()" name="font_style" id="font_style">
                                     <option value="Default"> Default </option>
 
                                 </select>
@@ -63,16 +130,16 @@
 
                         <br style="clear:both;" />
 
-                        <div style="float:left;margin-right:20px;">
+                        <div style="float:left;margin-right:0px;">
                             <label for="text-color">Text Color</label>
-                            <input type="color" id="ftextcolor" name="textcolor" value="#ff0000">
+                            <input type="color" id="text_color" name="text_color" value="#ff0000">
 
                         </div>
-                        <div style="float:left;margin-right:20px;">
-                            <label for="font-size">Background Color</label>
-                            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                        <div style="float:left;margin-right:0px;">
+                            <label for="background-color">Background Color</label>
+                            <input type="color" id="background_color" name="background_color" value="#ff0000">
                         </div>
-                        <div style="float:left;margin-right:20px;">
+                        <div style="float:left;margin-right:0px;">
                             <label for="font-variant">Font Variant</label>
                             <select name="font-variant" id="font-variant">
                                 <option value="Default"> Default </option>
@@ -86,12 +153,15 @@
             </div>
         </section>
         <section class="bottom-buttons">
-            <div class="header_btns">
+            <div class="bottom-button-container">
                 <button form="submit-form" type="button" class="downloadbtn" id="downloadbtn">Download</button>
-                <button form="submit-form" type="submit" class="previewbtn" id="previewbtn">Preview</button>
-
+                <button form="submit-form" type="button" class="previewbtn" id="previewbtn">Preview</button>
+              
             </div>
         </section>
+
+<!-- preview modal starts here -->
+        
         <section class="preview-modal" id="modalpopup">
             <div id="closebtn" onclick="closepopup()"><span>X</span></div>
             <div class="container">
@@ -190,56 +260,105 @@
                 </section>
                 <div class="downloadbutton">
                     <button type="button" class="downloadbtn" id="downloadbtn">Download</button>
-                    </div>
+                </div>
 
             </div>
         </section>
 
+<!-- preview modal ends here -->
+
     </main>
     <footer>
         <div class="upperfooter">
-            <div class="slogann">
-                <img src="./../images/favicon+slogan.png" alt="logo" class="slogan" />
-                <br />
-                <br />
-                <img src="./../images/Vector.png" alt="facebook" class="socials">&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="./../images/twitter.png" alt="twitter" class="socials" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="./../images/gmail icon.png" alt="gmail" class="socials" />
+          <div class="slogan">
+            <div class="footer-logo">
+              <img src="../images/favicon+slogan.png" alt="logo" />
             </div>
-            <div>
-                <h3>Resources</h3>
-                <br>
-                <p class="reducedfooter">What is a favicon?</p>
-
-                <p class="reducedfooter">How to create a favicon</p>
-
-                <p class="reducedfooter">Why Choose Us?</p>
+            <!-- <br />
+            <br /> -->
+            <div class="socials">
+              <a href="#"><img src="../images/Vector.png" alt="facebook" ></a>
+              <a href=""><img src="../images/twitter.png" alt="twitter" /></a>
+              <a href=""><img src="../images/gmail icon.png" alt="gmail" /></a>
+             
             </div>
-            <div>
-                <h3>Contact</h3>
-                <br />
-                <p class="reducedfooter">team69@gmail.com</p>
-
-                <p class="reducedfooter">08044426483</p>
-
-                <p class="reducedfooter">Send us a message</p>
+          </div>
+          <div class="footer-tab">
+            <div class="tab-header">
+              <h3>Resources</h3>
             </div>
-            <div>
-                <h3>About Us</h3>
-                <br />
-                <p class="reducedfooter">What Favicon is about?</p>
-
-                <p class="reducedfooter">Who we are</p>
+            <div class="tab-links">
+              <ul>
+                <li><a href="#"><span>What is a Favicon?</span></a></li>
+                <li><a href="#"><span>How to Create a Favicon</span></a></li>
+                <li><a href="#"><span>Why Choose Us?</span></a></li>
+              </ul>
             </div>
+          </div>
+    
+          <div class="footer-tab">
+            <div class="tab-header">
+              <h3>Contact</h3>
+            </div>
+            <div class="tab-links">
+              <ul>
+                <li><a href="#"><span>team69@gmail.com</span></a></li>
+                <li><a href="#"><span>+(234)8044426483</span></a></li>
+                <li><a href="#"><span>Send us a messagge.</span></a></li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="footer-tab">
+            <div class="tab-header">
+              <h3>About Us</h3>
+            </div>
+            <div class="tab-links">
+              <ul>
+                <li><a href="#"><span>What Favicon is about?</span></a></li>
+                <li><a href="#"><span>Who we are?</span></a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <!-- <div>
+            <h3>Resources</h3>
+            <br>
+            <p class="reducedfooter">What is a favicon?</p>
+    
+            <p class="reducedfooter">How to create a favicon</p>
+    
+            <p class="reducedfooter">Why Choose Us?</p>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <br />
+            <p class="reducedfooter">team69@gmail.com</p>
+    
+            <p class="reducedfooter">08044426483</p>
+    
+            <p class="reducedfooter">Send us a message</p>
+          </div>
+          <div>
+            <h3>About Us</h3>
+            <br />
+            <p class="reducedfooter">What Favicon is about?</p>
+    
+            <p class="reducedfooter">Who we are</p>
+          </div> -->
         </div>
         <div class="lowerfooter">
-            <div>&copy;2022 favicon.com. All rights reserved</div>
-            <div>
-                Privacy Policy &nbsp;&nbsp; Terms & Conditions &nbsp;&nbsp; Cookie
-                Policy &nbsp;&nbsp; Safety information
-            </div>
+          <div class="right"><span>&copy;2022 favicon.com. All rights reserved</span></div>
+          <div class="left">
+            <!-- Privacy Policy &nbsp;&nbsp; Terms & Conditions &nbsp;&nbsp; Cookie
+            Policy &nbsp;&nbsp; Safety information -->
+            <a href="#"><span>Privacy Policy</span></a>
+            <a href="#"><span>Terms & Conditions</span></a>
+            <a href="#"><span> Cookie Policy</span></a>
+            <a href="#"><span>Safety information</span></a>
+          </div>
         </div>
-    </footer>
+      </footer>
 </body>
 
 </html>
