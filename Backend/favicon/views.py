@@ -1,4 +1,3 @@
-from math import radians
 from django.http import Http404, FileResponse
 from rest_framework import generics, status
 from rest_framework.response import Response
@@ -7,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from knox.auth import TokenAuthentication
 
 from favicon.models import Favicon
-from .helpers import generate_favicon, text_to_image,emoji_to_image, favicons_to_zip
+from .helpers import generate_favicon, text_to_image, emoji_to_image, favicons_to_zip
 
 
 # Create your views here.
@@ -18,7 +17,8 @@ class FaviconListView(generics.GenericAPIView):
     permission_classes = (IsAuthenticated,)  
 
     def get(self, request, format=None):
-        favicons = Favicon.objects.all()
+        # print(request.user.favicons.all)
+        favicons = request.user.favicons.all()
         serializer = FaviconSerializer(favicons, many=True)
         return Response(serializer.data)
 
@@ -36,7 +36,7 @@ class CreateFaviconView(generics.GenericAPIView):
         if serializer.is_valid():
             favicon_type = request.data.get('type')
             if favicon_type is None:
-                return Response({'details':'please pass in a file type'})
+                return Response({'details':'please pass in a file type'}, 400)
             if favicon_type == 'text':
                 text_serializer = TextPreviewSerializer(data=request.data)
                 text_serializer.is_valid(raise_exception=True)
@@ -55,7 +55,6 @@ class CreateFaviconView(generics.GenericAPIView):
                 if image is None:
                     return Response({"details": "image field is required"})
             favicon = serializer.save()
-            favicon.title = 'my_title'
             generate_favicon(image, favicon_sizes, favicon)
             favicons_to_zip(favicon)
             favicon.save()

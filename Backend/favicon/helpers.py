@@ -5,11 +5,11 @@ from django.core.files.base import ContentFile
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from .models import Icon
 
-import requests
+import requests, random, string
 
 
 def generate_icon(image, size, favicon):
-
+   
     if size == "favicon":
         resized_img = image.resize((64, 64))
         img_name = "favicon"
@@ -18,6 +18,10 @@ def generate_icon(image, size, favicon):
         resized_img = image.resize(size)
         img_name = f"{size[0]}x{size[0]}"
         img_ext = 'PNG'
+        
+    letters = string.ascii_lowercase
+    result_str = ''.join(random.choice(letters) for i in range(5))
+    img_name = img_name + "_" + result_str
     blob = BytesIO()
     resized_img.save(fp=blob, format=img_ext)
     blob_val = blob.getvalue()
@@ -29,7 +33,6 @@ def generate_icon(image, size, favicon):
     upload_icon = my_icon.icon
     upload_icon.save(img_name, icon_file)
 
-    my_icon.save()
     
 
 def generate_favicon(image, sizes, favicon):
@@ -40,8 +43,8 @@ def generate_favicon(image, sizes, favicon):
 
 def text_to_image(text_data):
 
-    img_width = len(text_data["text"]) * int(text_data["font_size"] / 2)
-    img_height = text_data["font_size"] + 10
+    img_width = len(text_data["text"]) * int(text_data["font_size"])
+    img_height = text_data["font_size"] + 2
 
     new_img = Image.new("RGB", (img_width, img_height),
                         text_data["background_color"],)
@@ -55,7 +58,7 @@ def text_to_image(text_data):
     font_ttf = ImageFont.truetype(file_image, size=text_data["font_size"])
 
     drawable_img.text((img_width / len(text_data["text"]), img_height / text_data["font_size"]),
-                      text_data["text"], font=font_ttf, fill=text_data["text_color"])
+                      text_data["text"], align="center", font=font_ttf, fill=text_data["text_color"])
 
     blob = BytesIO()
 
@@ -71,6 +74,8 @@ def text_to_image(text_data):
 
 def favicons_to_zip(favicon):
     zip_blob = BytesIO()
+    letters = string.ascii_lowercase
+    result_str = ''.join(random.choice(letters) for i in range(5))
     with ZipFile(zip_blob, "w") as my_zip:
         for icon in favicon.icons.all():
             fav_icon = Image.open(icon.icon)
@@ -82,10 +87,10 @@ def favicons_to_zip(favicon):
             
     content = ContentFile(zip_blob.getvalue())
     uploadable_zip = InMemoryUploadedFile(
-        content, None, 'favion.zip', 'application/zip', content.tell, None)
+        content, None, f'favi.zip', 'application/zip', content.tell, None)
     
     zip = favicon.zip_file
-    zip.save("favicon.zip", uploadable_zip)
+    zip.save(f'faviconify_{result_str}.zip', uploadable_zip)
 
     return favicon
     
