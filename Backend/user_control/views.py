@@ -2,6 +2,7 @@ from django.contrib.auth import login, logout
 from .models import CustomUser
 
 from rest_framework import generics
+from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 
 from knox.models import AuthToken
@@ -53,8 +54,9 @@ class LogoutAPI(KnoxLogoutView):
         
 
 
-class UserAPIView(generics.UpdateAPIView ):
+class UserViewSet(ModelViewSet):
     queryset = CustomUser.objects.all()
     permissions_classes = (IsAuthenticated,)
     serializer_class = UserSerializer
     authentication_classes = (TokenAuthentication,)
+    http_method_name = ("get","put", "delete")

@@ -42,13 +42,12 @@ class LoginSerializer(serializers.Serializer):
         raise serializers.ValidationError('Incorrect Credentials Passed.')
     
 
-# Update Users informatiion
+# Users Serializers informatiion
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = "__all__"
+        exclude = ("user_permissions", "groups", "password", "is_superuser")
         extra_kwargs = {
-            'password': {'required': False, 'write_only': True},
             'email': {'required': False},
             'username': {'required': False},
         }
