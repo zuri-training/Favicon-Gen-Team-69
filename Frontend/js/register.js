@@ -87,7 +87,7 @@ form.addEventListener("submit", (e) => {
       password: password.value,
     };
 
-    const url = "https://faviconify-rest-api.herokuapp.com/api/register";
+    const url = "https://faviconify-rest-api.herokuapp.com/api/register/";
 
     fetch(url, {
       headers: {
