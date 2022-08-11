@@ -59,4 +59,9 @@ class UserViewSet(ModelViewSet):
     permissions_classes = (IsAuthenticated,)
     serializer_class = UserSerializer
     authentication_classes = (TokenAuthentication,)
-    http_method_name = ("get","put", "delete")
+    http_method_name = ("get", "put", "delete")
+    
+    def retrieve(self, request, format=None, pk=None):
+        user = request.user
+        serializer = UserSerializer(user)
+        return Response(serializer.data)
