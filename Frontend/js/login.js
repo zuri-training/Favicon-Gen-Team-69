@@ -77,7 +77,6 @@ form.addEventListener("submit", (e) => {
         }
         else if (data.token) {
             localStorage.setItem("token", data.token)
-            localStorage.setItem("user_id", data.user_id)
             window.location.pathname = "Favicon-Gen-Team-69/pages/profile.html"
         }
       })
