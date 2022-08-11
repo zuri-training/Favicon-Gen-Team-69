@@ -6,6 +6,10 @@ main {
   margin: 3rem auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 30px;
   color: #0051d4;
