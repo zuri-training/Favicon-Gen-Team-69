@@ -58,12 +58,15 @@
     *Link to Solution:*
     
    
-9. **Updated Page Responsiveness**
-    ### Link to issue:
+6. Updated Page Responsiveness
+    *Link to issue:*
    *Link to Solution:*
     
     
-10. **Fixed Registration Page**
+7. Fixed Registration Page
+    
+    > Fixed some stying issues with the registration page and also fixed the Javascript validation and API integration
+    
     *Link to Issue:*
     * https://github.com/zuri-training/Favicon-Gen-Team-69/issues/53
     
@@ -79,28 +82,33 @@
      *Link to Solution:*
      
      
-12.  **Fixed Navbar Across All Pages**
+12.  *Fixed Navbar Across All Pages*
      *Link to Issue:*
      *Link to Solution:*
      
      
-13. **Created Zip Compression helper Functions** 
+13. Created Zip Compression helper Functions
    *Link to Issue:*
     https://github.com/zuri-training/Favicon-Gen-Team-69/issues/35
     *Link to Solution:*
     
     
-14. **Fixed Icon Conflict** 
+14. Fixed Icon Conflict
     *Link to Issue:*
     *Link to Solution:*
   
     
-16: **Temporarily Deployed Backend for Testing**
+16: Temporarily Deployed Backend for Testing
+
+    > Deployed the backend to heroku for testing purposes, wrote a bash script for compiling and database migrations during the deployment and also installed the daphne for better performance
+    
     *Link to Issue:*
+    
+    
     *Link to Solution:*
     
     
-17. **Favicon Generation Algorithm**
+17. Favicon Generation Algorithm
     *Link to Issue:*
     https://github.com/zuri-training/Favicon-Gen-Team-69/issues/1
     *Link to Solution:*
