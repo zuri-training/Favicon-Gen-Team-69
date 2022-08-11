@@ -20,7 +20,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        user = CustomUser.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
+        user = CustomUser.objects.create_user(username=validated_data['username'], email=validated_data['email'], password=validated_data['password'])
         
         return user 
 
@@ -42,44 +42,12 @@ class LoginSerializer(serializers.Serializer):
         raise serializers.ValidationError('Incorrect Credentials Passed.')
     
 
-# Update Users informatiion
-class UpdateUserSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(required=True)
-
+# Users Serializers informatiion
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ('username', 'first_name', 'last_name', 'email')
+        exclude = ("user_permissions", "groups", "password", "is_superuser")
         extra_kwargs = {
-            'first_name': {'required': True},
-            'last_name': {'required': True}
+            'email': {'required': False},
+            'username': {'required': False},
         }
-    
-    def validate_email(self, value):
-        user = self.context['request'].user
-        if CustomUser.objects.exclude(pk=user.pk).filter(email=value).exists():
-            raise serializers.ValidationError({'email': 'This email already exists.'})
-        return value    
-
-    # 
-    def validate_username(self, value):
-        user = self.context['request'].user
-        if CustomUser.objects.exclude(pk=user.pk).filter(username=value).exists():
-            raise serializers.ValidationError({'username': 'This username already exists.'})
-        return value    
-
-    def update(self, instance, validated_data):
-        user = self.context['request'].user
-
-        # makes sure the user logged in is same as the user updating the profile
-        if user.pk != instance.pk:
-            raise serializers.ValidationError({'authorize': 'you dont have permission to perform this function.'})
-
-
-        instance.first_name = validated_data['first_name'] 
-        instance.last_name = validated_data['last_name'] 
-        instance.username = validated_data['username'] 
-        instance.email = validated_data['email'] 
-
-        instance.save()
-
-        return instance
