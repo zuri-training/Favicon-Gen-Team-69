@@ -56,7 +56,7 @@ async function getSelect(){
 
 
 
-downloadbtn.addEventListener('click', (e) => {
+downloadbtn.addEventListener('click', async(e) => {
     
     // prevent the form from submitting
     e.preventDefault();
@@ -104,7 +104,7 @@ downloadbtn.addEventListener('click', (e) => {
 
 });
 
-previewbtn.addEventListener('click', (e) => {
+previewbtn.addEventListener('click', async(e) => {
     
     // prevent the form from submitting
     e.preventDefault();

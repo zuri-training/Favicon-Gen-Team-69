@@ -75,42 +75,45 @@ form {
 
 }
 
-form div {
-    /* border: 2px solid brown; */
+/* form div {
+   
     padding: 2rem;
-    /* border: 2px solid red; */
+   
 
-}
+} */
 
-input,
+/* input,
 label {
     display: block;
 
 }
+*/
 
 input[type=text],
 input[type=number] {
     padding: .3rem 0;
+    padding-left: 1rem;
+    
 }
 
 select {
     padding: .5rem 0;
+    /* padding-left: .5rem; */
 }
 
 input,
-select {
-    /* border: 2px solid red; */
+select
+{
     background-color: #ffffff;
-    width: 230px;
-    /* width: 100%; */
-    margin: 1rem auto;
+    /* width: 230px; */
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
     border: 1px solid #3D89F5;
     box-sizing: border-box;
     border-radius: 2px;
 
-    text-align: center;
+    /* text-align: center; */
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -118,10 +121,22 @@ select {
     line-height: 30px;
     letter-spacing: 0.0005em;
     color: #757678;
-    /* border: 2px solid yellow; */
+    
+    
 
 
-
+}
+/* input,select{
+    width: 100px;
+   
+} */
+.form-element{
+    /* border: 2px solid orangered; */
+    width: 32%;
+    /* margin: 1rem; */
+    /* border: 2px solid red; */
+    /* margin: 1rem 0; */
+    margin-bottom: 2rem;
 }
 
 main form label {
@@ -132,8 +147,23 @@ main form label {
     line-height: 40px;
     letter-spacing: 0.0005em;
     color: #002055;
-}
+} 
 
+.form-holder{
+    /* border: 2px solid blue; */
+    width: 100%;
+}
+form .top-row{
+/* border: 2px solid red; */
+/* width: 100%; */
+display: flex;
+justify-content: space-between;
+}
+form .bottom-row{
+/* border: 2px solid yellow; */
+display: flex;
+justify-content: space-between;
+}
 
  .bottom-buttons {
     /* border: 2px solid red ; */
@@ -227,9 +257,15 @@ main form label {
 
 @media (max-width: 600px) {
 
-    input,
+    /* input,
     select {
         width: 400px;
+    } */
+    form .top-row,form .bottom-row{
+    flex-direction: column;
+    }
+    .form-element{
+        width: 100%;
     }
 
     .header_btns {
