@@ -11,16 +11,16 @@ class  IconSerializer(serializers.ModelSerializer):
 
 
 class FaviconSerializer(serializers.ModelSerializer):
-    author_id = serializers.IntegerField(write_only=True)
-
-    author = UserSerializer(read_only=True)
-
     icons = IconSerializer(many=True, read_only=True)
 
     class Meta:
         model = Favicon
-        fields ='__all__'
-
+        fields = "__all__"
+        extra_kwargs = {
+            'author': {'required': False},
+            'username': {'required': False},
+        }
+        
 class TextPreviewSerializer(serializers.Serializer):
     text = serializers.CharField(max_length=50)
     font_size = serializers.IntegerField()
@@ -32,7 +32,7 @@ class EmojiPreviewSerializer(serializers.Serializer):
     emoji = serializers.CharField()   
     text_color = serializers.ListField()
     background_color = serializers.ListField()
-   
+    url = serializers.URLField()
  
 
  
