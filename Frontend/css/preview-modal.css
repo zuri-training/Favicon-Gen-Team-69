@@ -2,14 +2,11 @@
 
 .preview-modal {
     width: 80%;
-    /* border: 2px solid red; */
     margin: 0 auto;
     box-shadow: 18px 18px 18px 18px rgba(0, 0, 0, 0.2);
-    /* background: RED; */
     opacity: 1;
     border-radius: 10px;
-
-    top: 90%;
+    top: 80%;
     left: 50%;
     opacity: 1;
     position: absolute;
@@ -58,7 +55,7 @@
     cursor: pointer;
 }
 
-.preview-modal .container {
+.preview-modal .modal-container {
     /* border: 2px solid yellow; */
     width: 80%;
     margin: 0 auto;
@@ -66,14 +63,14 @@
     padding-bottom: 2rem;
 }
 
-.preview-modal .container .display {
+.preview-modal .modal-container .modal-display {
     background: #CCDFFF;
     padding: 2rem;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     border-radius: 10px;
 }
 
-.preview-modal .container .display .card-main-text {
+.preview-modal .modal-container .modal-display .modal-card-main-text {
     color: #0061FF;
     font-family: 'Poppins';
     font-style: normal;
@@ -93,7 +90,7 @@
 
 }
 
-.preview-modal .container .display .card-sub-text {
+.preview-modal .modal-container .modal-display .modal-card-sub-text {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -107,7 +104,7 @@
     flex-grow: 0;
 }
 
-.preview-modal .container .display .image {
+.preview-modal .modal-container .modal-display .modal-image {
     display: flex;
     flex-direction: column;
     /* border: 2px solid green; */
@@ -117,7 +114,7 @@
     /* border: 2px solid red; */
 }
 
-.preview-modal .container .display .image .top {
+.preview-modal .modal-container .modal-display .modal-image .modal-top {
     display: flex;
     flex-direction: row;
     /* border: 2px solid orange; */
@@ -126,7 +123,7 @@
 
 }
 
-.preview-modal .container .display .image .top .seg1 {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg1 {
     /* border: 2px solid red; */
     width: 20%;
     background-color: #D6D4D4;
@@ -137,7 +134,7 @@
 }
 
 
-.preview-modal .container .display .image .top .seg2 {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2 {
     /* border: 2px solid blue; */
     width: 60%;
     display: flex;
@@ -148,15 +145,15 @@
     border-top-right-radius: 7px
 }
 
-.preview-modal .container .display .image .top .seg2 .center-align {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2 .modal-center-align {
     text-align: center;
 }
 
-.preview-modal .container .display .image .top .seg2 .right-align {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2 .modal-right-align {
     text-align: right;
 }
 
-.preview-modal .container .display .image .top .seg2 .logo {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2 .modal-logo {
     /* border: 2px solid red; */
     width: 25%;
     display: flex;
@@ -165,7 +162,7 @@
 }
 
 
-.preview-modal .container .display .image .top .seg2 .title {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2 .modal-title {
     /* border: 2px solid blue; */
     width: 50%;
     display: flex;
@@ -173,7 +170,7 @@
     justify-content: center;
 }
 
-.preview-modal .container .display .image .top .seg2 .close {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2 .modal-close {
     /* border: 2px solid yellow; */
     width: 25%;
     display: flex;
@@ -184,7 +181,7 @@
 }
 
 
-.preview-modal .container .display .image .top .seg2 img {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2 img {
     border-radius: 50%;
     /* overflow: hidden; */
     width: 50%;
@@ -194,7 +191,7 @@
 
 }
 
-.preview-modal .container .display .image .top .seg3 {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg3 {
     /* border: 2px solid yellow; */
     width: 20%;
     text-align: center;
@@ -205,7 +202,7 @@
 
 }
 
-.preview-modal .container .display .image .bottom {
+.preview-modal .modal-container .modal-display .modal-image .modal-bottom {
     width: 100%;
     background-color: #ffffff;
     height: .5em;
@@ -213,20 +210,20 @@
 
 }
 
-.preview-modal .container .display .image-dark {
+.preview-modal .modal-container .modal-display .modal-image-dark {
     background-color: #282A2B;
 }
 
-.preview-modal .container .display .image .top .seg1-dark,
-.preview-modal .container .display .image .top .seg3-dark {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg1-dark,
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg3-dark {
     background-color: #282A2B;
 }
 
-.preview-modal .container .display .image .top .seg2-dark {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2-dark {
     background-color: #98999A
 }
 
-.preview-modal .container .display .image .bottom .seg4 {
+.preview-modal .modal-container .modal-display .modal-image .modal-bottom .modal-seg4 {
     /* border: 2px solid blue; */
     padding: .3em;
     background-color: #ffffff;
@@ -234,16 +231,16 @@
     width: 100%;
 }
 
-.preview-modal .container .display .image .bottom .seg4-dark {
+.preview-modal .modal-container .modal-display .modal-image .modal-bottom .modal-seg4-dark {
     /* border: 2px solid blue; */
     padding: .3em;
     background-color: #98999A
 }
 
-.preview-modal .container .display .image .top .seg1,
-.preview-modal .container .display .image .top .seg2,
-.preview-modal .container .display .image .top .seg3,
-.preview-modal .container .display .image .bottom .seg4 p {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg1,
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2,
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg3,
+.preview-modal .modal-container .modal-display .modal-image .modal-bottom .modal-seg4 p {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -263,14 +260,14 @@
     flex-grow: 0;
 }
 
-.preview-modal .container .display .image .top .seg1-dark,
-.preview-modal .container .display .image .top .seg2-dark,
-.preview-modal .container .display .image .top .seg3-dark,
-.preview-modal .container .display .image .bottom .seg4-dark p {
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg1-dark,
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg2-dark,
+.preview-modal .modal-container .modal-display .modal-image .modal-top .modal-seg3-dark,
+.preview-modal .modal-container .modal-display .modal-image .modal-bottom .modal-seg4-dark p {
     color: #ffffff;
 }
 
-.preview-modal .container .card3-container {
+.preview-modal .modal-container .modal-card3-container {
     /* border: 2px solid red; */
     background-color: #ffffff;
     border-radius: 10px;
@@ -284,20 +281,20 @@
     background: #FFFFFF;
 }
 
-.preview-modal .container .card3-container .row1 {
+.preview-modal .modal-container .modal-card3-container .modal-row1 {
     display: flex;
     flex-direction: row;
     justify-content: start;
 }
 
-.preview-modal .container .card3-container .row1 .logo {
+.preview-modal .modal-container .modal-card3-container .modal-row1 .modal-logo {
     /* border: 2px solid blue; */
     width: 4%;
     /* min-width: 200px; */
     min-width: 25px;
 }
 
-.preview-modal .container .card3-container .row1 .logo img {
+.preview-modal .modal-container .modal-card3-container .modal-row1 .modal-logo img {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -305,12 +302,12 @@
     /* margin: 0 auto; */
 }
 
-.preview-modal .container .card3-container .row1 .text {
+.preview-modal .modal-container .modal-card3-container .modal-row1 .modal-text {
     /* border: 2px solid yellow; */
     padding-left: 1rem;
 }
 
-.preview-modal .container .card3-container .row1 .text p {
+.preview-modal .modal-container .modal-card3-container .modal-row1 .modal-text p {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -374,7 +371,7 @@ h4 {
     letter-spacing: 0.0005em;
 }
 
-.preview-modal .container .card3-container .row2 span {
+.preview-modal .modal-container .modal-card3-container .modal-row2 span {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -397,7 +394,7 @@ h4 {
     flex-grow: 0;
 }
 
-.preview-modal .container .card3-container .row3 span {
+.preview-modal .modal-container .modal-card3-container .modal-row3 span {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -419,13 +416,13 @@ h4 {
     flex-grow: 0;
 }
 
-.preview-modal .container .card3-container .row1,
-.preview-modal .container .card3-container .row2,
-.preview-modal .container .card3-container .row3 {
+.preview-modal .modal-container .modal-card3-container .modal-row1,
+.preview-modal .modal-container .modal-card3-container .modal-row2,
+.preview-modal .modal-container .modal-card3-container .modal-row3 {
     margin-bottom: 1rem;
 }
 
-.preview-modal .container .card3-container .row3 {
+.preview-modal .modal-container .modal-card3-container .modal-row3 {
     padding-bottom: 1em;
 
 }
@@ -441,5 +438,18 @@ h4 {
 @media (max-width: 600px) {
     .preview-modal {
         width: 100%;
+        position: absolute;
+        /* top: 10%;
+        left: 50%; */
     }
+    .preview-modal .modal-container .modal-display .modal-image {
+        width: 100%;
+    }
+    /* .modal-card3, */
+    .modal-card3-container{
+        width: 100%;
+        /* border: 2px solid red; */
+        /* margin: 0 auto; */
+    } 
+   
 }
