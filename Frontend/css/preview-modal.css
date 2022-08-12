@@ -3,7 +3,7 @@
 .preview-modal {
     width: 80%;
     margin: 0 auto;
-    box-shadow: 18px 18px 18px 18px rgba(0, 0, 0, 0.2);
+    box-shadow: 2000px 2000px 2000px 2000px rgba(0, 0, 0, 0.2);
     opacity: 1;
     border-radius: 10px;
     top: 80%;
@@ -442,14 +442,16 @@ h4 {
         /* top: 10%;
         left: 50%; */
     }
+
     .preview-modal .modal-container .modal-display .modal-image {
         width: 100%;
     }
+
     /* .modal-card3, */
-    .modal-card3-container{
+    .modal-card3-container {
         width: 100%;
         /* border: 2px solid red; */
         /* margin: 0 auto; */
-    } 
-   
+    }
+
 }

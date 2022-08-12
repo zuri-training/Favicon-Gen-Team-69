@@ -1,0 +1,289 @@
+.cover-backround{
+background-color: rgba(0, 0, 0, 0.3);
+}
+.success-modal {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 2000px 2000px 2000px 2000px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    border-radius: 10px;
+    top: 100%;
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(70%);
+    transition: transform 0.4s, top 0.4s;
+    background: #FFF;
+    visibility: hidden;
+    padding: 3rem;
+
+}
+.open-popup {
+    visibility: visible;
+}
+
+.success-modal-cancel-button {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.success-modal-cancel-button img:hover {
+    cursor: pointer;
+}
+
+.success-modal .success-modal-container {
+    /* border: 2px solid yellow; */
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+}
+
+.success-modal .success-modal-container .success-modal-row1 {
+    border: 2px solid green;
+    padding: 5rem 3rem;
+    width: 80%;
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.success-modal .success-modal-container .success-modal-row1 .success-modal-row1-text {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.success-modal .success-modal-container .success-modal-row1 .success-modal-row1-logo {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid blue; */
+}
+
+.success-modal .success-modal-container .success-modal-row1 .success-modal-row1-logo img {
+    margin-top: 1.5rem;
+    width: 25%;
+
+}
+
+.success-modal .success-modal-container .success-modal-row1 .success-modal-row1-text span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.5px;
+    line-height: 24px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0005em;
+    color: #002055;
+}
+
+.success-modal .success-modal-container .success-modal-row2 {
+    /* border: 2px solid red; */
+    margin: 3rem 0;
+  
+}
+
+.success-modal .success-modal-container .success-modal-row2 form {
+    /* border: 2px solid blue; */
+    width: 60%;
+    margin: 0 auto;
+    
+}
+
+.success-modal .success-modal-container .success-modal-row2 form input[type=text] {
+    width: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #0051D5;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.5px;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+.success-modal .success-modal-container .success-modal-row2 form button {
+    font-family: "Poppins";
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0005em;
+    color: white;
+    background: #0041aa;
+    border-radius: 7px;
+    padding: 10px;
+    gap: 10px;
+    border: none;
+    width: 120px;
+    /* width: 45%; */
+    /* height: 44px; */
+    left: 409px;
+    top: 419px;
+    -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
+    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
+}
+
+.success-modal .success-modal-container .success-modal-row2 form button:hover {
+    background: #80B0FF;
+    color: white;
+    transition-delay: 0.1s;
+    border: none
+}
+
+.success-modal .success-modal-container .success-modal-row3{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.success-modal .success-modal-container .success-modal-row3 span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 112%;
+    letter-spacing: 0.0005em;
+
+    color: #002055;
+    
+}
+.success-modal .success-modal-container .success-modal-row4{
+/* border: 2px solid red; */
+/* padding: 10rem; */
+margin-bottom: 2rem;
+}
+.success-modal .success-modal-container .success-modal-row4 span{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 17.5px;
+line-height: 30px;
+/* or 194% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.0005em;
+
+/* Light blue 100 */
+
+color: #002055;
+}
+.success-modal .success-modal-container .success-modal-row5{
+    border: 2px solid green;
+    width: 90%;
+    margin: 0 auto;
+    background: #F2F7FF;
+    border-radius: 5px;
+}
+.success-modal .success-modal-container .success-modal-row5 .success-modal-row5-container{
+    /* background: #F2F7FF;
+border-radius: 5px; */
+width: 90%;
+/* border: 2px solid blue; */
+display: flex;
+flex-direction: column;
+
+margin: 2rem auto;
+/* padding-left: 0; */
+
+}
+.success-modal .success-modal-container .success-modal-row5 .success-modal-row5-container  ul{
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+    /* border: 2px solid brown; */
+}
+.success-modal .success-modal-container .success-modal-row5 .success-modal-row5-container .success-modal-row5-container-links{
+/* border: 2px solid red; */
+/* padding-left: 0; */
+display: flex;
+justify-content: space-between;
+
+}
+.success-modal .success-modal-container .success-modal-row5 .success-modal-row5-container .success-modal-row5-container-links span{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 52px;
+display: flex;
+align-items: center;
+letter-spacing: 0.0005em;
+
+color: #002055;
+}
+.success-modal .success-modal-container .success-modal-row5 .success-modal-row5-container .success-modal-row5-container-links img{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    /* width: 10%; */
+    min-width: 40px;
+    max-width: 50px;
+
+}
+.success-modal .success-modal-container .success-modal-row5 .success-modal-row5-container .success-modal-row5-container-links img:hover{
+    cursor: pointer;
+}
+
+.success-modal .success-modal-container .success-modal-row6 form button {
+    font-family: "Poppins";
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0005em;
+    color: white;
+    background: #0041aa;
+    border-radius: 7px;
+    padding: 10px;
+    gap: 10px;
+    border: none;
+    width: 120px;
+    /* width: 45%; */
+    /* height: 44px; */
+    left: 409px;
+    top: 419px;
+    -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
+    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1.2s both;
+    margin-top: 2rem;
+}
+.success-modal .success-modal-container .success-modal-row6 form button:hover {
+    background: #80B0FF;
+    color: white;
+    transition-delay: 0.1s;
+    border: none
+}
+
+@media (max-width: 600px) {
+   
+    .success-modal {
+        top: 140%;
+    }
+    .success-modal .success-modal-container .success-modal-row2 form {
+        display: flex;
+        flex-direction: column;
+        
+        width: 80%;
+    }
+    .success-modal .success-modal-container .success-modal-row2 form input[type=text] {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .success-modal .success-modal-container .success-modal-row2 form button{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .success-modal .success-modal-container .success-modal-row6 form button {
+       width: 80%;
+    }
+}
