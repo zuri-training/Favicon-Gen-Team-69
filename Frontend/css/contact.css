@@ -40,10 +40,30 @@ p {
 
 form {
     width: 50%;
-/*    min-width: 762px;
-*/    margin: 0 auto 188px;
+    margin: 0 auto 188px;
     box-shadow: 0 8px 16px #CDDAF0C9;
     background-color: #FFFFFF;
+}
+
+#scsMsg {
+    width: 587px;
+    height: 379px;
+    border: 1px solid #002055;
+    border-radius: 5px;
+    margin: 150px auto;
+    background-color: #FFFFFF;
+}
+
+#scsMsg p {
+    margin-top: 64px;
+    font-size: 17.5px;
+}
+
+#scsMsg img {
+    width: 142px;
+    height: 142px;
+    position: relative;
+    top: 55px;
 }
 
 fieldset {
