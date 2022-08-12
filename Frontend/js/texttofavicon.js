@@ -32,25 +32,26 @@ async function getData(){
 
 async function getSelect(){
     font_variants.innerHTML='<option value="Default"> Default </option>'
-    d= document.getElementById('font-style').value
+    d= document.getElementById('font_style').value
     const response = await fetch(url);
     const data= await response.json();
 
     let font_variant= data.items.filter(function(value){
         return value['family'] == d
     })
-    console.log(typeof(font_variant))
-    console.log("Font Variant Print")
-    console.log(font_variant[0]['variants'].length)
+    // console.log(typeof(font_variant))
+    // console.log("Font Variant Print")
+    // console.log(font_variant[0]['variants'].length)
 
     let loopcounter = font_variant[0]['variants'].length
     let i=0
     for(i=0 ; i<loopcounter ; i++){
-        console.log(font_variant[0]['variants'].length)
-        console.log(font_variant[0]['variants'])
+       
         font_variants.innerHTML+=`<option value="${font_variant[0]['variants'][i]}"> ${font_variant[0]['variants'][i]}</option>`
-        console.log("Running")
+        // console.log("Running")
     }
+    console.log(font_variant[0]['variants'].length)
+    console.log(font_variant[0]['variants'])
 
 }
 
@@ -73,11 +74,6 @@ downloadbtn.addEventListener('click', async(e) => {
     if (fontsize.value === '' || fontsize.value == null) {
         font_size_message.push("font size Cannot Be Empty")
     }
-    // if (isNaN(fontsize.value)) {
-    //     // font_size_message.push("font size Cannot Be Empty")
-    //     // alert("only number allowed")
-    //     font_size_empty_span.innerText="Only Numbers Allowed"
-    // }
 
     if (text_message.length > 0) {
         e.preventDefault()
