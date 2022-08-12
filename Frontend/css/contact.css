@@ -6,7 +6,7 @@ main {
     background-image: url("../images/contact screen.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0 -420px;
     text-align: center;
 }
 
@@ -40,8 +40,8 @@ p {
 
 form {
     width: 50%;
-    max-width: 762px;
-    margin: 0 auto;
+/*    min-width: 762px;
+*/    margin: 0 auto 188px;
     box-shadow: 0 8px 16px #CDDAF0C9;
     background-color: #FFFFFF;
 }
@@ -74,8 +74,8 @@ textarea {
 #email {
     background-image: url('../images/mail.png');
     background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 50px 50px;
+    background-position: 12px 12px;
+    background-size: 30px 30px;
     padding-left: 70px;
     font-size: 15.5px;
 }
@@ -83,8 +83,8 @@ textarea {
 #user {
     background-image: url('../images/user.png');
     background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 50px 50px;
+    background-position: 12px 12px;
+    background-size: 30px 30px;
     padding-left: 70px;
     font-size: 15.5px;
 }
@@ -109,13 +109,18 @@ textarea {
 }
 
 #documentation {
-    width: 43%;
+    width: 35%;
     margin: 144px auto;
+}
+
+#documentation h2 {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 #docBttn {
     margin: 74px auto;
-    width: 200px;
+    width: 250px;
     height: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -155,9 +160,13 @@ textarea {
     border: none;
     border-radius: 50%;
     background-color: #F2F7FF;
-    display: flex;
     margin: auto;
     justify-content: center;
+}
+
+.icon img {
+    position: relative;
+    top: 10px;
 }
 
 
@@ -275,7 +284,7 @@ textarea {
         width: 90%;
     }
 
-    #favImp {
+    /*#favImp {
         padding: 0 0 100px;
         font-size: 11px;
         font-weight: 400;
@@ -343,10 +352,260 @@ textarea {
     #faq3 h3 {
         font-size: 16px;
         padding: 25px 25px 0;
+    }*/
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+        min-width: 600px;
+        height: auto;
+        text-align: center;
+        padding: 25px;
+
+        background-image: url("../images/contact-screen-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 -200px;
     }
 
+    h1 {
+        font-size: 24px;
+    }
 
+    #intro {
+        width: 600px;
+        font-size: 11px;
+        padding: 0 0 80px;
+    }
 
+    #intro h2 {
+        display: none;
+    }
 
+    #call {
+        width: 80%;
+        height: 180px;
+    }
 
+    form {
+        width: 80%;
+        margin: 0 auto 167px;
+        padding: 26px 0;
+    }
+
+    #submitForm {
+        width: 50.7%;
+    }
+
+    #getT {
+        color: #205055;
+        font-size: 24px;
+    }
+
+    .inTouch {
+        width: 100%;
+        height: 93px;
+        color: #205055;
+    }
+
+    .icon {
+        margin: 0;
+    }
+
+    .dark {
+        font-size: 20px;
+        font-weight: 700;
+}
+
+    .light {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    #documentation {
+        width: 100%;
+    }
+
+    #documentation h2 {
+        color: #0041AA;
+        font-size: 20px;
+        width: 65%;
+        margin: auto;
+        padding: 0;
+        height: 120px;
+    }
+
+    #docBttn {
+        width: 40%;
+        font-size: 20px;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        width: 100%;
+        max-width: 1024px;
+        height: auto;
+        text-align: center;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+        color: #0041AA;
+    }
+
+    #intro {
+        width: 773px;
+        margin: 60px auto 0;
+        font-size: 11px;
+    }
+
+    #intro h2 {
+        padding-bottom: 30px;
+        color: #002055;
+        font-size: 22px;
+    }
+
+    #call {
+        width: 100%;
+        height: 65px;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+
+    form {
+        width: 762px;
+        margin: 0 auto 167px;
+        padding: 0;
+    }
+
+    #submitForm {
+        width: 170px;
+    }
+
+    #getT {
+        font-size: 22px;
+    }
+
+    .inTouch {
+        width: 300px;
+        height: 93px;
+        display: inline-flex;
+    }
+
+    .icon {
+        margin: 0;
+    }
+
+    .dark {
+        font-size: 17.5px;
+        font-weight: 400;
+    }
+
+    .light {
+        font-size: 15.5px;
+        font-weight: 400;
+    }
+
+    #documentation {
+        width: 100%;
+    }
+
+    #documentation h2 {
+        font-size: 20px;
+        width: 65%;
+        margin: auto;
+        padding: 0;
+        height: 120px;
+    }
+
+    #docBttn {
+        width: 250px;
+        font-size: 80px;
+        font-size: 24px;
+    }
+
+    #container {
+        display: flex;
+        width: 90%;
+    }
+
+    /*#favImp {
+        padding: 0 0 100px;
+        font-size: 11px;
+        font-weight: 400;
+        text-align: left;
+        width: 332px;
+    }
+
+    #faq1 {
+        width: 100%;
+        height: 194px;
+        padding: 0;
+        margin: 0 auto 24px;
+
+    }
+
+    #faq1 p {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq1 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }
+
+    #faq2 {
+        width: 100%;
+        height: 200px;
+        padding: 0 0 10px;
+        margin: 0 auto 24px;
+
+    }
+
+    #faq2 ul {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq2 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }
+
+    #faq3 {
+        width: 100%;
+        height: 194px;
+        padding: 0;
+        background-color: #205055;
+        color: #FFFFFF;
+        margin: 0 auto 247px;
+
+    }
+
+    #faq3 p {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq3 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }*/
 }
