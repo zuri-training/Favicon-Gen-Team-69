@@ -11,7 +11,10 @@ Solution Provided: I worked with the team over google meets and google docs and 
 
 then we created an interview script and shared accross to individuals to gather qualitative responses and those responces were curated and pinned to a Figjam board to aid other team member in carrying out a proper research analysis.
 
-Link: https://www.figma.com/file/Q3BdDpHxXjd9oal105nS18/Team-69-research-UX-document?node-id=0%3A1
+Link: 1. https://www.figma.com/file/Q3BdDpHxXjd9oal105nS18/Team-69-research-UX-document?node-id=0%3A1
+      2. https://docs.google.com/document/d/1m2-tzJugvHI3vawkQWisMP52p2N_kSoaIZcBtnrHkhM/edit?usp=drivesdk
+
+
 
 # 2. Draw user flow
 

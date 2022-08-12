@@ -2,326 +2,342 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="shortcut icon" href=" " type="image/x-icon" />
-    <link rel="stylesheet" href="./../css/texttofavicon.css" />
-    <script defer src="./../js/texttofavicon.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="shortcut icon" href=" " type="image/x-icon" />
+  <link rel="stylesheet" href="./../css/texttofavicon.css" />
+  <script defer src="./../js/texttofavicon.js"></script>
 
+  <!-- color picker -->
+  <!-- <link rel="stylesheet" href="coloris.min.css" />
+<script src="coloris.min.js"></script> -->
 
-    <link rel="stylesheet" href="./../css/header&footer.css" />
-    <link rel="stylesheet" href="./../css/preview-modal.css" />
-    <link rel="stylesheet" href="../css/mobile-menu.css" />
-    <script defer src="../js/mobile-menu.js"></script>
+  <link rel="stylesheet" href="./../css/header&footer.css" />
+  <link rel="stylesheet" href="./../css/preview-modal.css" />
+  <link rel="stylesheet" href="../css/mobile-menu.css" />
+  <script defer src="../js/mobile-menu.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="favicon_logo">
-          <img src="../images/favicon.png" alt="Logo" />
+  <header>
+    <div class="favicon_logo">
+      <img src="../images/favicon.png" alt="Logo" />
+    </div>
+    <div class="header_links">
+      <a href="#">Generator</a>
+      <a href="#">Tutorial</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="header_btns">
+      <div class="button-container">
+        <button type="button" class="loginbtn">Login</button>
+        <button type="button" class="regbtn">Register</button>
+      </div>
+    </div>
+    <div class="mobile-header_btns">
+      <img src="../images/menu-3-slashes.png" onclick="menu()" />
+    </div>
+  </header>
+
+
+  <!-- mobile menu -->
+  <div class="mobile-menu-links " id="mobile-menu">
+    <div class="mobile-menu-links-container">
+
+      <div class="mobile-menu-cards ">
+        <a href="#">
+          <div class="mobile-menu-logo">
+            <img src="../images/generate-icon.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>Generator</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-menu-cards ">
+        <a href="#">
+          <div class="mobile-menu-logo">
+            <img src="../images/Tutoorial.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>Tutorial</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-menu-cards ">
+        <a href="#">
+          <div class="mobile-menu-logo">
+            <img src="../images/About.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>About</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-menu-cards ">
+        <a href="#">
+          <div class="mobile-menu-logo">
+            <img src="../images/contact.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>Contact</p>
+          </div>
+        </a>
+      </div>
+
+
+
+
+    </div>
+  </div>
+  <!-- mobile menu end -->
+
+  <main>
+
+    <section class="head-text">
+      <h2>Generate your Favicons in Seconds!</h2>
+      <h4>Quickly generate your favicon from an image by uploading your image below. Download your favicon in the
+        most up to date formats.</h4>
+    </section>
+    <section class="text-generate-container">
+      <div class="top">
+        <h3>Generate From Text</h3>
+      </div>
+      <div class="bottom">
+        <form name="submit-form" method="post" action="" id="submit-form">
+          <section class="form-holder">
+            <div class="top-row">
+              
+              <div class="form-element">
+                <label for="text">Text</label>
+                <input id="text" type="text" value="" name="text" placeholder="Friends">
+                <p style="color: red;" id="text-empty"></p>
+              </div>
+              <!-- style="float:left;margin-right:0px;" -->
+              <div class="form-element">
+                <label for="font_size">Font Size</label>
+                <input id="font_size" type="number" value="" name="font_size" placeholder="14">
+                <p id="font-size-empty" style="color: red;""> </span></p>
+              </div>
+              
+              <div class="form-element">
+                  <label for=" font_style">Font Style</label>
+                  <select onchange="getSelect()" name="font_style" id="font_style">
+                  <option value="Default"> Default </option>
+                  </select>
+              </div>
+            
+            </div>
+            <div class="bottom-row">
+              
+              <div class="form-element">
+                <label for="text-color">Text Color</label>
+                <input type="color" id="text_color" name="text_color" value="#ff0000">
+                <!-- <input type="text" data-coloris />
+                <input type="text" class="coloris" value="rgb(255, 0, 0)" /> -->
+              </div>
+              
+              <div class="form-element">
+                <label for="background-color">Background Color</label>
+                <input type="color" id="background_color" name="background_color" value="#ff0000">
+              </div>
+              
+              <div class="form-element">
+                <label for="font-variant">Font Variant</label>
+                <select name="font-variant" id="font-variant">
+                <option value="Default"> Default </option>
+                </select>
+                <!-- <input id="Font Style" type="text" value="" name="font-style"> -->
+              </div>
+            </div>
+
+
+            <!-- <br style="clear:both;" /> -->
+
+
+          </section>
+
+        </form>
+
+      </div>
+    </section>
+    <section class="bottom-buttons">
+      <div class="bottom-button-container">
+        <button form="submit-form" type="button" class="downloadbtn" id="downloadbtn">Download</button>
+        <button form="submit-form" type="button" class="previewbtn" id="previewbtn">Preview</button>
+
+      </div>
+    </section>
+
+    <!-- preview modal starts here -->
+
+    <section class="preview-modal" id="modalpopup">
+      <div id="closebtn" onclick="closepopup()"><span>X</span></div>
+      <div class="modal-container">
+
+        <section class="modal-head-text">
+          <h2>Preview</h2>
+          <h4>A preview of how your favicons will look like on different screens and web browsers.</h4>
+        </section>
+        <section class="modal-display">
+          <div class="modal-card1">
+
+            <p class="modal-card-main-text">For desktop browsers</p>
+            <br>
+            <p class="modal-card-sub-text">Default theme</p>
+
+            <div class="modal-image">
+              <div class="modal-top">
+                <div class="modal-seg1">x</div>
+                <div class="modal-seg2">
+                  <div class="modal-logo">
+                    <img src="../images/link.png" alt="">
+                  </div>
+                  <div class="modal-title">
+                    <p class="modal-center-align">Lorem</p>
+                  </div>
+                  <div class="modal-close">
+                    <p class="modal-right-align">x</p>
+                  </div>
+
+                </div>
+                <div class="modal-seg3">+</div>
+              </div>
+              <div class="modal-bottom">
+                <div class="modal-seg4"></div>
+              </div>
+            </div>
+            <br>
+          </div>
+
+          <div class="modal-card2">
+            <p class="modal-card-sub-text">Dark theme</p>
+
+            <div class="modal-image modal-image-dark ">
+              <div class="modal-top ">
+                <div class="modal-seg1 modal-seg1-dark">x</div>
+                <div class="modal-seg2 modal-seg2-dark">
+                  <div class="modal-logo ">
+                    <img src="../images/link.png" alt="">
+                  </div>
+                  <div class="modal-title ">
+                    <p class="modal-center-align">Lorem</p>
+                  </div>
+                  <div class="modal-close">
+                    <p class="modal-right-align">x</p>
+                  </div>
+
+                </div>
+                <div class="modal-seg3 modal-seg3-dark">+</div>
+              </div>
+              <div class="modal-bottom">
+                <div class="modal-seg4 modal-seg4-dark"></div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="modal-card3">
+            <br>
+            <br>
+            <p class="modal-card-main-text">For Google Result Pages</p>
+
+            <p class="modal-card-sub-text">Desktop</p>
+
+
+            <div class="modal-card3-container">
+              <div class="modal-row1">
+                <div class="modal-logo ">
+                  <img src="../images/link.png" alt="">
+                </div>
+                <div class="modal-text">
+                  <p class="modal-center-align">example.com</p>
+                </div>
+              </div>
+              <div class="modal-row2">
+                <p><span>Lorem Ipsum</span></p>
+              </div>
+              <div class="modal-row3">
+                <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas ratione necessitatibus
+                    similique alias laborum vitae itaque iusto labore at?</span></p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- <h2>For desktop browsers</h2>
+                    <h4>Default theme.</h4> -->
+        </section>
+        <div class="downloadbutton">
+          <button type="button" class="downloadbtn" id="downloadbtn">Download</button>
         </div>
-        <div class="header_links">
-          <a href="#">Generator</a>
-          <a href="#">Tutorial</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+
+      </div>
+    </section>
+
+    <!-- preview modal ends here -->
+
+  </main>
+  <footer>
+    <div class="upperfooter">
+      <div class="slogan">
+        <div class="footer-logo">
+          <img src="../images/favicon+slogan.png" alt="logo" />
         </div>
-        <div class="header_btns">
-          <div class="button-container">
-            <button type="button" class="loginbtn">Login</button>
-            <button type="button" class="regbtn">Register</button>
-          </div>
-        </div>
-        <div class="mobile-header_btns">
-          <img src="../images/menu-3-slashes.png" onclick="menu()" />
-        </div>
-      </header>
-    
-    
-<!-- mobile menu -->
-      <div class="mobile-menu-links " id="mobile-menu">
-        <div class="mobile-menu-links-container">
-    
-          <div class="cards card1">
-            <a href="#">
-              <div class="logo">
-                <img src="../images/generate-icon.svg" alt="">
-              </div>
-              <div class="text">
-                <p>Generator</p>
-              </div>
-            </a>
-          </div>
-          
-          <div class="cards card1">
-            <a href="#">
-              <div class="logo">
-                <img src="../images/Tutoorial.svg" alt="">
-              </div>
-              <div class="text">
-                <p>Tutorial</p>
-              </div>
-            </a>
-          </div>
-    
-          <div class="cards card1">
-            <a href="#">
-              <div class="logo">
-                <img src="../images/About.svg" alt="">
-              </div>
-              <div class="text">
-                <p>About</p>
-              </div>
-            </a>
-          </div>
-    
-          <div class="cards card1">
-            <a href="#">
-              <div class="logo">
-                <img src="../images/contact.svg" alt="">
-              </div>
-              <div class="text">
-                <p>Contact</p>
-              </div>
-            </a>
-          </div>
-    
-    
-    
-    
+        <!-- <br />
+            <br /> -->
+        <div class="socials">
+          <a href="#"><img src="../images/logo/Vector.png" alt="facebook"></a>
+          <a href=""><img src="../images/twitter.png" alt="twitter" /></a>
+          <a href=""><img src="../images/gmail icon.png" alt="gmail" /></a>
+
         </div>
       </div>
-<!-- mobile menu end -->
-    
-    <main>
+      <div class="footer-tab">
+        <div class="tab-header">
+          <h3>Resources</h3>
+        </div>
+        <div class="tab-links">
+          <ul>
+            <li><a href="#"><span>What is a Favicon?</span></a></li>
+            <li><a href="#"><span>How to Create a Favicon</span></a></li>
+            <li><a href="#"><span>Why Choose Us?</span></a></li>
+          </ul>
+        </div>
+      </div>
 
-        <section class="head-text">
-            <h2>Generate your Favicons in Seconds!</h2>
-            <h4>Quickly generate your favicon from an image by uploading your image below. Download your favicon in the
-                most up to date formats.</h4>
-        </section>
-        <section class="text-generate-container">
-            <div class="top">
-                <h3>Generate From Text</h3>
-            </div>
-            <div class="bottom">
-                <form name="submit-form" method="post" action="" id="submit-form">
-                    <section>
-                        <div style="float:left;margin-right:0px;">
-                            <label for="text">Text</label>
-                            <input id="text" type="text" value="" name="text" placeholder="Friends">
+      <div class="footer-tab">
+        <div class="tab-header">
+          <h3>Contact</h3>
+        </div>
+        <div class="tab-links">
+          <ul>
+            <li><a href="#"><span>team69@gmail.com</span></a></li>
+            <li><a href="#"><span>+(234)8044426483</span></a></li>
+            <li><a href="#"><span>Send us a messagge.</span></a></li>
+          </ul>
+        </div>
+      </div>
 
-                            <p style="color: red;" id="text-empty"></p>
-                        </div>
-                        <div style="float:left;margin-right:0px;">
-                            <label for="font_size">Font Size</label>
-                            <input id="font_size" type="number" value="" name="font_size" placeholder="14">
-                            <p id="font-size-empty" style="color: red;""> </span></p>
-                        </div>
-                        <div style=" float:left;margin-right:0px;">
-                                <label for="font_style">Font Style</label>
-                                <select onchange="getSelect()" name="font_style" id="font_style">
-                                    <option value="Default"> Default </option>
+      <div class="footer-tab">
+        <div class="tab-header">
+          <h3>About Us</h3>
+        </div>
+        <div class="tab-links">
+          <ul>
+            <li><a href="#"><span>What Favicon is about?</span></a></li>
+            <li><a href="#"><span>Who we are?</span></a></li>
 
-                                </select>
-                        </div>
-
-                        <br style="clear:both;" />
-
-                        <div style="float:left;margin-right:0px;">
-                            <label for="text-color">Text Color</label>
-                            <input type="color" id="text_color" name="text_color" value="#ff0000">
-
-                        </div>
-                        <div style="float:left;margin-right:0px;">
-                            <label for="background-color">Background Color</label>
-                            <input type="color" id="background_color" name="background_color" value="#ff0000">
-                        </div>
-                        <div style="float:left;margin-right:0px;">
-                            <label for="font-variant">Font Variant</label>
-                            <select name="font-variant" id="font-variant">
-                                <option value="Default"> Default </option>
-                            </select>
-                            <!-- <input id="Font Style" type="text" value="" name="font-style"> -->
-                        </div>
-                    </section>
-
-                </form>
-
-            </div>
-        </section>
-        <section class="bottom-buttons">
-            <div class="bottom-button-container">
-                <button form="submit-form" type="button" class="downloadbtn" id="downloadbtn">Download</button>
-                <button form="submit-form" type="button" class="previewbtn" id="previewbtn">Preview</button>
-              
-            </div>
-        </section>
-
-<!-- preview modal starts here -->
-        
-        <section class="preview-modal" id="modalpopup">
-            <div id="closebtn" onclick="closepopup()"><span>X</span></div>
-            <div class="container">
-                
-                <section class="modal-head-text">
-                    <h2>Preview</h2>
-                    <h4>A preview of how your favicons will look like on different screens and web browsers.</h4>
-                </section>
-                <section class="display">
-                    <div class="card1">
-                        
-                        <p class="card-main-text">For desktop browsers</p>
-                        <br>
-                        <p class="card-sub-text">Default theme</p>
-                        
-                        <div class="image">
-                            <div class="top">
-                                <div class="seg1">x</div>
-                                <div class="seg2">
-                                    <div class="logo">
-                                        <img src="../images/link.png" alt="">
-                                    </div>
-                                    <div class="title">
-                                        <p class="center-align">Lorem</p>
-                                    </div>
-                                    <div class="close">
-                                        <p class="right-align">x</p>
-                                    </div>
-
-                                </div>
-                                <div class="seg3">+</div>
-                            </div>
-                            <div class="bottom">
-                                <div class="seg4"></div>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                    
-                    <div class="card2">
-                        <p class="card-sub-text">Dark theme</p>
-                        
-                        <div class="image image-dark ">
-                            <div class="top ">
-                                <div class="seg1 seg1-dark">x</div>
-                                <div class="seg2 seg2-dark">
-                                    <div class="logo ">
-                                        <img src="../images/link.png" alt="">
-                                    </div>
-                                    <div class="title ">
-                                        <p class="center-align">Lorem</p>
-                                    </div>
-                                    <div class="close">
-                                        <p class="right-align">x</p>
-                                    </div>
-
-                                </div>
-                                <div class="seg3 seg3-dark">+</div>
-                            </div>
-                            <div class="bottom">
-                                <div class="seg4 seg4-dark"></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="card3">
-                        <br>
-                        <br>
-                        <p class="card-main-text">For Google Result Pages</p>
-                        
-                        <p class="card-sub-text">Desktop</p>
-                        
-
-                        <div class="card3-container">
-                            <div class="row1">
-                                <div class="logo ">
-                                    <img src="../images/link.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p class="center-align">example.com</p>
-                                </div>
-                            </div>
-                            <div class="row2">
-                                <p><span>Lorem Ipsum</span></p>
-                            </div>
-                            <div class="row3">
-                                <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas ratione necessitatibus similique alias laborum vitae itaque iusto labore at?</span></p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                    <!-- <h2>For desktop browsers</h2>
-                    <h4>Default theme.</h4> -->
-                </section>
-                <div class="downloadbutton">
-                    <button type="button" class="downloadbtn" id="downloadbtn">Download</button>
-                </div>
-
-            </div>
-        </section>
-
-<!-- preview modal ends here -->
-
-    </main>
-    <footer>
-        <div class="upperfooter">
-          <div class="slogan">
-            <div class="footer-logo">
-              <img src="../images/favicon+slogan.png" alt="logo" />
-            </div>
-            <!-- <br />
-            <br /> -->
-            <div class="socials">
-              <a href="#"><img src="../images/Vector.png" alt="facebook" ></a>
-              <a href=""><img src="../images/twitter.png" alt="twitter" /></a>
-              <a href=""><img src="../images/gmail icon.png" alt="gmail" /></a>
-             
-            </div>
-          </div>
-          <div class="footer-tab">
-            <div class="tab-header">
-              <h3>Resources</h3>
-            </div>
-            <div class="tab-links">
-              <ul>
-                <li><a href="#"><span>What is a Favicon?</span></a></li>
-                <li><a href="#"><span>How to Create a Favicon</span></a></li>
-                <li><a href="#"><span>Why Choose Us?</span></a></li>
-              </ul>
-            </div>
-          </div>
-    
-          <div class="footer-tab">
-            <div class="tab-header">
-              <h3>Contact</h3>
-            </div>
-            <div class="tab-links">
-              <ul>
-                <li><a href="#"><span>team69@gmail.com</span></a></li>
-                <li><a href="#"><span>+(234)8044426483</span></a></li>
-                <li><a href="#"><span>Send us a messagge.</span></a></li>
-              </ul>
-            </div>
-          </div>
-    
-          <div class="footer-tab">
-            <div class="tab-header">
-              <h3>About Us</h3>
-            </div>
-            <div class="tab-links">
-              <ul>
-                <li><a href="#"><span>What Favicon is about?</span></a></li>
-                <li><a href="#"><span>Who we are?</span></a></li>
-                
-              </ul>
-            </div>
-          </div>
-          <!-- <div>
+          </ul>
+        </div>
+      </div>
+      <!-- <div>
             <h3>Resources</h3>
             <br>
             <p class="reducedfooter">What is a favicon?</p>
@@ -346,19 +362,19 @@
     
             <p class="reducedfooter">Who we are</p>
           </div> -->
-        </div>
-        <div class="lowerfooter">
-          <div class="right"><span>&copy;2022 favicon.com. All rights reserved</span></div>
-          <div class="left">
-            <!-- Privacy Policy &nbsp;&nbsp; Terms & Conditions &nbsp;&nbsp; Cookie
+    </div>
+    <div class="lowerfooter">
+      <div class="right"><span>&copy;2022 favicon.com. All rights reserved</span></div>
+      <div class="left">
+        <!-- Privacy Policy &nbsp;&nbsp; Terms & Conditions &nbsp;&nbsp; Cookie
             Policy &nbsp;&nbsp; Safety information -->
-            <a href="#"><span>Privacy Policy</span></a>
-            <a href="#"><span>Terms & Conditions</span></a>
-            <a href="#"><span> Cookie Policy</span></a>
-            <a href="#"><span>Safety information</span></a>
-          </div>
-        </div>
-      </footer>
+        <a href="#"><span>Privacy Policy</span></a>
+        <a href="#"><span>Terms & Conditions</span></a>
+        <a href="#"><span> Cookie Policy</span></a>
+        <a href="#"><span>Safety information</span></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
