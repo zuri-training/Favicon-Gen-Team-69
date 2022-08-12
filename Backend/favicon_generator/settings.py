@@ -80,13 +80,24 @@ WSGI_APPLICATION = 'favicon_generator.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
+DB_NAME = "dbrq7uc307nq0b"
+DB_HOST = "ec2-54-246-185-161.eu-west-1.compute.amazonaws.com"
+DB_PORT = "5432"
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': DB_NAME,
+        'USER': config("POSTGRES_USER"),
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
+        'PASSWORD': config("POSTGRES_PASSWORD")
     }
 }
 
+AUTH_USER_MODEL = "user_control.CustomUser"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -130,6 +141,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

@@ -1,13 +1,13 @@
 const url='https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyD9x1uTZJYIotU_maFzogT5YjZ90xwfKnc'
-const font_style = document.getElementById('font-style')
+const font_style = document.getElementById('font_style')
 const font_variants = document.getElementById('font-variant')
 
 
 const downloadbtn = document.querySelector('#downloadbtn');
 const previewbtn = document.querySelector('#previewbtn');
 const form = document.querySelector('#submit-form');
-const text = document.getElementById('text-input')
-const fontsize = document.getElementById('font-size')
+const text = document.getElementById('text')
+const fontsize = document.getElementById('font_size')
 
 const text_empty= document.getElementById('text-empty')
 const font_size_empty = document.getElementById('font-size-empty')
@@ -60,13 +60,7 @@ downloadbtn.addEventListener('click', (e) => {
     
     // prevent the form from submitting
     e.preventDefault();
-
-    // show the form values
-    const formData = new FormData(form);
-
-    // form data
-    const values = [...formData.entries()];
-    console.log(values);
+    
     
 
     let text_message = []
@@ -104,6 +98,8 @@ downloadbtn.addEventListener('click', (e) => {
      if (fontsize.value.length !== 0) {
         font_size_empty.innerText =''
      }
+
+     processoutput()
    
 
 });
@@ -163,3 +159,37 @@ previewbtn.addEventListener('click', (e) => {
 function closepopup(){
     modal.classList.remove("open-popup")
 }
+
+function processoutput(){
+ // show the form values
+ const formData = new FormData(form);
+
+ // form data
+ const values = [...formData.entries()];
+values[3][1]=hexToRgb(values[3][1])
+values[4][1]=hexToRgb(values[4][1])
+//  console.log(values[3][1]);
+console.log(values)
+// console.log("Output Logged")
+}
+
+function hexToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+      return r + r + g + g + b + b;
+    });
+  
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    // return result ? {
+    //   r: parseInt(result[1], 16),
+    //   g: parseInt(result[2], 16),
+    //   b: parseInt(result[3], 16)
+    // } : null;
+    return result ? [
+        parseInt(result[1], 16),
+        parseInt(result[2], 16),
+        parseInt(result[3], 16)
+    ]: null;
+
+  }
