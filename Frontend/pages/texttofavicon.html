@@ -8,6 +8,7 @@
   <title>Home</title>
   <link rel="shortcut icon" href=" " type="image/x-icon" />
   <link rel="stylesheet" href="./../css/texttofavicon.css" />
+  <link rel="stylesheet" href="./../css/success-modal.css" />
   <script defer src="./../js/texttofavicon.js"></script>
 
   <!-- color picker -->
@@ -113,7 +114,7 @@
         <form name="submit-form" method="post" action="" id="submit-form">
           <section class="form-holder">
             <div class="top-row">
-              
+
               <div class="form-element">
                 <label for="text">Text</label>
                 <input id="text" type="text" value="" name="text" placeholder="Friends">
@@ -126,32 +127,32 @@
                 <p id="font-size-empty" style="color: red;""> </span></p>
               </div>
               
-              <div class="form-element">
+              <div class=" form-element">
                   <label for=" font_style">Font Style</label>
                   <select onchange="getSelect()" name="font_style" id="font_style">
-                  <option value="Default"> Default </option>
+                    <option value="Default"> Default </option>
                   </select>
               </div>
-            
+
             </div>
             <div class="bottom-row">
-              
+
               <div class="form-element">
                 <label for="text-color">Text Color</label>
                 <input type="color" id="text_color" name="text_color" value="#ff0000">
                 <!-- <input type="text" data-coloris />
                 <input type="text" class="coloris" value="rgb(255, 0, 0)" /> -->
               </div>
-              
+
               <div class="form-element">
                 <label for="background-color">Background Color</label>
                 <input type="color" id="background_color" name="background_color" value="#ff0000">
               </div>
-              
+
               <div class="form-element">
                 <label for="font-variant">Font Variant</label>
                 <select name="font-variant" id="font-variant">
-                <option value="Default"> Default </option>
+                  <option value="Default"> Default </option>
                 </select>
                 <!-- <input id="Font Style" type="text" value="" name="font-style"> -->
               </div>
@@ -176,9 +177,10 @@
     </section>
 
     <!-- preview modal starts here -->
-
     <section class="preview-modal" id="modalpopup">
-      <div id="closebtn" onclick="closepopup()"><span>X</span></div>
+      <div id="closebtn" onclick="closepopup()">
+        <img src="../images/cancel.png" alt="" />
+      </div>
       <div class="modal-container">
 
         <section class="modal-head-text">
@@ -280,9 +282,99 @@
 
       </div>
     </section>
-
     <!-- preview modal ends here -->
 
+    <!-- success modal starts here -->
+    <div class="cover-backround">
+      <section class="success-modal" id="successmodalpopup">
+        <div id="" onclick="closesuccesspopup()" class="success-modal-cancel-button">
+          <img src="../images/cancel.png" alt="" />
+        </div>
+        <div class="success-modal-container">
+
+          <div class="success-modal-row1">
+            <div class="success-modal-row1-text">
+              <span>Congratulations your faivicon has been downloaded successfully!</span>
+            </div>
+            <div class="success-modal-row1-logo">
+              <img src="../images/Succsess icon.svg" alt="">
+            </div>
+          </div>
+
+          <div class="success-modal-row2">
+            <form action="">
+              <input id="favicon_name" type="text" value="" name="favicon_name" placeholder="Enter favicon Name here">
+              <button type="button" class="savebtn">Save</button>
+            </form>
+          </div>
+
+          <div class="success-modal-row3">
+            <span>For code installation<span>
+          </div>
+
+          <div class="success-modal-row4">
+            <span>installation</span>
+            <br>
+            <span>First, use the download button to download the files listed below. Place the files in the root
+              directory
+              of your website.</span>
+            <br>
+            <ul id="success-modal-generated-favicon">
+              <li><span>android-chrome-192x192.png</span></li>
+              <li><span>android-chrome-512x512.png</span></li>
+              <li><span>apple-touch-icon.png</span></li>
+              <li><span>favicon-16x16.png</span></li>
+              <li><span>favicon-32x32.png</span></li>
+              <li><span>favicon.ico</span></li>
+              <li><span>site.webmanifest</span></li>
+            </ul>
+            <br>
+            <span>Next, copy the following link tags and paste them into the head of your HTML.</span>
+          </div>
+
+          <div class="success-modal-row5">
+            <div class="success-modal-row5-container">
+              <ul>
+
+                <li>
+                  <div class="success-modal-row5-container-links">
+                    <span>&ltlink rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /&gt</span>
+                    <img src="../images/copy.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="success-modal-row5-container-links">
+                    <span>&ltlink rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /&gt</span>
+                    <img src="../images/copy.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="success-modal-row5-container-links">
+                    <span>&ltlink rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/&gt</span>
+                    <img src="../images/copy.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="success-modal-row5-container-links">
+                    <span>&ltlink rel="manifest" href="/site.webmanifest" /&gt</span>
+                    <img src="../images/copy.svg" alt="">
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="success-modal-row6">
+            <form action="">
+              <button type="button" class="copybtn">Copy Code</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- success modal ends here -->
   </main>
   <footer>
     <div class="upperfooter">
@@ -293,9 +385,9 @@
         <!-- <br />
             <br /> -->
         <div class="socials">
-          <a href="#"><img src="../images/logo/Vector.png" alt="facebook"></a>
-          <a href=""><img src="../images/twitter.png" alt="twitter" /></a>
-          <a href=""><img src="../images/gmail icon.png" alt="gmail" /></a>
+          <a href="#"><img src="../images/social-media-logo/Facebook footer.svg" alt="facebook"></a>
+          <a href=""><img src="../images/social-media-logo/twitter logo (1).svg" alt="twitter" /></a>
+          <a href=""><img src="../images/social-media-logo/Email logo (1).svg" alt="gmail" /></a>
 
         </div>
       </div>
