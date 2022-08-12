@@ -1,4 +1,10 @@
+const redirect = window.localStorage.getItem("redirect")
+
 form = document.querySelector("form");
+
+redirectError = document.querySelector("#redirect-error")
+errorField = document.querySelector("#general-error")
+
 let usernameIsValid = false;
 let passwordIsValid = false;
 
@@ -36,15 +42,33 @@ const autoValidate = (tag) => {
   );
 };
 
+if (redirect === "initial") {
+  redirectError.classList.remove("invisible")
+  redirectError.innerHTML = "You must login to access this page"
+  setTimeout(() => {
+    redirectError.classList.add("invisible")
+    window.localStorage.removeItem("login_redirect")
+  }, 7000)
+
+}
+
+if (redirect === "initial") {
+  redirectError.classList.remove("invisible")
+  redirectError.innerHTML = "Please login to continue"
+  setTimeout(() => {
+    redirectError.classList.add("invisible")
+    window.localStorage.removeItem("redirect")
+  }, 7000)
+
+}
+
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   username = e.target.username;
   email = e.target.email;
   password = e.target.password;
   cpassword = e.target.cpassword;
-
-  errorField = document.querySelector("#general-error")
-  errorField.classList.add("invisible")
 
   validateLength(username);
   autoValidate(username);
