@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+p {
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 400px;
+  color: #002055;
+}
+
+main {
+  background-image: url("../images/image generator screen.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 1440px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700px;
+  color: #0051d4;
+}
+
+.gen_image1 {
+  margin-top: 7rem;
+  text-align: center;
+  color: #0051d4;
+  text-align: center;
+  /* margin-top: 50px; */
+  margin-bottom: 20px;
+}
+
+.container {
+  color: black;
+  background-color: #fff;
+  max-width: 100%;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.converter {
+  color: black;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-top: 20px; */
+}
+
+.drag_area {
+  height: 200px;
+  width: 620px;
+  border: 1px solid #0041aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px auto;
+  padding: 0px 10px 0px 10px;
+}
+
+.drag_area.active {
+  border: 1px solid #0041aa;
+}
+
+.drag_area button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #0041aa;
+  background: #fff;
+  color: #002055;
+  cursor: pointer;
+  position: relative;
+  bottom: -50px;
+  font-family: "Poppins";
+}
+
+.download_btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drag_area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#download,
+#preview {
+  font-weight: 600;
+}
+#general-error {
+  font-size: 20px;
+  color: #f1510c;
+  text-align: center;
+  position: relative;
+  right: 12px;
+  bottom: -1px;
+  animation: buttons 0.3s linear;
+  display: none;
+}
+@keyframes buttons {
+  0% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* mobile view */
+
+@media (max-width: 375px) {
+  main {
+    background-image: url(../images/image\ generator\ screen.svg);
+    background-color: white;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    color: #0051d4;
+    font-size: 27px;
+    /* margin-top: 2.5rem; */
+    /* margin: 3rem; */
+  }
+  .gen_image1 {
+    text-align: center;
+    margin: 3rem 3rem 3rem 3rem;
+  }
+  p,
+  span {
+    font-size: 12px;
+  }
+  .converter {
+    font-size: 22px;
+    margin: auto;
+    position: relative;
+    left: 15px;
+    top: -15px;
+  }
+  .button,
+  #preview,
+  #download {
+    font-size: 15px;
+  }
+  .drag_area {
+    height: 350px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .container {
+    padding: 3em 1em 3em 1em;
+    /* width: 250px;
+    height: 443px; */
+    max-width: 100%;
+    max-height: 100%;
+  }
+  span {
+    text-align: center;
+    padding: 20px;
+  }
+  .drag_area button {
+    border-radius: 5px;
+    bottom: -20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .download_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #preview,
+  #download {
+    /* padding-left: 5rem; */
+    /* padding-right: 5rem; */
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    width: 190px;
+    height: 40px;
+  }
+   #general-error{
+    font-size: 15px;
+    position: relative;
+    right: 12px;
+    bottom: -15px;
+  } 
+}
+/* mobile view */
+@media (max-width: 414px) {
+    main {
+      background-image: url(../images/image\ generator\ screen.svg);
+      background-color: white;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+      color: #0051d4;
+      font-size: 27px;
+      /* margin-top: 2.5rem; */
+      margin: 3rem;
+    }
+    .gen_image1 {
+      text-align: center;
+      margin: 10rem 3rem 3rem 3rem;
+    }
+    p,
+    span {
+      font-size: 12px;
+    }
+    .converter {
+      font-size: 22px;
+      margin: auto;
+      position: relative;
+      left: 18px;
+      top: -18px;
+    }
+    .button,
+    #preview,
+    #download {
+      font-size: 15px;
+    }
+    .drag_area {
+      height: 300px;
+      width: 150px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .container {
+      padding: 3em 1em 3em 1em;
+      width: 250px;
+    }
+    span {
+      text-align: center;
+      padding: 20px;
+    }
+    .drag_area button {
+      border-radius: 5px;
+      bottom: -20px;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .download_btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #preview,
+    #download {
+      /* padding-left: 5rem; */
+      /* padding-right: 5rem; */
+      text-align: center;
+      margin: auto;
+      border-radius: 5px;
+    }
+  }
+/* tablet view */
+@media (max-width: 960px) {
+  main {
+    background-image: url(../images/image\ generator\ screen.svg);
+    min-width: 375px;
+  }
+  .drag_area {
+    height: 200px;
+    width: 570px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+}

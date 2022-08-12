@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+p {
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: #002055;
+}
+
+body {
+    background-image: url("../images/registration\ pages.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-size: 27px;
+  color: #0051D5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* column-gap: 50px; */
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3rem;
+}
+
+
+.container > div {
+    text-align: center;
+}
+
+.container > div > h2 {
+    margin: 2rem 0;
+}
+
+ span {
+    color: #002055;
+}
+
+.intro {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.header {
+    /* height: 100%; */
+    text-align: center;
+
+}
+
+.card {
+    display: block;
+    margin: auto auto;
+    width: 90%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.field {
+    width: 90%;
+    margin: 20px auto;
+}
+.field label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #002055;
+    text-align: start;
+}
+
+.field i {
+    padding: 10px 10px;
+    position: absolute;
+    display: inline;
+    color: #757678;
+    font-size: 25px;
+}
+
+.field  input {
+    display: inline;
+    width: 100%;
+    border-radius: 3px;
+    padding: 10pt 35pt;
+    border: 1px solid #002055;
+    color: #757678;
+    background-color: #f8f9fc;
+    font-size: 15px;
+}
+
+.error {
+    display: absolute;
+    color: #F1510C;
+    font-size: 12px;
+    margin: 5px 10px;
+}
+
+#general-error {
+    font-size: 16px;
+    color: #F1510C;
+    text-align: center;
+}
+
+.invisible {
+    display: none;
+}
+
+
+.invalid {
+    background: url("images/icon-error.svg") no-repeat scroll 97% 10px;
+    border: 2px solid #F1510C !important;
+}
+
+.card  button {
+    display: block;
+    margin: auto auto;
+    padding: 1rem;
+    color: #fff;
+    background-color: #0061FF;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+    width: 20%;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background-color:#80B0FF;
+}
+
+.sign-in {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.terms {
+    /* margin: 4px 0; */
+    text-align: center;
+    font-size: 12px;
+}
+
+.terms > span {
+    color:#ff7979;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: url("../images/tablet\ signup\ page.png");
+    }
+    
+
+    .container {
+        grid-template-columns: auto;
+    }
+
+    .container > div {
+        margin: 2rem auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("../images/mobile\ signup\ page.png");
+    }
+
+    .container {
+        grid-template-columns: auto;
+        padding: 2rem 1rem;
+        margin-top: 4rem;
+    }
+    .container > div {
+        text-align: center;
+    }
+
+    .welcome {
+        display: none;
+    }
+    h2 {
+        font-size: 24px;
+        margin: 1rem auto;
+    }
+
+    .container > div > p {
+        margin-bottom: 20px;
+    }
+    
+    .card  button {
+        width: 30%;
+    }
+
+    .terms {
+        font-size: 11px;
+    }
+
+    #general-error {
+        font-size: 15px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 1rem 0.2rem;
+    }
+    .card  button {
+        width: 40%;
+    }
+
+    .terms {
+        font-size: 10px;
+    }
+
+    #general-error {
+        font-size: 12px;
+    }
+    
+}
