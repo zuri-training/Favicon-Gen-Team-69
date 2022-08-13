@@ -150,6 +150,13 @@ h6 {
     text-align: center;
 }
 
+#redirect-error {
+    font-size: 27px;
+    color: #F1510C;
+    text-align: center;
+    margin: 1rem;
+}
+
 .invisible {
     display: none;
 }
@@ -253,6 +260,10 @@ h6 {
 
     #general-error {
         font-size: 15px;
+    }
+
+    #redirect-error {
+        font-size: 24px;
     }
     
     
