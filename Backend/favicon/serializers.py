@@ -20,7 +20,16 @@ class FaviconSerializer(serializers.ModelSerializer):
             'author': {'required': False},
             'username': {'required': False},
         }
+
+class CreateFaviconSerializer(serializers.ModelSerializer):
+    author = UserSerializer(read_only=True)
+    author_id = serializers.IntegerField(write_only=True)
+    class Meta:
+        model = Favicon
+        fields = "__all__"
         
+        
+
 class TextPreviewSerializer(serializers.Serializer):
     text = serializers.CharField(max_length=50)
     font_size = serializers.IntegerField()

@@ -2,7 +2,7 @@ from django.http import Http404, FileResponse
 from rest_framework import generics, status
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
-from .serializers import FaviconSerializer, TextPreviewSerializer, EmojiPreviewSerializer, Favicon
+from .serializers import FaviconSerializer, TextPreviewSerializer, EmojiPreviewSerializer, Favicon, CreateFaviconSerializer
 from rest_framework.permissions import IsAuthenticated
 from knox.auth import TokenAuthentication
 
@@ -25,7 +25,7 @@ class CreateFaviconView(generics.GenericAPIView):
 
     def post(self, request, format=None):
 
-        serializer = FaviconSerializer(data=request.data)
+        serializer = CreateFaviconSerializer(data=request.data)
         favicon_sizes = [(16, 16),  (24, 24), (32, 32),
                          (48, 48), 'favicon', (128, 128)]
 
