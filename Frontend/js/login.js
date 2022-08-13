@@ -103,7 +103,7 @@ form.addEventListener("submit", (e) => {
             const token_info = JSON.stringify({...data})
             // window.localStorage.removeItem("token_info")
             window.localStorage.setItem("token_info",token_info)
-            window.location.pathname = "/pages/profile.html"
+            window.location.pathname = "Favicon-Gen-Team-69/pages/profile.html"
         }
       })
       .catch((error) => console.log(error));
