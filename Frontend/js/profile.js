@@ -1,4 +1,5 @@
-const token = window.localStorage.getItem("token");
+const token_info = window.localStorage.getItem("token_info");
+const token = JSON.parse(token_info).token
 const url = "https://faviconify-rest-api.herokuapp.com/api/user/1/";
 const favicons_url = "https://faviconify-rest-api.herokuapp.com/api/favicons/";
 const headers = {
@@ -14,11 +15,11 @@ fetch(url, {
     if (response.status === 200) {
       return response.json();
     } else if (response.status === 401) {
-      window.localStorage.removeItem("token");
+      window.localStorage.removeItem("token_info");
       window.localStorage.setItem("redirect", "true");
       window.location.pathname = "Frontend/pages/login.html";
     } else if (response.status === 500) {
-      window.localStorage.removeItem("token");
+      window.localStorage.removeItem("token_token");
       window.location.pathname = "Frontend/pages/login.html";
     }
   })

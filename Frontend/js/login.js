@@ -100,8 +100,9 @@ form.addEventListener("submit", (e) => {
             errorField.innerHTML = data.non_field_errors[0]
         }
         else if (data.token) {
-            localStorage.setItem("token", data.token)
-            window.location.pathname = "Favicon-Gen-Team-69/pages/profile.html"
+            const token_info = JSON.stringify({...data})
+            localStorage.setItem("token_info",token_info)
+            // window.location.pathname = "Frontend/pages/profile.html"
         }
       })
       .catch((error) => console.log(error));
