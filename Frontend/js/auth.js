@@ -7,12 +7,12 @@
     nowDate = new Date();
     const token = JSON.parse(token_info);
     const tokenDate = new Date(token.expiry);
-    const hours = Math.abs(nowDate - tokenDate) / (60 * 60 * 1000) - 9.5;
+    let hours = Math.abs(((nowDate - tokenDate) / (60 * 60 * 1000))) - 10;
+    hours = Math.abs(hours)
     if (hours > 6) {
       window.localStorage.removeItem("token_info");
+      window.localStorage.setItem("redirect", "true");
       window.location.pathname = "/Frontend/pages/login.html";
     }
   }
-  // for (const key in token_info) {
-  //     console.log(token_info[key])
 })();

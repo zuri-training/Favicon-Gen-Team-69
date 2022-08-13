@@ -1,11 +1,10 @@
 const dragArea = document.querySelector(".drag_area");
-const form = document.querySelector("form")
+const form = document.querySelector("form");
 let button = document.querySelector(".button");
 let input = document.querySelector("input");
 const errorField = document.getElementById("general-error");
-const cancelBtn = document.querySelector("#cancelBtn")
-const uploadArea = document.querySelector(".uploadArea")
-
+const cancelBtn = document.querySelector("#cancelBtn");
+const uploadArea = document.querySelector(".uploadArea");
 
 let file;
 button.onclick = () => {
@@ -13,7 +12,7 @@ button.onclick = () => {
 };
 // while browsing
 input.addEventListener("change", function () {
-  cancelBtn.classList.add("invisible")
+  cancelBtn.classList.add("invisible");
   errorField.classList.add("invisible");
   file = this.files[0];
   dragArea.classList.add("active");
@@ -21,8 +20,7 @@ input.addEventListener("change", function () {
 });
 // when file is inside the drag area
 dragArea.addEventListener("dragover", (event) => {
-  event.preventDefault(),
-  cancelBtn.classList.add("invisible")
+  event.preventDefault(), cancelBtn.classList.add("invisible");
   errorField.classList.add("invisible");
   file = this.files[0];
   dragArea.classList.add("active");
@@ -32,7 +30,7 @@ dragArea.addEventListener("dragover", (event) => {
 // when file leaves the drag area
 dragArea.addEventListener("dragleave", () => {
   dragArea.classList.remove("active");
-  cancelBtn.classList.add("invisible")
+  cancelBtn.classList.add("invisible");
   errorField.classList.add("invisible");
   file = this.files[0];
   dragArea.classList.add("active");
@@ -47,34 +45,31 @@ dragArea.addEventListener("drop", (event) => {
   uploadFile();
 });
 
-
 const clearImage = (e) => {
-  form.reset()
-  dragArea.style.backgroundImage = "none"
-  uploadArea.classList.remove("invisible")
-  cancelBtn.classList.add("invisible")
-}
-
+  form.reset();
+  dragArea.style.backgroundImage = "none";
+  uploadArea.classList.remove("invisible");
+  cancelBtn.classList.add("invisible");
+};
 
 function uploadFile() {
-  let fileType = 
-  file.type;
+  let fileType = file.type;
   let validExtensions = ["image/png", "image/jpeg", "image/jpg"];
   if (validExtensions.includes(fileType)) {
-    cancelBtn.classList.remove("invisible")
+    cancelBtn.classList.remove("invisible");
     let fileReader = new FileReader();
     fileReader.onload = () => {
       let fileURL = fileReader.result;
       // let imgTag = `<img src="${fileURL}" alt="">`;
       dragArea.style.backgroundImage = `url(${fileURL})`;
-      uploadArea.classList.add("invisible")
+      uploadArea.classList.add("invisible");
     };
     fileReader.readAsDataURL(file);
   } else {
-    console.log("there was an error")
-    console.log(errorField)
+    console.log("there was an error");
+    console.log(errorField);
     errorField.classList.remove("invisible");
-    errorField.innerHTML = "Please upload only .png, .jpg and .jpeg files"
+    errorField.innerHTML = "Please upload only .png, .jpg and .jpeg files";
     dragArea.classList.remove("active");
   }
 }
@@ -82,47 +77,66 @@ function uploadFile() {
 // sending data to the backend
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  my_file = event.target.image.files[0];
   if (file === undefined) {
     errorField.classList.remove("invisible");
-    errorField.innerHTML = "Please upload an image first"
+    errorField.innerHTML = "Please upload an image first";
     setTimeout(() => {
-      errorField.classList.add("invisible")
-    }, 2000)
-    return
+      errorField.classList.add("invisible");
+    }, 2000);
+    return;
   }
-  const formData = new FormData();
-  formData.append("image", file);
-  formData.append("type", "image");
-  formData.append("author_id", 2);
-  
-  const url = "https://faviconify-rest-api.herokuapp.com/api/generate_favicon/";
-  const token_info = window.localStorage.getItem("token_info")
-  const token = JSON.parse(token_info).token
-  let req = new XMLHttpRequest();
-  req.open("POST", url);
-  req.setRequestHeader("Content-Type", "application/json");
-  req.setRequestHeader("Authorization", `Token ${token}`);
-  console.log(token)
-  req.onload = () => {
-    const response = req.response;
-    console.log(response)
-    // const data = JSON.parse(response);
-    successmodal.classList.add("open-popup")
-    // console.log(data);
-  };
 
-  req.send(formData);
   
+  const formData = new FormData(event.target);
+  formData.append("type", "image");
+  formData.append("author_id", 3);
+
+  const url = "https://faviconify-rest-api.herokuapp.com/api/generate_favicon/";
+  const token_info = window.localStorage.getItem("token_info");
+  const token = JSON.parse(token_info).token;
+  fetch(url, {
+    headers: {
+      "Authorization": `Token ${token}`,
+    },
+    method: "POST",
+    body: formData,
+  })
+    .then(function (response) {
+      console.log(response);
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data) => {
+      favicon_data = data
+      downloadBtn.setAttribute("href", favicon_data.zip_file)
+      myIconList = favicon_data.icons
+      myIconList.forEach(element => {
+        iconsList.insertAdjacentHTML("beforeend", `<li>
+        <div class="success-modal-row5-container-links">
+          <span>&ltlink rel="icon" type="image/png" sizes="32x32" href="${element.icon}" /&gt</span>
+          <img src="../images/copy.svg" alt="">
+        </div>
+      </li>`)
+      });
+      successmodal.classList.add("open-popup");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
 });
 
 // PREVIEW JAVASCRIPT LOGIC
 
 const previewbtn = document.querySelector("#previewbtn");
 const modal = document.getElementById("modalpopup");
-const successmodal = document.getElementById('successmodalpopup')
-// MODAL IMAGES 
-const modal_imgs = document.querySelectorAll(".modal-logo")
-const generateBtn = document.querySelector("#generateBtn")
+const successmodal = document.getElementById("successmodalpopup");
+const iconsList = document.querySelector("#iconsList")
+// MODAL IMAGES
+const modal_imgs = document.querySelectorAll(".modal-logo");
+const generateBtn = document.querySelector("#generateBtn");
+const downloadBtn = document.querySelector("#downloadBtn")
 
 previewbtn.addEventListener("click", async (e) => {
   // prevent the form from submitting
@@ -133,11 +147,11 @@ previewbtn.addEventListener("click", async (e) => {
   // check if image is uploaded
   if (file === undefined) {
     errorField.classList.remove("invisible");
-    errorField.innerHTML = "Please upload an image first"
+    errorField.innerHTML = "Please upload an image first";
     setTimeout(() => {
-      errorField.classList.add("invisible")
-    }, 2000)
-    return
+      errorField.classList.add("invisible");
+    }, 2000);
+    return;
   }
 
   console.log(file);
@@ -149,8 +163,8 @@ previewbtn.addEventListener("click", async (e) => {
       modal.innerHTML = imgTag;
     };
     fileReader.readAsDataURL(file);
-  })
-  modal.classList.add("open-popup")
+  });
+  modal.classList.add("open-popup");
   // //  modal.classList.add("open-popup")
   // console.log(font_size_message.length)
   // console.log(text_message.length)
@@ -164,13 +178,6 @@ function closepopup() {
   modal.classList.remove("open-popup");
 }
 
-
-
-
-
-
-
-
 function closesuccesspopup() {
-  successmodal.classList.remove("open-popup")
+  successmodal.classList.remove("open-popup");
 }

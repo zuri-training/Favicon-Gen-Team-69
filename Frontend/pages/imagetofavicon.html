@@ -1,3 +1,4 @@
+<script src="../js/auth.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,6 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <script src="../js/auth.js"></script>
 </head>
 
 <body>
@@ -64,7 +64,7 @@
                     <div class="uploadArea">
                       <span> Drag and drop your file or click here to upload image</span>
                       <button type="button" class="button">Choose a File</button>
-                      <input type="file" id="image" hidden />
+                      <input type="file" name="image" id="image" hidden />
                     </div>
                 </div>
                 <p class="invisible" id="general-error"></p>
@@ -209,7 +209,8 @@
           <div class="success-modal-row2">
             <form action="">
               <input id="favicon_name" type="text" value="" name="favicon_name" placeholder="Enter favicon Name here">
-              <button type="button" class="savebtn">Save</button>
+              <button type="button" class="savebtn">Save</button><br>
+              <a id="downloadBtn" href=""><button type="button" class="savebtn">Download</button></a>
             </form>
           </div>
 
@@ -231,7 +232,6 @@
               <li><span>favicon-16x16.png</span></li>
               <li><span>favicon-32x32.png</span></li>
               <li><span>favicon.ico</span></li>
-              <li><span>site.webmanifest</span></li>
             </ul>
             <br>
             <span>Next, copy the following link tags and paste them into the head of your HTML.</span>
@@ -239,32 +239,7 @@
 
           <div class="success-modal-row5">
             <div class="success-modal-row5-container">
-              <ul>
-
-                <li>
-                  <div class="success-modal-row5-container-links">
-                    <span>&ltlink rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /&gt</span>
-                    <img src="../images/copy.svg" alt="">
-                  </div>
-                </li>
-                <li>
-                  <div class="success-modal-row5-container-links">
-                    <span>&ltlink rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /&gt</span>
-                    <img src="../images/copy.svg" alt="">
-                  </div>
-                </li>
-                <li>
-                  <div class="success-modal-row5-container-links">
-                    <span>&ltlink rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/&gt</span>
-                    <img src="../images/copy.svg" alt="">
-                  </div>
-                </li>
-                <li>
-                  <div class="success-modal-row5-container-links">
-                    <span>&ltlink rel="manifest" href="/site.webmanifest" /&gt</span>
-                    <img src="../images/copy.svg" alt="">
-                  </div>
-                </li>
+              <ul id="iconsList">
 
               </ul>
 

@@ -101,8 +101,9 @@ form.addEventListener("submit", (e) => {
         }
         else if (data.token) {
             const token_info = JSON.stringify({...data})
-            localStorage.setItem("token_info",token_info)
-            // window.location.pathname = "Frontend/pages/profile.html"
+            // window.localStorage.removeItem("token_info")
+            window.localStorage.setItem("token_info",token_info)
+            window.location.pathname = "/pages/profile.html"
         }
       })
       .catch((error) => console.log(error));
