@@ -11,6 +11,11 @@
   .Profile {
     padding: 3% 5%;
   }
+
+  .profile__card {
+    overflow-y: scroll;
+  }
+
   .profile__head {
     display: flex;
     justify-content: space-between;
@@ -197,6 +202,10 @@
     height: 80px;
     margin-left: 40px;
   }
+
+  .profile__card-flex img {
+    cursor: pointer;
+  }
   
   .card_flex {
     border: 2px solid #0061ff;
@@ -221,7 +230,7 @@
     white-space: nowrap;
   }
   
-  .circle-img {
+   .circle-img {
     width: 25px;
     height: 25px;
     border-radius: 50px;

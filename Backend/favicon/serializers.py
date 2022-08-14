@@ -1,7 +1,6 @@
 from rest_framework import serializers
 
 from favicon.models import Favicon, Icon
-from user_control.serializers import UserSerializer
 
 class  IconSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,7 +19,14 @@ class FaviconSerializer(serializers.ModelSerializer):
             'author': {'required': False},
             'username': {'required': False},
         }
+
+class CreateFaviconSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Favicon
+        fields = "__all__"
         
+        
+
 class TextPreviewSerializer(serializers.Serializer):
     text = serializers.CharField(max_length=50)
     font_size = serializers.IntegerField()

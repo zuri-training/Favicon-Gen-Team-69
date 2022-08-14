@@ -1,3 +1,4 @@
+<script src="../js/auth.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,11 @@
     <title>Home</title>
     <link rel="shortcut icon" href=" " type="image/x-icon" />
     <link rel="stylesheet" href="../css/header&footer.css" />
+    <link rel="stylesheet" href="./../css/success-modal.css" />
     <link rel="stylesheet" href="../css/imagetofavicon.css" />
+    <link rel="stylesheet" href="./../css/preview-modal.css" />
+    <link rel="stylesheet" href="../css/mobile-menu.css" />
+    <script defer src="../js/mobile-menu.js"></script>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -19,23 +24,86 @@
 </head>
 
 <body>
+  <header>
+    <div class="favicon_logo">
+      <a href="/">
+      <img src="../images/favicon.png" alt="Logo" />
+      </a>
+    </div>
+    <div class="header_links">
+       <a href="generate.html">Generator</a>
+        <a href="tutorial.html">Tutorial</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="header_btns">
+      <div class="button-container">
+        <a href="login.html"><button type="button" class="loginbtn">Login</button></a>
+        <a href="register.html"><button type="button" class="regbtn">Register</button></a>
+      </div>
+    </div>
+    <div class="mobile-header_btns">
+      <img src="../images/menu-3-slashes.png" onclick="menu()" />
+    </div>
+  </header>
 
 
-    <header>
-        <div class="favicon_logo">
-          <img src="../images/favicon.png" alt="Logo" />
-        </div>
-        <div class="header_links">
-          <a href="generate.html">Generator</a>
-          <a href="tutorial.html">Tutorial</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="header_btns">
-          <button type="button" class="loginbtn">Login</button>
-          <button type="button" class="regbtn">Register</button>
-        </div>
-      </header>
+  <!-- mobile menu -->
+  <div class="mobile-menu-links " id="mobile-menu">
+    <div class="mobile-menu-links-container">
+
+      <div class="mobile-menu-cards ">
+        <a href="generate.html">
+          <div class="mobile-menu-logo">
+            <img src="../images/generate-icon.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>Generator</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-menu-cards ">
+        <a href="tutorial.html">
+          <div class="mobile-menu-logo">
+            <img src="../images/Tutoorial.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>Tutorial</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-menu-cards ">
+        <a href="about.html">
+          <div class="mobile-menu-logo">
+            <img src="../images/About.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>About</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-menu-cards ">
+        <a href="contact.html">
+          <div class="mobile-menu-logo">
+            <img src="../images/contact.svg" alt="">
+          </div>
+          <div class="mobile-menu-text">
+            <p>Contact</p>
+          </div>
+        </a>
+      </div>
+
+
+
+
+    </div>
+  </div>
+  <!-- mobile menu end -->
+
+
     <main>
         <div class="gen_image1">
             <h1>Generate your Favicon in Seconds!</h1>
@@ -48,67 +116,297 @@
         </div>
         <form class="wrapper" id="form" method="post">
             <div class="container">
-                <h3 class="converter">Converter</h3>
+                <h3 class="converter">Converter <img onclick="clearImage(input)" class="invisible" id="cancelBtn" src="../images/cancel.png" </h3>
                 <div class="drag_area">
-                    <span> Drag and drop your file or click here to upload image</span>
-                    <button type="button" class="button">Choose a File</button>
-                    <input type="file" id="image" hidden />
+                    <div class="uploadArea">
+                      <span> Drag and drop your file or click here to upload image</span>
+                      <button type="button" class="button">Choose a File</button>
+                      <input type="file" name="image" id="image" hidden />
+                    </div>
                 </div>
-                <p class="invisible" id="general-error">This is not an image</p>
+                <p class="invisible" id="general-error"></p>
             </div>
             <br><br>
             <div class="download_btns">
-                <div> <button type="submit" class="regbtn" id="download">Generate</button>
+                <div> <button type="submit" class="regbtn" id="generateBtn">Generate</button>
                 </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <div><button type="button" class="loginbtn" id="preview">Preview</button></div>
+                <div><button type="button" class="loginbtn" id="previewbtn">Preview</button></div>
             </div>
         </form>
         <br><br><br><br>
         <br><br><br><br><br><br>
+
+
+
+        <!-- preview modal starts here -->
+    <section class="preview-modal" id="modalpopup">
+        <div id="closebtn" onclick="closepopup()">
+          <img src="../images/cancel.png" alt="" />
+        </div>
+        <div class="modal-container">
+  
+          <section class="modal-head-text">
+            <h2>Preview</h2>
+            <h4>A preview of how your favicons will look like on different screens and web browsers.</h4>
+          </section>
+          <section class="modal-display">
+            <div class="modal-card1">
+  
+              <p class="modal-card-main-text">For desktop browsers</p>
+              <br>
+              <p class="modal-card-sub-text">Default theme</p>
+  
+              <div class="modal-image">
+                <div class="modal-top">
+                  <div class="modal-seg1">x</div>
+                  <div class="modal-seg2">
+                    <div class="modal-logo">
+                      <img src="../images/link.png" alt="">
+                    </div>
+                    <div class="modal-title">
+                      <p class="modal-center-align">Lorem</p>
+                    </div>
+                    <div class="modal-close">
+                      <p class="modal-right-align">x</p>
+                    </div>
+  
+                  </div>
+                  <div class="modal-seg3">+</div>
+                </div>
+                <div class="modal-bottom">
+                  <div class="modal-seg4"></div>
+                </div>
+              </div>
+              <br>
+            </div>
+  
+            <div class="modal-card2">
+              <p class="modal-card-sub-text">Dark theme</p>
+  
+              <div class="modal-image modal-image-dark ">
+                <div class="modal-top ">
+                  <div class="modal-seg1 modal-seg1-dark">x</div>
+                  <div class="modal-seg2 modal-seg2-dark">
+                    <div class="modal-logo ">
+                      <img src="../images/link.png" alt="">
+                    </div>
+                    <div class="modal-title ">
+                      <p class="modal-center-align">Lorem</p>
+                    </div>
+                    <div class="modal-close">
+                      <p class="modal-right-align">x</p>
+                    </div>
+  
+                  </div>
+                  <div class="modal-seg3 modal-seg3-dark">+</div>
+                </div>
+                <div class="modal-bottom">
+                  <div class="modal-seg4 modal-seg4-dark"></div>
+                </div>
+              </div>
+  
+  
+            </div>
+            <div class="modal-card3">
+              <br>
+              <br>
+              <p class="modal-card-main-text">For Google Result Pages</p>
+  
+              <p class="modal-card-sub-text">Desktop</p>
+  
+  
+              <div class="modal-card3-container">
+                <div class="modal-row1">
+                  <div class="modal-logo ">
+                    <img src="../images/link.png" alt="">
+                  </div>
+                  <div class="modal-text">
+                    <p class="modal-center-align">example.com</p>
+                  </div>
+                </div>
+                <div class="modal-row2">
+                  <p><span>Lorem Ipsum</span></p>
+                </div>
+                <div class="modal-row3">
+                  <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas ratione necessitatibus
+                      similique alias laborum vitae itaque iusto labore at?</span></p>
+                </div>
+              </div>
+  
+            </div>
+  
+            <!-- <h2>For desktop browsers</h2>
+                      <h4>Default theme.</h4> -->
+          </section>
+  
+        </div>
+      </section>
+      <!-- preview modal ends here -->
+
+
+
+
+    <!-- success modal starts here -->
+    <div class="cover-backround">
+      <section class="success-modal" id="successmodalpopup">
+        <div id="" onclick="closesuccesspopup()" class="success-modal-cancel-button">
+          <img src="../images/cancel.png" alt="" />
+        </div>
+        <div class="success-modal-container">
+
+          <div class="success-modal-row1">
+            <div class="success-modal-row1-text">
+              <span>Congratulations your faivicon has been downloaded successfully!</span>
+            </div>
+            <div class="success-modal-row1-logo">
+              <img src="../images/Succsess icon.svg" alt="">
+            </div>
+          </div>
+
+          <div class="success-modal-row2">
+            <form action="">
+              <input id="favicon_name" type="text" value="" name="favicon_name" placeholder="Enter favicon Name here">
+              <button type="button" class="savebtn">Save</button><br>
+              <a id="downloadBtn" href=""><button type="button" class="savebtn">Download</button></a>
+            </form>
+          </div>
+
+          <div class="success-modal-row3">
+            <span>For code installation<span>
+          </div>
+
+          <div class="success-modal-row4">
+            <span>installation</span>
+            <br>
+            <span>First, use the download button to download the files listed below. Place the files in the root
+              directory
+              of your website.</span>
+            <br>
+            <ul id="success-modal-generated-favicon">
+              <li><span>android-chrome-192x192.png</span></li>
+              <li><span>android-chrome-512x512.png</span></li>
+              <li><span>apple-touch-icon.png</span></li>
+              <li><span>favicon-16x16.png</span></li>
+              <li><span>favicon-32x32.png</span></li>
+              <li><span>favicon.ico</span></li>
+            </ul>
+            <br>
+            <span>Next, copy the following link tags and paste them into the head of your HTML.</span>
+          </div>
+
+          <div class="success-modal-row5">
+            <div class="success-modal-row5-container">
+              <ul id="iconsList">
+
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="success-modal-row6">
+            <form action="">
+              <button type="button" class="copybtn">Copy Code</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- success modal ends here -->
+  
     </main>
+
+
     <footer>
-        <div class="upperfooter">
-            <div class="slogann">
-                <img src="../images/favicon+slogan.png" alt="logo" class="slogan" />
-                <br />
-                <br />
-                <img src="../images/Vector.png" alt="facebook" class="socials" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="../images/twitter.png" alt="twitter" class="socials" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="../images/gmail icon.png" alt="gmail" class="socials" />
-            </div>
-            <div>
-                <h3>Resources</h3>
-                <br />
-                <p class="reducedfooter">What is a favicon?</p>
-
-                <p class="reducedfooter">How to create a favicon</p>
-
-                <p class="reducedfooter">Why Choose Us?</p>
-            </div>
-            <div>
-                <h3>Contact</h3>
-                <br />
-                <p class="reducedfooter">team69@gmail.com</p>
-
-                <p class="reducedfooter">08044426483</p>
-
-                <p class="reducedfooter">Send us a message</p>
-            </div>
-            <div>
-                <h3>About Us</h3>
-                <br />
-                <p class="reducedfooter">What Favicon is about?</p>
-
-                <p class="reducedfooter">Who we are</p>
-            </div>
+      <div class="upperfooter">
+        <div class="slogan">
+          <div class="footer-logo">
+            <img src="../images/favicon+slogan.png" alt="logo" />
+          </div>
+          <!-- <br />
+              <br /> -->
+          <div class="socials">
+            <a href="#"><img src="../images/social-media-logo/Facebook footer.svg" alt="facebook"></a>
+            <a href=""><img src="../images/social-media-logo/twitter logo (1).svg" alt="twitter" /></a>
+            <a href=""><img src="../images/social-media-logo/Email logo (1).svg" alt="gmail" /></a>
+  
+          </div>
         </div>
-        <div class="lowerfooter">
-            <div>&copy;2022 favicon.com. All rights reserved</div>
-            <div>
-                Privacy Policy &nbsp;&nbsp; Terms & Conditions &nbsp;&nbsp; Cookie Policy &nbsp;&nbsp; Safety information
-            </div>
+        <div class="footer-tab">
+          <div class="tab-header">
+            <h3>Resources</h3>
+          </div>
+          <div class="tab-links">
+            <ul>
+              <li><a href="#"><span>What is a Favicon?</span></a></li>
+              <li><a href="#"><span>How to Create a Favicon</span></a></li>
+              <li><a href="#"><span>Why Choose Us?</span></a></li>
+            </ul>
+          </div>
         </div>
-    </footer> 
+  
+        <div class="footer-tab">
+          <div class="tab-header">
+            <h3>Contact</h3>
+          </div>
+          <div class="tab-links">
+            <ul>
+              <li><a href="#"><span>team69@gmail.com</span></a></li>
+              <li><a href="#"><span>+(234)8044426483</span></a></li>
+              <li><a href="#"><span>Send us a messagge.</span></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="footer-tab">
+          <div class="tab-header">
+            <h3>About Us</h3>
+          </div>
+          <div class="tab-links">
+            <ul>
+              <li><a href="#"><span>What Favicon is about?</span></a></li>
+              <li><a href="#"><span>Who we are?</span></a></li>
+  
+            </ul>
+          </div>
+        </div>
+        <!-- <div>
+              <h3>Resources</h3>
+              <br>
+              <p class="reducedfooter">What is a favicon?</p>
+      
+              <p class="reducedfooter">How to create a favicon</p>
+      
+              <p class="reducedfooter">Why Choose Us?</p>
+            </div>
+            <div>
+              <h3>Contact</h3>
+              <br />
+              <p class="reducedfooter">team69@gmail.com</p>
+      
+              <p class="reducedfooter">08044426483</p>
+      
+              <p class="reducedfooter">Send us a message</p>
+            </div>
+            <div>
+              <h3>About Us</h3>
+              <br />
+              <p class="reducedfooter">What Favicon is about?</p>
+      
+              <p class="reducedfooter">Who we are</p>
+            </div> -->
+      </div>
+      <div class="lowerfooter">
+        <div class="right"><span>&copy;2022 favicon.com. All rights reserved</span></div>
+        <div class="left">
+          <!-- Privacy Policy &nbsp;&nbsp; Terms & Conditions &nbsp;&nbsp; Cookie
+              Policy &nbsp;&nbsp; Safety information -->
+          <a href="#"><span>Privacy Policy</span></a>
+          <a href="#"><span>Terms & Conditions</span></a>
+          <a href="#"><span> Cookie Policy</span></a>
+          <a href="#"><span>Safety information</span></a>
+        </div>
+      </div>
+    </footer>
     <script src="../js/imagetofavicon.js"></script>
 </body>
 
