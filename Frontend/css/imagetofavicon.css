@@ -319,10 +319,6 @@ h6 {
     background-image: url(../images/image\ generator\ screen.svg);
     min-width: 375px;
   }
-  .drag_area {
-    height: 200px;
-    width: 570px;
-  }
   h1 {
     font-size: 27px;
   }

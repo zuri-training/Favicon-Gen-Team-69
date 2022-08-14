@@ -24,7 +24,7 @@ class CreateFaviconView(generics.GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def post(self, request, format=None):
-
+        request.data["author"] = request.user.id
         serializer = CreateFaviconSerializer(data=request.data)
         favicon_sizes = [(16, 16),  (24, 24), (32, 32),
                          (48, 48), 'favicon', (128, 128)]
