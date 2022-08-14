@@ -12,8 +12,10 @@
   <script defer src="./../js/texttofavicon.js"></script>
 
   <!-- color picker -->
-  <!-- <link rel="stylesheet" href="coloris.min.css" />
+<!-- <link rel="stylesheet" href="coloris.min.css" />
 <script src="coloris.min.js"></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
 
   <link rel="stylesheet" href="./../css/header&footer.css" />
   <link rel="stylesheet" href="./../css/preview-modal.css" />
@@ -139,7 +141,9 @@
 
               <div class="form-element">
                 <label for="text-color">Text Color</label>
-                <input type="color" id="text_color" name="text_color" value="#ff0000">
+                <!-- <input type="color" id="text_color" name="text_color" value="#ff0000"> -->
+                <div class="color-picker"></div>
+                
                 <!-- <input type="text" data-coloris />
                 <input type="text" class="coloris" value="rgb(255, 0, 0)" /> -->
               </div>
