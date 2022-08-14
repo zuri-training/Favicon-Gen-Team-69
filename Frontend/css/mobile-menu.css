@@ -129,6 +129,8 @@
         visibility: visible;
         display: flex;
         display: contents;
+        position: absolute;
+        z-index: 5;
        
        
     }
