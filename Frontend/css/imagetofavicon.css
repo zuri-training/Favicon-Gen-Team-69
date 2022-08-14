@@ -127,7 +127,7 @@ h6 {
 
 #cancelBtn {
   position: absolute;
-  padding:0px 34%;
+  padding: 0px 34%;
   justify-content: end;
   cursor: pointer;
 }
@@ -188,11 +188,11 @@ h6 {
     font-size: 15px;
   }
   #cancelBtn {
-    padding:0px 24%;
+    padding: 0px 24%;
   }
   .drag_area {
     height: 350px;
-    width: 350px;
+    width: 150px;
     padding: 10px;
     border-radius: 5px;
   }
@@ -200,7 +200,7 @@ h6 {
     padding: 3em 1em 3em 1em;
     /* width: 250px;
     height: 443px; */
-    max-width: 80%;
+    max-width: 100%;
     max-height: 100%;
   }
   span {
@@ -211,7 +211,7 @@ h6 {
     border-radius: 5px;
     bottom: -20px;
     padding: 10px;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 15px;
   }
   .download_btns {
@@ -231,95 +231,94 @@ h6 {
     width: 190px;
     height: 40px;
   }
-   #general-error{
+  #general-error {
     font-size: 14px;
     position: relative;
     right: 12px;
     bottom: -15px;
-  } 
+  }
 }
 /* mobile view */
-@media screen and (max-width: 450px)  {
-    main {
-      background-image: url(../images/image\ generator\ screen.svg);
-      background-color: white;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: 700;
-      color: #0051d4;
-      font-size: 27px;
-      /* margin-top: 2.5rem; */
-      margin: 3rem;
-    }
-    .gen_image1 {
-      text-align: center;
-      margin: 10rem 3rem 3rem 3rem;
-    }
-    p,
-    span {
-      font-size: 12px;
-    }
-    .converter {
-      font-size: 22px;
-      margin: auto;
-      position: relative;
-      left: 18px;
-      top: -18px;
-    }
-    .button,
-    #preview,
-    #download {
-      font-size: 15px;
-    }
-    /* .drag_area {
-      height: 300px;
-      width: 150px;
-      padding: 10px;
-      border-radius: 5px;
-    } */
-    .container {
-      padding: 3em 1em 3em 1em;
-      width: 250px;
-    }
-    span {
-      text-align: center;
-      padding: 20px;
-    }
-    .drag_area button {
-      border-radius: 5px;
-      bottom: -20px;
-      padding: 10px;
-      font-weight: 400;
-      font-size: 15px;
-    }
-    .download_btns {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    #preview,
-    #download {
-      /* padding-left: 5rem; */
-      /* padding-right: 5rem; */
-      text-align: center;
-      margin: auto;
-      border-radius: 5px;
-    }
+@media screen and (max-width: 414px) {
+  main {
+    background-image: url(../images/image\ generator\ screen.svg);
+    background-color: white;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    color: #0051d4;
+    font-size: 27px;
+    /* margin-top: 2.5rem; */
+    margin: 3rem;
+  }
+  .gen_image1 {
+    text-align: center;
+    margin: 10rem 3rem 3rem 3rem;
+  }
+  p,
+  span {
+    font-size: 12px;
+  }
+  .converter {
+    font-size: 22px;
+    margin: auto;
+    position: relative;
+    left: 18px;
+    top: -18px;
+  }
+  .button,
+  #preview,
+  #download {
+    font-size: 15px;
+  }
+  .drag_area {
+    height: 300px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .container {
+    padding: 3em 1em 3em 1em;
+    width: 250px;
+  }
+  span {
+    text-align: center;
+    padding: 20px;
+  }
+  .drag_area button {
+    border-radius: 5px;
+    bottom: -20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .download_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #preview,
+  #download {
+    /* padding-left: 5rem; */
+    /* padding-right: 5rem; */
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+  }
+}
 /* tablet view */
 @media screen and (max-width: 960px) {
   main {
     background-image: url(../images/image\ generator\ screen.svg);
     min-width: 375px;
   }
-
   h1 {
     font-size: 27px;
   }
