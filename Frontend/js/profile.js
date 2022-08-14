@@ -104,7 +104,7 @@ fetch(url, {
       <div class="img__flex">
         <h5>Saved Favicons</h5>
         <div class="add">
-          <a href="/generate.html"><img src="../images/carbon_task-add.png" alt="add"></a>
+          <a href="generate.html"><img src="../images/carbon_task-add.png" alt="add"></a>
         </div>
       </div>    
 

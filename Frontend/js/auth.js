@@ -2,7 +2,7 @@
   const token_info = window.localStorage.getItem("token_info");
   if (!token_info) {
     window.localStorage.setItem("redirect", "true");
-    window.location.pathname = "/Frontend/pages/login.html";
+    window.location.pathname = "/Favicon-Gen-Team-69/pages/login.html";
   } else {
     nowDate = new Date();
     const token = JSON.parse(token_info);
@@ -12,7 +12,7 @@
     if (hours > 6) {
       window.localStorage.removeItem("token_info");
       window.localStorage.setItem("redirect", "true");
-      window.location.pathname = "/Frontend/pages/login.html";
+      window.location.pathname = "/Favicon-Gen-Team-69/pages/login.html";
     }
   }
 })();

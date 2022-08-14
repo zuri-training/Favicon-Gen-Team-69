@@ -1,16 +1,8 @@
-from dataclasses import field
-import email
-from pyexpat import model
 from requests import Response
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 from .models import CustomUser
-
-# User Serializer
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CustomUser
-        fields = ('id', 'username', 'email')
+from favicon.serializers import FaviconSerializer
 
 # Register Serializer
 class RegisterSerializer(serializers.ModelSerializer):
@@ -44,6 +36,7 @@ class LoginSerializer(serializers.Serializer):
 
 # Users Serializers informatiion
 class UserSerializer(serializers.ModelSerializer):
+    favicons = FaviconSerializer(write_only=True, many=True)
     class Meta:
         model = CustomUser
         exclude = ("user_permissions", "groups", "password", "is_superuser")
