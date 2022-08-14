@@ -1,3 +1,4 @@
+<script src="../js/auth.js"></script>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,23 +9,89 @@
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <link rel="stylesheet" href="../css/generate.css" />
     <link rel="stylesheet" href="../css/header&footer.css" />
+    <link rel="stylesheet" href="../css/mobile-menu.css">
+    <script defer src="../js/mobile-menu.js"></script>
   </head>
   <body>
     <header>
       <div class="favicon_logo">
+        <a href="/">
         <img src="../images/favicon.png" alt="Logo" />
+        </a>
       </div>
       <div class="header_links">
-        <a href="generate.html">Generator</a>
-        <a href="tutorial.html">Tutorial</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+         <a href="generate.html">Generator</a>
+          <a href="tutorial.html">Tutorial</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
       </div>
       <div class="header_btns">
-        <button type="button" class="loginbtn">Login</button>
-        <button type="button" class="regbtn">Register</button>
+        <div class="button-container">
+          <a href="login.html"><button type="button" class="loginbtn">Login</button></a>
+          <a href="register.html"><button type="button" class="regbtn">Register</button></a>
+        </div>
+      </div>
+      <div class="mobile-header_btns">
+        <img src="../images/menu-3-slashes.png" onclick="menu()" />
       </div>
     </header>
+  
+  
+    <!-- mobile menu -->
+    <div class="mobile-menu-links " id="mobile-menu">
+      <div class="mobile-menu-links-container">
+  
+        <div class="mobile-menu-cards ">
+          <a href="generate.html">
+            <div class="mobile-menu-logo">
+              <img src="../images/generate-icon.svg" alt="">
+            </div>
+            <div class="mobile-menu-text">
+              <p>Generator</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="mobile-menu-cards ">
+          <a href="tutorial.html">
+            <div class="mobile-menu-logo">
+              <img src="../images/Tutoorial.svg" alt="">
+            </div>
+            <div class="mobile-menu-text">
+              <p>Tutorial</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="mobile-menu-cards ">
+          <a href="about.html">
+            <div class="mobile-menu-logo">
+              <img src="../images/About.svg" alt="">
+            </div>
+            <div class="mobile-menu-text">
+              <p>About</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="mobile-menu-cards ">
+          <a href="contact.html">
+            <div class="mobile-menu-logo">
+              <img src="../images/contact.svg" alt="">
+            </div>
+            <div class="mobile-menu-text">
+              <p>Contact</p>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+      </div>
+    </div>
+    <!-- mobile menu end -->
+  
     
     <main>
       <h1>Generate your Favicon in Seconds!</h1>
@@ -130,5 +197,6 @@
     </footer>
 
     <script src="../js/generate.js"></script>
+    
   </body>
 </html>

@@ -161,13 +161,6 @@ a:hover {
         justify-content: center;
 }
 
-.header_btns button {
-        width: 40%;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center; */
-}
-
 .button-container {
         /* border: 1px solid red; */
         width: 80%;

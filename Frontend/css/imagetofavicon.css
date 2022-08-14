@@ -63,6 +63,8 @@ h6 {
 }
 
 .drag_area {
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 200px;
   width: 620px;
   border: 1px solid #0051d4;
@@ -72,6 +74,10 @@ h6 {
   flex-direction: column;
   margin: 10px auto;
   padding: 0px 10px 0px 10px;
+}
+
+.uploadArea {
+  text-align: center;
 }
 
 .drag_area.active {
@@ -110,15 +116,26 @@ h6 {
   font-weight: 400;
 }
 #general-error {
-  font-size: 20px;
+  font-size: 16px;
   color: #f1510c;
   text-align: center;
   position: relative;
   right: 12px;
   bottom: -1px;
   animation: buttons 0.3s linear;
+}
+
+#cancelBtn {
+  position: absolute;
+  padding:0px 34%;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.invisible {
   display: none;
 }
+
 @keyframes buttons {
   0% {
     transform: scale(0.1);
@@ -133,7 +150,7 @@ h6 {
 
 /* mobile view */
 
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
   main {
     background-image: url(../images/image\ generator\ screen.svg);
     background-color: white;
@@ -170,9 +187,12 @@ h6 {
   #download {
     font-size: 15px;
   }
+  #cancelBtn {
+    padding:0px 24%;
+  }
   .drag_area {
     height: 350px;
-    width: 150px;
+    width: 350px;
     padding: 10px;
     border-radius: 5px;
   }
@@ -180,7 +200,7 @@ h6 {
     padding: 3em 1em 3em 1em;
     /* width: 250px;
     height: 443px; */
-    max-width: 100%;
+    max-width: 80%;
     max-height: 100%;
   }
   span {
@@ -212,14 +232,14 @@ h6 {
     height: 40px;
   }
    #general-error{
-    font-size: 15px;
+    font-size: 14px;
     position: relative;
     right: 12px;
     bottom: -15px;
   } 
 }
 /* mobile view */
-@media (max-width: 414px) {
+@media screen and (max-width: 450px)  {
     main {
       background-image: url(../images/image\ generator\ screen.svg);
       background-color: white;
@@ -256,12 +276,12 @@ h6 {
     #download {
       font-size: 15px;
     }
-    .drag_area {
+    /* .drag_area {
       height: 300px;
       width: 150px;
       padding: 10px;
       border-radius: 5px;
-    }
+    } */
     .container {
       padding: 3em 1em 3em 1em;
       width: 250px;
@@ -294,15 +314,12 @@ h6 {
     }
   }
 /* tablet view */
-@media (max-width: 960px) {
+@media screen and (max-width: 960px) {
   main {
     background-image: url(../images/image\ generator\ screen.svg);
     min-width: 375px;
   }
-  .drag_area {
-    height: 200px;
-    width: 570px;
-  }
+
   h1 {
     font-size: 27px;
   }
