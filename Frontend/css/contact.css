@@ -1,0 +1,631 @@
+* {
+    margin: 0;
+}
+
+main {
+    background-image: url("../images/contact screen.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -420px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 27px;
+    color: #0041AA;
+}
+
+h2 {
+    font-size: 22px;
+    color: #002055;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 15.5px;
+}
+
+#intro {
+    padding: 60px 115px;
+}
+
+#call {
+    font-size: 18px;
+    font-weight: 500;
+    color: #002055;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto 188px;
+    box-shadow: 0 8px 16px #CDDAF0C9;
+    background-color: #FFFFFF;
+}
+
+#scsMsg {
+    width: 587px;
+    height: 379px;
+    border: 1px solid #002055;
+    border-radius: 5px;
+    margin: 150px auto;
+    background-color: #FFFFFF;
+}
+
+#scsMsg p {
+    margin-top: 64px;
+    font-size: 17.5px;
+}
+
+#scsMsg img {
+    width: 142px;
+    height: 142px;
+    position: relative;
+    top: 55px;
+}
+
+fieldset {
+    border: none;
+    padding: 17px 40px;
+}
+
+label {
+    display: block;
+    font-size: 15.5px;
+    color: #002055;
+    text-align: left;
+    padding: 10px;
+}
+
+input {
+    height: 54px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #003180;
+    margin: 12px 0 0;
+}
+
+#email {
+    background-image: url('../images/mail.png');
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+    background-size: 30px 30px;
+    padding-left: 70px;
+    font-size: 15.5px;
+}
+
+#user {
+    background-image: url('../images/user.png');
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+    background-size: 30px 30px;
+    padding-left: 70px;
+    font-size: 15.5px;
+}
+
+#textField {
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 15px;
+    font-size: 15.5px;
+}
+
+#submitForm {
+    width: 170px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #0061FF;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto 40px;
+}
+
+#documentation {
+    width: 35%;
+    margin: 144px auto;
+}
+
+#documentation h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#docBttn {
+    margin: 74px auto;
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    background-color: #0061FF;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+#container {
+    border: none;
+    width: 782px;
+    display: flex;
+    margin: auto;
+}
+
+.inTouch {
+    border: none;
+    width: 351px;
+    height: 93px;
+    display: inline-block;
+    margin: 63px auto;
+    box-shadow: 0 8px 16px #CDDAF0C9;
+    background-color: #FFFFFF;
+}
+
+.buzz {
+    display: flex;
+    padding: 13px 30px;
+}
+
+
+.icon {
+    width: 68px;
+    height: 68px;
+    border: none;
+    border-radius: 50%;
+    background-color: #F2F7FF;
+    margin: auto;
+    justify-content: center;
+}
+
+.icon img {
+    position: relative;
+    top: 10px;
+}
+
+
+.content {
+    margin: auto;
+}
+
+.faqText {
+    color: #205055;
+    padding-top: 70px;
+}
+
+#favImp {
+    padding: 0 127px 65px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+#faq1 {
+    width: 61%;
+    min-height: 220px;
+    border: none;
+    border-radius: 5px;
+    background-color: #205055;
+    box-shadow: 0 8px 16px #CDDAF0C9;
+    margin: auto;
+    text-align: left;
+    color: #FFFFFF;
+    padding: 35px 100px;
+}
+
+#faq2 {
+    width: 61%;
+    min-height: 220px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 16px #CDDAF0C9;
+    margin: 120px auto 0;
+    text-align: left;
+    color: #002055;
+    padding: 35px 100px;
+}
+
+#faq3 {
+    width: 61%;
+    min-height: 220px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 16px #CDDAF0C9;
+    margin: 120px auto 330px;
+    text-align: left;
+    color: #002055;
+    padding: 35px 100px;
+}
+
+@media screen and (max-width: 375px) {
+
+    main {
+        background-image: url("../images/contact-screen-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #intro {
+	    width: 375px;
+        font-size: 11px;
+        padding: 0;
+    }
+
+    #intro h2 {
+        display: none;
+    }
+
+    #call {
+        width: 100%;
+        height: 180px;
+    }
+
+    form {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #documentation {
+        width: 100%;
+    }
+
+    #documentation h2 {
+        color: #0041AA;
+        font-size: 15.5px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+        height: 120px;
+    }
+
+    #docBttn {
+        width: 190px;
+        font-size: 15.5px;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    /*#favImp {
+        padding: 0 0 100px;
+        font-size: 11px;
+        font-weight: 400;
+        text-align: left;
+        width: 332px;
+    }
+
+    #faq1 {
+        width: 100%;
+        height: 194px;
+        padding: 0;
+        margin: 0 auto 24px;
+
+    }
+
+    #faq1 p {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq1 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }
+
+    #faq2 {
+        width: 100%;
+        height: 200px;
+        padding: 0 0 10px;
+        margin: 0 auto 24px;
+
+    }
+
+    #faq2 ul {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq2 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }
+
+    #faq3 {
+        width: 100%;
+        height: 194px;
+        padding: 0;
+        background-color: #205055;
+        color: #FFFFFF;
+        margin: 0 auto 247px;
+
+    }
+
+    #faq3 p {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq3 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }*/
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+        min-width: 600px;
+        height: auto;
+        text-align: center;
+        padding: 25px;
+
+        background-image: url("../images/contact-screen-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 -200px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #intro {
+        width: 600px;
+        font-size: 11px;
+        padding: 0 0 80px;
+    }
+
+    #intro h2 {
+        display: none;
+    }
+
+    #call {
+        width: 80%;
+        height: 180px;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto 167px;
+        padding: 26px 0;
+    }
+
+    #submitForm {
+        width: 50.7%;
+    }
+
+    #getT {
+        color: #205055;
+        font-size: 24px;
+    }
+
+    .inTouch {
+        width: 100%;
+        height: 93px;
+        color: #205055;
+    }
+
+    .icon {
+        margin: 0;
+    }
+
+    .dark {
+        font-size: 20px;
+        font-weight: 700;
+}
+
+    .light {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    #documentation {
+        width: 100%;
+    }
+
+    #documentation h2 {
+        color: #0041AA;
+        font-size: 20px;
+        width: 65%;
+        margin: auto;
+        padding: 0;
+        height: 120px;
+    }
+
+    #docBttn {
+        width: 40%;
+        font-size: 20px;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        width: 100%;
+        max-width: 1024px;
+        height: auto;
+        text-align: center;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+        color: #0041AA;
+    }
+
+    #intro {
+        width: 773px;
+        margin: 60px auto 0;
+        font-size: 11px;
+    }
+
+    #intro h2 {
+        padding-bottom: 30px;
+        color: #002055;
+        font-size: 22px;
+    }
+
+    #call {
+        width: 100%;
+        height: 65px;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+
+    form {
+        width: 762px;
+        margin: 0 auto 167px;
+        padding: 0;
+    }
+
+    #submitForm {
+        width: 170px;
+    }
+
+    #getT {
+        font-size: 22px;
+    }
+
+    .inTouch {
+        width: 300px;
+        height: 93px;
+        display: inline-flex;
+    }
+
+    .icon {
+        margin: 0;
+    }
+
+    .dark {
+        font-size: 17.5px;
+        font-weight: 400;
+    }
+
+    .light {
+        font-size: 15.5px;
+        font-weight: 400;
+    }
+
+    #documentation {
+        width: 100%;
+    }
+
+    #documentation h2 {
+        font-size: 20px;
+        width: 65%;
+        margin: auto;
+        padding: 0;
+        height: 120px;
+    }
+
+    #docBttn {
+        width: 250px;
+        font-size: 80px;
+        font-size: 24px;
+    }
+
+    #container {
+        display: flex;
+        width: 90%;
+    }
+
+    /*#favImp {
+        padding: 0 0 100px;
+        font-size: 11px;
+        font-weight: 400;
+        text-align: left;
+        width: 332px;
+    }
+
+    #faq1 {
+        width: 100%;
+        height: 194px;
+        padding: 0;
+        margin: 0 auto 24px;
+
+    }
+
+    #faq1 p {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq1 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }
+
+    #faq2 {
+        width: 100%;
+        height: 200px;
+        padding: 0 0 10px;
+        margin: 0 auto 24px;
+
+    }
+
+    #faq2 ul {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq2 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }
+
+    #faq3 {
+        width: 100%;
+        height: 194px;
+        padding: 0;
+        background-color: #205055;
+        color: #FFFFFF;
+        margin: 0 auto 247px;
+
+    }
+
+    #faq3 p {
+        font-size: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #faq3 h3 {
+        font-size: 16px;
+        padding: 25px 25px 0;
+    }*/
+}

@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+}
+
+main {
+	background-image: url("../images/contact screen.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -420px;
+    text-align: center;
+    padding: 156px;
+}
+
+h1 {
+	color: #0041AA;
+}
+
+.faqText {
+	color: #205055;
+}
+
+#searchBox {
+	width: 800px;
+	height: 80px;
+	padding-left: 80px;
+	font-size: 20px;
+	background-image: url('../images/vector (3).png');
+	background-repeat: no-repeat;
+	background-position: 20px 20px;
+	margin-top: 70px;
+	border: 3px solid #D6D6D6;
+}
+
+#faqMain {
+	width: 1200px;
+	height: 288px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	padding: 54px;
+	margin: 64px auto 0;
+	text-align: left;
+	box-shadow: 0 4px 40px 16px #CDDAF059;
+}
+
+#faqMain h2 {
+	padding-bottom: 63px;
+	background-image: url('../images/vector-collapse.png');
+	background-repeat: no-repeat;
+	background-position: 1030px 8px;
+	font-size: 25px;
+	color: #002055;
+
+}
+
+#faqMain p {
+	width: 850px;
+	font-size: 16px;
+	color: #002055;
+}
+
+.faqMod {
+	width: 1200px;
+	height: 160px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	padding: 54px;
+	margin: 64px auto 0;
+	text-align: left;
+	box-shadow: 0 4px 40px 16px #CDDAF059;
+}
+
+.faqMod h2 {
+	padding-bottom: 63px;
+	background-image: url('../images/vector-expand.png');
+	background-repeat: no-repeat;
+	background-position: 1030px 8px;
+	font-size: 22px;
+	color: #002055;
+
+}
+
+#btmTxt {
+	margin: 64px auto 48px;
+	width: 926px;
+	color: #002055;
+}
+
+#cntBttn {
+	width: 200px;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	background-color: #0061FF;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+	.faqMod h2 {
+		padding-bottom: 63px;
+		background-image: url('../images/vector-expand.png');
+		background-repeat: no-repeat;
+		background-position: 850px 8px;
+		font-size: 22px;
+		color: #002055;
+	}
+
+	#faqMain h2 {
+		padding-bottom: 63px;
+		background-image: url('../images/vector-collapse.png');
+		background-repeat: no-repeat;
+		background-position: 850px 8px;
+		font-size: 25px;
+		color: #002055;
+	}
+	
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+	.faqMod h2 {
+		padding-bottom: 63px;
+		background-image: url('../images/vector-expand.png');
+		background-repeat: no-repeat;
+		background-position: 740px 8px;
+		font-size: 22px;
+		color: #002055;
+	}
+
+	#faqMain h2 {
+		padding-bottom: 63px;
+		background-image: url('../images/vector-collapse.png');
+		background-repeat: no-repeat;
+		background-position: 740px 8px;
+		font-size: 25px;
+		color: #002055;
+	}
+	
+}
