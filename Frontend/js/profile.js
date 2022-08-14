@@ -25,7 +25,6 @@ fetch(url, {
   })
   .then((data) => {
     user = data;
-    console.log(user);
     body = document.querySelector("body");
     body.innerHTML = `
     <div class="Profile">
@@ -113,10 +112,19 @@ fetch(url, {
   </div>
 </div>
 <button class="logout-primary">Logout</button>`;
+}).then(() => {
+  load_favicons()
 });
 
-const profile__card = document.querySelector(".profile");
 const load_favicons = () => {
+  const profile__card = document.querySelector(".profile");
+  const profile_flex = document.querySelectorAll(".profile__card-flex");
+  if (profile_flex.length > 0) {
+    profile_flex.forEach((card) => {
+      card.parentElement.removeChild(card)
+    })
+  }
+  
   fetch(favicons_url, {
     "Content-Type": "application/json",
     headers: headers,
@@ -158,9 +166,8 @@ const load_favicons = () => {
           );
         });
       }
-    });
+    })
 }
-load_favicons()
 
 const deleteFav = (id) => {
   fetch("https://faviconify-rest-api.herokuapp.com/api/favicon/" + id + "/", {
