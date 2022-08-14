@@ -1,5 +1,5 @@
 const token_info = window.localStorage.getItem("token_info");
-const token = JSON.parse(token_info).token
+const token = JSON.parse(token_info).token;
 const url = "https://faviconify-rest-api.herokuapp.com/api/user/1/";
 const favicons_url = "https://faviconify-rest-api.herokuapp.com/api/favicons/";
 const headers = {
@@ -106,51 +106,71 @@ fetch(url, {
         <div class="add">
           <a href="generate.html"><img src="../images/carbon_task-add.png" alt="add"></a>
         </div>
-      </div>
-      
+      </div>    
 
      
     </div>
   </div>
 </div>
 <button class="logout-primary">Logout</button>`;
-    const profile__card = document.querySelector(".profile");
-    fetch(favicons_url, {
-      "Content-Type": "application/json",
-      headers: headers,
+});
+
+const profile__card = document.querySelector(".profile");
+const load_favicons = () => {
+  fetch(favicons_url, {
+    "Content-Type": "application/json",
+    headers: headers,
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      }
     })
-      .then((response) => {
-        if (response.status === 200) {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        if (data.length < 1) {
+    .then((data) => {
+      if (data.length < 1) {
+        profile__card.insertAdjacentHTML(
+          "afterend",
+          `
+  <p class="card"> No Icons saved yet, click generate to start one </p>    
+      `
+        );
+      } else {
+        data.forEach((favicon) => {
           profile__card.insertAdjacentHTML(
             "afterend",
             `
-    <p class="card"> No Icons saved yet, click generate to start one </p>    
-        `
+            <div class ="profile__card-flex">
+          <div class="round-img">
+        <img class="round" src="../images/Vector22.png" alt="" />
+        </div>
+        <p>${favicon.title ? favicon.title : "My Favicon"}</p>
+        <a href=${favicon.zip_file}>
+        <div class="circle-img">
+        <img src="../images/Vector- 24.png" alt="download" />
+        </div>
+        </a>
+        <div class="circle-img">
+        <img src="../images/Vector-23.png" onclick="deleteFav(${
+          favicon.id
+        })" alt="delete" />
+        </div>
+      </div>`
           );
-        }
+        });
+      }
+    });
+}
+load_favicons()
 
-        else {
-          data.forEach(favicon => {
-              profile__card.insertAdjacentHTML("afterend", `
-              <div class ="profile__card-flex">
-            <div class="round-img">
-          <img class="round" src="../images/Vector22.png" alt="" />
-          </div>
-          <p>${data.title ? data.title : "My Favicon"}</p>
-          <div class="circle-img">
-          <img src="../images/Vector- 24.png" alt="" />
-          </div>
-          <div class="circle-img">
-          <img src="../images/Vector-23.png" alt="" />
-          </div>
-        </div>`)
-          });
-        }
-
-      });
+const deleteFav = (id) => {
+  fetch("https://faviconify-rest-api.herokuapp.com/api/favicon/" + id + "/", {
+    method: "DELETE",
+    headers: {
+      Authorization: `Token ${token}`,
+    },
+  }).then((response) => {
+    if (response.status === 204) {
+      load_favicons();
+    };
   });
+};
