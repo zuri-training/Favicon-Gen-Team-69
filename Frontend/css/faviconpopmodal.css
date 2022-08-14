@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#main-container{ 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+}
+#favicon{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 100px; 
+    
+
+}
+
+#favicon img{
+height: 20.625px;
+width: 20px;
+left: 2.5px;
+top: 1.875px;
+border-radius: 0px;
+align-items: center;
+
+/* padding: 0px 10px 0px 0px; */
+}
+#vector{
+    background: #CCDFFF;
+    border-radius: 40px;
+    width: 40px;
+    height:40px;
+}
+h1{
+    padding: 0px 20px 0px 20px;
+}
+
+#edit{
+padding-right: 10px;
+width: 20px;
+height:20px;
+}
+#how{
+text-align:center;
+color: #101111;
+padding-bottom: 30px;
+font-size: 15px;
+font-weight: 700;
+}
+#installation ul{
+padding-bottom: 20px;
+font-size: 15.5px;
+font-weight: 400;
+text-align:center;
+display: flex;
+
+}
+#cards{
+
+border-radius: 5px;
+display: grid;
+line-height: 10px;
+background: #F2F7FF;
+padding: 20px;
+border-style: solid;
+border-width: 1px;
+border-color: lightblue;
+text-align: left;
+}
+.links{
+    display: flex;
+
+}
+.links p{
+    padding-right: 30px;
+
+}
+#input{
+    text-align: center;
+    color: white;
+    background: #F1510C;
+    margin-left: 190px;
+    margin-right: 190px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
