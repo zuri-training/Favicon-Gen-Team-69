@@ -1,0 +1,111 @@
+.logo-1 {
+  position: absolute;
+  left: 17.76%;
+  right: -17.76%;
+  top: 15%;
+  bottom: 0.61%;
+  animation: swing-back 3s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 3s infinite;
+  -webkit-transform-origin: top;
+}
+
+.logo-2 {
+  position: absolute;
+  left: 350px;
+  top: 221.23px;
+  animation: swing-forward 4s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 4s infinite;
+  -webkit-transform-origin: top;
+}
+
+.logo-3 {
+  position: absolute;
+  left: 22.24%;
+  right: 27.76%;
+  top: 70.43%;
+  bottom: -10.76%;
+  animation: swing-back 5s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 5s infinite;
+  -webkit-transform-origin: top;
+}
+
+.logo-4 {
+  position: absolute;
+  left: 32.24%;
+  right: 27.76%;
+  top: 95.43%;
+  bottom: -10.76%;
+  animation: swing-back 3s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 3s infinite;
+  -webkit-transform-origin: top;
+}
+
+.logo-5 {
+  position: absolute;
+  left: 1248.47px;
+  right: 309.11px;
+  top: 113.99px;
+  animation: swing-forward 4s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 4s infinite;
+  -webkit-transform-origin: top;
+}
+
+.logo-6 {
+  position: absolute;
+  right: 340.01px;
+  top: 244.91px;
+  animation: swing-back 5s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 5s infinite;
+  -webkit-transform-origin: top;
+}
+
+.logo-7 {
+  position: absolute;
+  right: 249.18px;
+  top: 356.19px;
+  animation: swing-back 3s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 3s infinite;
+  -webkit-transform-origin: top;
+}
+
+.logo-8 {
+  position: absolute;
+  right: 349.18px;
+  top: 556.19px;
+  animation: swing-forward 4s infinite ease-in-out;
+  transform-origin: top;
+  -webkit-animation: swing-back 4s infinite;
+  -webkit-transform-origin: top;
+
+}
+
+@keyframes swing-back {
+  0% {
+    -webkit-transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: rotate(-25deg);
+  }
+}
+
+@keyframes swing-forward {
+  0% {
+    -webkit-transform: rotate(225deg);
+  }
+  50% {
+    -webkit-transform: rotate(-225deg);
+  }
+  100% {
+    -webkit-transform: rotate(225deg);
+  }
+}
