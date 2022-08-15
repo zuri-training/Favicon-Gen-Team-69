@@ -27,12 +27,12 @@ fetch(url, {
     user = data;
     body = document.querySelector("body");
     body.innerHTML = `
-    <div class="Profile">
+    <div class="profile">
     <div class="profile__head">
       <h5>User Profile</h5>
       <div class="buttons">
         <a href="generate.html"><button class="btn">New favicon</button></a>
-        <button id="logout" class="btn-primary">Logout</button>
+        <button id="logout" onclick="logout();" class="btn-primary">Logout</button>
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@ fetch(url, {
  
 
   <div class="profile__card">
-    <div class="profile">
+    <div class="profile_things">
       <div class="img__flex">
         <h5>Saved Favicons</h5>
         <div class="add">
@@ -111,13 +111,13 @@ fetch(url, {
     </div>
   </div>
 </div>
-<button class="logout-primary">Logout</button>`;
+<button onclick="logout()" class="logout-primary">Logout</button>`;
 }).then(() => {
   load_favicons()
 });
 
 const load_favicons = () => {
-  const profile__card = document.querySelector(".profile");
+  const profile__card = document.querySelector(".profile_things");
   const profile_flex = document.querySelectorAll(".profile__card-flex");
   if (profile_flex.length > 0) {
     profile_flex.forEach((card) => {
@@ -181,3 +181,8 @@ const deleteFav = (id) => {
     };
   });
 };
+
+const logout = () => {
+  window.localStorage.removeItem("token_info")
+  window.location.pathname = "/"
+}

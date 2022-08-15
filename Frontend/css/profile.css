@@ -55,6 +55,7 @@
     border: 1px solid #f1510c;
     background: transparent;
     color: #f1510c;
+    cursor: pointer;
   }
   
   .btn:hover {
@@ -300,7 +301,7 @@
     }
   }
   
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 435px) {
       body{
           background-image:url('../images/about\ and\ profile.svg');
           background-repeat: no-repeat;
@@ -366,7 +367,7 @@
     }
     .add{
       display:grid;
-      margin-top: -70px;
+      margin-top: 70px;
       margin-bottom:50px;
       text-align: left;
       font-size: 22px;
@@ -427,6 +428,7 @@
       Width:170px;
       Height:54px;
       font-family:'poppins';
+      cursor: pointer;
   }
   
   }
@@ -465,7 +467,7 @@
         .profile__card h5 {
           margin-top: -70px;
         }
-        .add{
+        /* .add{
           margin-top: -70px;
           margin-bottom:20px;
           text-align: left;
@@ -475,7 +477,7 @@
       
         .add img{
           margin-right:40px;
-        }
+        } */
   }
   
   
