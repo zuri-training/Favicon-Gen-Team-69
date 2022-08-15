@@ -246,6 +246,13 @@ form .bottom-row {
   justify-content: center;
 }
 
+.color-picker{
+  width: 100%;
+  border: 2px solid red;
+}
+.pickr .pcr-button {
+  width: 100% !important;
+}
 
 @media (max-width: 600px) {
 
