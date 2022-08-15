@@ -87,6 +87,10 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
+  const spinner = document.querySelector("#ispinner")
+  generateBtn.classList.add("invisible")
+  previewbtn.classList.add("invisible")
+  spinner.classList.remove("invisible")
   
   const formData = new FormData(event.target);
   formData.append("type", "image");
@@ -119,6 +123,9 @@ form.addEventListener("submit", (event) => {
         </div>
       </li>`)
       });
+      generateBtn.classList.remove("invisible")
+      previewbtn.classList.remove("invisible")
+      spinner.classList.add("invisible")
       successmodal.classList.add("open-popup");
     })
     .catch((error) => {

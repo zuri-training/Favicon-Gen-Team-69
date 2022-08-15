@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <link rel="stylesheet" href="../css/reg&login.css" />
+    <link rel="stylesheet" href="../css/ispinner.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -42,7 +43,7 @@
             <form action="" method="post">
               <div class="field">
                 <label for="username">Username</label>
-                <img src="../images/User icon.svg" alt="user_avata" />
+                <img src="../images/User icon.svg" alt="user_avatar" />
                 <input name="username" type="text" placeholder="E.g faith" />
                 <p class="error invisible">
                   username must be at least 4 characters long
@@ -58,7 +59,22 @@
                 </p>
               </div>
 
-              <button type="submit">Login</button>
+              <button type="submit" id="login">Login</button>
+              </form>
+              <div class="field invisible" id="ispinner">
+                <div class="ispinner ispinner-large">
+                  <div class="ispinner-blade"></div>
+                  <div class="ispinner-blade"></div>
+                  <div class="ispinner-blade"></div>
+                  <div class="ispinner-blade"></div>
+                  <div class="ispinner-blade"></div>
+                  <div class="ispinner-blade"></div>
+                  <div class="ispinner-blade"></div>
+                  <div class="ispinner-blade"></div>
+                </div>
+                Please wait
+              </div>
+              
               <p class="sign-in">
                 Don't have an account
                 <span><a href="register.html">SIGN UP</a></span>
@@ -67,7 +83,6 @@
                 By clicking sign up, you agree to the Faviconify Terms and
                 conditions and privacy policy.
               </p>
-            </form>
           </div>
         </div>
       </div>
