@@ -159,7 +159,7 @@ h6 {
 }
 
 .invisible {
-    display: none;
+    display: none !important;
 }
 
 

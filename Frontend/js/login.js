@@ -82,6 +82,12 @@ form.addEventListener("submit", (e) => {
     };
     
     const url = "https://faviconify-rest-api.herokuapp.com/api/login/";
+    
+    const login = document.querySelector("#login")
+    const spinner = document.querySelector("#ispinner")
+    login.classList.add("invisible")
+    spinner.classList.remove("invisible")
+
 
     fetch(url, {
       headers: {
@@ -98,6 +104,8 @@ form.addEventListener("submit", (e) => {
         if (data.non_field_errors) {
             errorField.classList.remove("invisible")
             errorField.innerHTML = data.non_field_errors[0]
+            login.classList.remove("invisible")
+            spinner.classList.add("invisible")
         }
         else if (data.token) {
             const token_info = JSON.stringify({...data})

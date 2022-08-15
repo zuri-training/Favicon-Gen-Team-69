@@ -81,6 +81,11 @@ form.addEventListener("submit", (e) => {
   autoValidate(cpassword, password);
 
   if (usernameIsValid && passwordIsValid && emailIsValid) {
+    const register = document.querySelector("#register")
+    const spinner = document.querySelector("#ispinner")
+    register.classList.add("invisible")
+    spinner.classList.remove("invisible")
+
     userData = {
       username: username.value,
       email: email.value,
@@ -107,6 +112,9 @@ form.addEventListener("submit", (e) => {
         }
         else if (data.user) {
             window.location.pathname = "Favicon-Gen-Team-69/pages/login.html"
+        } else {
+          register.classList.remove("invisible")
+          spinner.classList.add("invisible")
         }
       })
       .catch((error) => console.log(error));

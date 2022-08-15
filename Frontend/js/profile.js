@@ -46,7 +46,7 @@ fetch(url, {
         />
       </div>
       <div class="images">
-        <img src="../images/Group.png" alt="" />
+        <img src="../images/camera icon.png" alt="" />
       </div>
 
       <div class="text">
@@ -101,12 +101,11 @@ fetch(url, {
   <div class="profile__card">
     <div class="profile_things">
       <div class="img__flex">
-        <h5>Saved Favicons</h5>
-        <div class="add">
+      <h5>Saved Favicons</h5>
+      <div class="add">
           <a href="generate.html"><img src="../images/carbon_task-add.png" alt="add"></a>
         </div>
-      </div>    
-
+      </div>  
      
     </div>
   </div>
