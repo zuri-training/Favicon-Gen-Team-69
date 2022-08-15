@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
 }
 
 #main-container{ 
@@ -11,69 +18,95 @@
     align-items: center;
     text-align: center;
     padding: 5%;
+    width: 876px;
+    height: 1000px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    border: 1px solid lightgrey;
+    margin: auto;
 }
 #favicon{
-    display: flex;
-    text-align: center;
+    display: inline-flex;
+    /*text-align: center;
     align-items: center;
     font-size: 12px;
     font-weight: 700;
-    padding-left: 100px; 
+    padding-left: 100px;*/
+    margin: auto;
+    padding: 88px 0 0; 
     
 
 }
 
-#favicon img{
-height: 20.625px;
-width: 20px;
-left: 2.5px;
-top: 1.875px;
+#vector2{
+height: 17.63px;
+width: 18.66px;
+position: relative;
+top: 25px;
 border-radius: 0px;
 align-items: center;
+margin: auto;
 
-/* padding: 0px 10px 0px 0px; */
 }
+
 #vector{
     background: #CCDFFF;
-    border-radius: 40px;
-    width: 40px;
-    height:40px;
+    border-radius: 50%;
+    width: 70px;
+    height:70px;
+    margin: auto;
 }
 h1{
-    padding: 0px 20px 0px 20px;
+    padding: 12px 80px 0px 40px;
+    color: #003180;
+    font-size: 27px;
+    font-weight: 700px;
 }
 
 #edit{
-padding-right: 10px;
-width: 20px;
-height:20px;
+width: 23.3px;
+height:23.3px;
+margin-top: 20px;
 }
+
+#delete {
+    width: 25px;
+    height: 25px;
+    margin: 20px 24.5px 0;
+}
+
 #how{
 text-align:center;
 color: #101111;
-padding-bottom: 30px;
-font-size: 15px;
+padding-bottom: 63px;
+font-size: 22px;
 font-weight: 700;
 }
-#installation ul{
-padding-bottom: 20px;
+
+#installation {
+padding-bottom: 32px;
 font-size: 15.5px;
 font-weight: 400;
-text-align:center;
-display: flex;
+text-align: center;
+color: #101111;
 
 }
-#cards{
 
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+#cards{
 border-radius: 5px;
 display: grid;
-line-height: 10px;
+width: 764px;
+height: 297px;
 background: #F2F7FF;
-padding: 20px;
-border-style: solid;
-border-width: 1px;
-border-color: lightblue;
+padding: 56px;
+border: 1px solid #F2F7FF;
 text-align: left;
+font-size: 16px;
+color: #002055;
 }
 .links{
     display: flex;
@@ -83,13 +116,20 @@ text-align: left;
     padding-right: 30px;
 
 }
-#input{
+
+.links img {
+    width: 10.29px;
+    height: 11.92px;
+}
+button {
     text-align: center;
     color: white;
     background: #F1510C;
-    margin-left: 190px;
-    margin-right: 190px;
     border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border: none;
+    width: 160px;
+    height: 56px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 500;
 }
