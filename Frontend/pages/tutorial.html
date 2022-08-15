@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../css/header&footer.css" />
     <link rel="stylesheet" href="../css/mobile-menu.css">
     <script defer src="../js/mobile-menu.js"></script>
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
+
   </head>
   <body>
     <header>
@@ -92,11 +95,6 @@
     <!-- mobile menu end -->
     <main>
       <div id="main-container">
-        <div id="img1"><img src="../images/vector-svg1.svg" alt="img" /></div>
-        <div id="img2"><img src="../images/Vector-svg2.svg" alt="img" /></div>
-        <div id="img3"><img src="../images/Vector-svg2.svg" alt="img" /></div>
-        <div id="img4"><img src="../images/Vector-svg3.svg" alt="img" /></div>
-        <div id="img5"><img src="../images/Vector-svg4.svg" alt="img" /></div>
 
         <section id="section1">
           <div class="up-text">
@@ -112,7 +110,24 @@
             </p>
           </div>
           <div id="logocard">
-            <div id="card"></div>
+            <div id="card">
+              <video 
+    id="my-player"
+    class="video-js card"
+    controls
+    preload="auto"
+    poster="https://faviconify.s3.us-east-2.amazonaws.com/favicon%2Bslogan.png"
+    data-setup='{}'>
+  <source src="https://faviconify.s3.us-east-2.amazonaws.com/Faviconify+Tutorial.mp4" type="video/mp4"></source>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a
+    web browser that
+    <a href="https://videojs.com/html5-video-support/" target="_blank">
+      supports HTML5 video
+    </a>1
+  </p>
+</video>
+            </div>
             <div id="img6">
               <img src="../images/Vector12edited.png" alt="img" />
             </div>

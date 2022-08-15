@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+video {
+    width: max-content;
+    height: auto;
+}
+
 #main-container {
     justify-content: center;
     display: grid;
@@ -36,9 +41,11 @@ h3 {
     display: flex;
 }
 
-#card {
-    height: 75vh;
-    width: 100%;
+.card {
+    display: block;
+    margin: auto auto;
+    height: 500px;
+    width: 1000px !important;
     box-shadow: 0.05px 0.05px 10px, 0.05px 0.05px 10px;
     border-radius: 20px;
 }
