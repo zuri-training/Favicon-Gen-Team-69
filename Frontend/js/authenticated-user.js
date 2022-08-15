@@ -9,7 +9,7 @@ const buttons = document.querySelectorAll('.check');
     const token_info = window.localStorage.getItem("token_info");
     if (!token_info) {
         user_menu.innerHTML+=`<div class="mobile-menu-cards ">
-        <a href="../pages/profile.html">
+        <a href="../pages/login.html">
           <div class="mobile-menu-logo">
             <img src="../images/logo/user-icon.svg" alt="">
           </div>
