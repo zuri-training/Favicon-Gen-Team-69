@@ -39,7 +39,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = "username"
     EMAIL_FIELD = "email"
-    objects = CustomUserManager()
+    objects = UserManager()
 
     def __str__(self):
         return self.email
