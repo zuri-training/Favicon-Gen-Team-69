@@ -319,8 +319,8 @@ async function processoutput() {
                 //   )
             })
             .then(blob => {
-                 const imageObjectURL = URL.createObjectURL(blob);
-                 console.log(imageObjectURL);
+                //  const imageObjectURL = URL.createObjectURL(blob);
+                //  console.log(imageObjectURL);
 
                 // let image = window.URL.createObjectURL(blob)
                 // console.log(image)
