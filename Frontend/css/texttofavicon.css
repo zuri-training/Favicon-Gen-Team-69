@@ -250,8 +250,8 @@ form .bottom-row {
   width: 100%;
   border: 2px solid red;
 }
-.pickr{
-  
+.pickr .pcr-button {
+  width: 100% !important;
 }
 
 @media (max-width: 600px) {

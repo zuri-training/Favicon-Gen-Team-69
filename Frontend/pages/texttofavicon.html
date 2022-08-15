@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+  <title>TextToFavicon</title>
   <link rel="shortcut icon" href=" " type="image/x-icon" />
   <link rel="stylesheet" href="./../css/texttofavicon.css" />
   <link rel="stylesheet" href="./../css/success-modal.css" />
   <script defer src="./../js/texttofavicon.js"></script>
+  <script defer src="./../js/authenticated-user.js"></script>
 
   <!-- color picker -->
 <!-- <link rel="stylesheet" href="coloris.min.css" />
@@ -34,10 +35,11 @@
       <a href="#">About</a>
       <a href="#">Contact</a>
     </div>
-    <div class="header_btns">
-      <div class="button-container">
-        <button type="button" class="loginbtn">Login</button>
-        <button type="button" class="regbtn">Register</button>
+    <div class="header_btns" >
+      <div class="button-container" id="insert">
+        <button type="button" class="loginbtn check">Login</button>
+        <button type="button" class="regbtn check">Register</button>
+        
       </div>
     </div>
     <div class="mobile-header_btns">
@@ -48,7 +50,7 @@
 
   <!-- mobile menu -->
   <div class="mobile-menu-links " id="mobile-menu">
-    <div class="mobile-menu-links-container">
+    <div class="mobile-menu-links-container" id="mobile-menu-user-check">
 
       <div class="mobile-menu-cards ">
         <a href="#">
@@ -142,7 +144,7 @@
               <div class="form-element">
                 <label for="text-color">Text Color</label>
                 <!-- <input type="color" id="text_color" name="text_color" value="#ff0000"> -->
-                <div class="color-picker"></div>
+                <div class="color-picker one"></div>
                 
                 <!-- <input type="text" data-coloris />
                 <input type="text" class="coloris" value="rgb(255, 0, 0)" /> -->
@@ -150,7 +152,10 @@
 
               <div class="form-element">
                 <label for="background-color">Background Color</label>
-                <input type="color" id="background_color" name="background_color" value="#ff0000">
+                <!-- <input type="color" id="background_color" name="background_color" value="#ff0000"> -->
+                <div class="color-picker-two">
+                  
+                </div>
               </div>
 
               <div class="form-element">

@@ -2,6 +2,9 @@
     display: none;
     
 }
+body{
+/* position: absolute; */
+}
 
 
 @media (max-width: 600px) {
@@ -130,7 +133,7 @@
         display: flex;
         display: contents;
         position: absolute;
-        z-index: 5;
+        z-index: -5;
        
        
     }
