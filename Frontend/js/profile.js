@@ -182,6 +182,13 @@ const deleteFav = (id) => {
 };
 
 const logout = () => {
+  fetch("https://faviconify-rest-api.herokuapp.com/api/logout/", {
+    headers: headers
+  }).then((response) => {
+    return response.json()
+  }).then((data) => {
+    console.log(data)
+  })
   window.localStorage.removeItem("token_info")
-  window.location.pathname = "/"
+  window.location.pathname = "/Favicon-Gen-Team-69/"
 }
