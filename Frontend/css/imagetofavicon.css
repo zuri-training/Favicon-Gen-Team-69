@@ -115,6 +115,11 @@ h6 {
 #preview {
   font-weight: 400;
 }
+
+#downloadBtn {
+  display: block;
+  margin: 10px auto;
+}
 #general-error {
   font-size: 16px;
   color: #f1510c;
