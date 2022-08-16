@@ -13,6 +13,7 @@
   <link rel="icon" type="image/png" sizes="48x48" href="https://faviconify.s3.amazonaws.com/icons/48x48_btyfn" />
   <link rel="icon" type="image/png" sizes="48x48" href="https://faviconify.s3.amazonaws.com/icons/favicon_shlrc" />
   <link rel="icon" type="image/png" sizes="128x128" href="https://faviconify.s3.amazonaws.com/icons/128x128_ppewp" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./css/header&footer.css" />
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/logos.css" >
@@ -127,7 +128,7 @@
           satifsfactions
         </p>
 
-        <button data-aos="fade-up" data-aos-delay="100">Get Started</button>
+        <a href="pages/generate.html"><button data-aos="fade-up" data-aos-delay="100">Get Started</button></a>
       </div>
 
 
@@ -145,7 +146,6 @@
           <h5>300+</h5>
           <p>Registered Users</p>
         </div>
-
 
 
 
@@ -325,9 +325,16 @@
         <div class="testimonials-con">
           <div class="testimonials-cards">
             <div class="test-cards" data-aos="fade-up" data-aos-delay="200">
-              <img src="./images/590-5904853_glen-circle-profile-fundraising 1.png" alt="">
+              <img class="profile_image" src="./images/590-5904853_glen-circle-profile-fundraising 1.png" alt="">
               <h6>Faith Daniel</h6>
-              <img src="" alt="">
+              <!-- <img src="" alt=""> -->
+              <div class="stars">
+                <img src="./images/star.svg" alt="star">
+                <img src="./images/star.svg" alt="star">
+                <img src="./images/star.svg" alt="star">
+                <img src="./images/star-white.svg" alt="star">
+                <img src="./images/star-white.svg" alt="star">
+              </div>
               <h5>Excellent work.</h5>
               <p>
                 As a newbie webdev I was looking for a simple,
@@ -336,11 +343,17 @@
               </p>
             </div>
 
-
-            <div class="test-cards2" data-aos="fade-up" data-aos-delay="200">
-              <img src="./images/391-3919742_an-image-of-hayley-jayne-menere-talent-manager 1.png" alt="">
+            <div class="test-cards" data-aos="fade-up" data-aos-delay="200">
+              <img class="profile_image" src="./images/391-3919742_an-image-of-hayley-jayne-menere-talent-manager 1.png" alt="profile_avatar">
               <h6>Faith Daniel</h6>
-              <img src="" alt="">
+              <!-- <img src="" alt=""> -->
+              <div class="stars">
+                <img src="./images/star.svg" alt="star">
+                <img src="./images/star.svg" alt="star">
+                <img src="./images/star.svg" alt="star">
+                <img src="./images/star-white.svg" alt="star">
+                <img src="./images/star-white.svg" alt="star">
+              </div>
               <h5>Excellent work.</h5>
               <p>
                 As a newbie webdev I was looking for a simple,
@@ -349,6 +362,7 @@
               </p>
             </div>
 
+          
           </div>
         </div>
       </div>
@@ -450,7 +464,12 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800
+    });
+  </script>
   <script src="./js/index.js"></script>
 </body>
 
