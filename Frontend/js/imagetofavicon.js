@@ -187,4 +187,5 @@ function closepopup() {
 
 function closesuccesspopup() {
   successmodal.classList.remove("open-popup");
+  window.location.pathname = "/Favicon-Gen-Team-69/pages/profile.html"
 }
