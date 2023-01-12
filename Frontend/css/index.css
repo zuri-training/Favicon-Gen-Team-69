@@ -19,7 +19,7 @@ body {
   background-image: url('../images/landing\ page\ background.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 150vh;
+  height: auto;
   /* margin: auto; */
 }
 
@@ -473,7 +473,7 @@ height:30px;
 
 @media screen and (max-width: 1024px) {
   .header-section {
-    height: 90vh;
+/*     height: 90vh; */
   }
 
   .header-section::before {
@@ -695,7 +695,7 @@ height:30px;
   }
 
   .header-section {
-    height: 90vh;
+/*     height: 90vh; */
     /* margin: auto; */
   }
 
@@ -967,7 +967,7 @@ height:30px;
   }
 
   .header-section {
-    height: 100vh;
+/*     height: 100vh; */
     /* margin: auto; */
   }
 
